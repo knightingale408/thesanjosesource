@@ -703,3 +703,10 @@ a:hover {
     transform: none;
   }
 }
+
+/* Phone: keep brand and nav labels on one line each */
+@media (max-width: 520px) {
+  .nav { flex-wrap: wrap; row-gap: 0.6rem; }
+  .nav__brand, .nav__link { white-space: nowrap; }
+  .nav__links { flex-wrap: wrap; gap: 0.5rem 1rem; }
+}

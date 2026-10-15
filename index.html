@@ -45,8 +45,9 @@
       <nav class="nav" aria-label="Primary">
         <a class="nav__brand" href="#top">The San Jose Source</a>
         <div class="nav__links">
-          <a class="nav__link" href="/brief/2/">Latest brief</a>
-          <a class="nav__link" href="./tracker/">Tracker</a>
+          <a class="nav__link" href="#coverage">Briefs</a>
+          <a class="nav__link" href="./tracker/">Promised vs. Actual</a>
+          <a class="nav__link" href="#about">About</a>
           <a class="nav__link" href="#subscribe">Subscribe</a>
         </div>
       </nav>
@@ -68,7 +69,7 @@
     </header>
 
     <main id="main">
-      <section class="section section--why" aria-labelledby="why-title">
+      <section class="section section--why" id="about" aria-labelledby="why-title">
         <div class="wrap">
           <h2 id="why-title" class="section__title reveal" data-reveal>
             Long agendas. Short brief.
@@ -131,43 +132,66 @@
             The sourcing promise
           </h2>
           <p class="section__lede reveal" data-reveal>
-            Every factual claim links to the City’s official record on
+            Every factual claim links to the City’s official record, such as
+            agendas and staff reports on
             <a
               href="https://sanjose.legistar.com/Calendar.aspx"
               target="_blank"
               rel="noopener noreferrer"
               >Legistar</a
-            >. No party line. No guesses about motives. No rumors. If something
+            > and City budget documents. No party line. No guesses about motives. No rumors. If something
             is wrong, the correction goes at the top.
           </p>
         </div>
       </section>
 
-      <section class="section section--brief" aria-labelledby="brief-title">
+      <section class="section section--brief" id="coverage" aria-labelledby="brief-title">
         <div class="wrap">
-          <p class="eyebrow reveal" data-reveal>From Brief #1</p>
+          <p class="eyebrow reveal" data-reveal>Latest coverage</p>
           <h2 id="brief-title" class="section__title reveal" data-reveal>
-            October 20: Independent Police Auditor year-end report
+            Recent briefs
           </h2>
+          <ul class="section__lede reveal" data-reveal>
+            <li>
+              <a href="/brief/2/"><strong>Brief #2 · Oct 15, 2026 — Planned vs. Actual: four public-safety buildings.</strong></a>
+              What the City first planned for three Measure T fire stations and the police training academy, and where each stands today.
+            </li>
+            <li>
+              <a href="/brief/1/"><strong>Brief #1 · Oct 12, 2026 (corrected Oct 14) — Council money items, week of Oct 12.</strong></a>
+              What the Council did on recent money items, plus police recruiting overtime that ran $631,986 over budget.
+            </li>
+          </ul>
           <p class="section__lede reveal" data-reveal>
-            The only meeting still ahead in this pull is October 20. The item
-            is the 2025 Independent Police Auditor Year End Report. Dollar
-            figures and votes for the items in this pull are not stated in the
-            Legistar record.
-          </p>
-          <p class="brief-link reveal" data-reveal>
-            <a href="/brief/2/">Read the latest brief</a>
-            ·
-            <a href="/brief/1/">Brief #1</a>
-            ·
-            <a href="./tracker/">Promised vs actual</a>
-            ·
-            <a
+            <strong>Coming up, Oct 20:</strong> the City Council agenda lists the 2025
+            Independent Police Auditor Year End Report
+            (<a
               href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=16370&GUID=32CE8DC6-DA1B-4F68-ACE6-B0E54E7A5289"
               target="_blank"
               rel="noopener noreferrer"
-              >26-1078</a
-            >
+              >file 26-1078</a
+            >).
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tracker" aria-labelledby="tracker-title">
+        <div class="wrap">
+          <h2 id="tracker-title" class="section__title reveal" data-reveal>
+            Promised vs. Actual
+          </h2>
+          <p class="section__lede reveal" data-reveal>
+            What the City said a project would cost and when it would finish,
+            compared with what actually happened, using only dates and dollars
+            the record states.
+          </p>
+          <p class="section__lede reveal" data-reveal>
+            Example: a June 2021 City status report expected Fire Station 8 to
+            be finished in mid-2024. Its crew began operating there on July 22, 2026.
+          </p>
+          <p class="brief-link reveal" data-reveal>
+            <a href="./tracker/">See the tracker</a>
+            ·
+            <a href="/brief/2/">Read Brief #2</a>
           </p>
         </div>
       </section>
@@ -179,10 +203,11 @@
       >
         <div class="wrap wrap--narrow">
           <h2 id="subscribe-title" class="section__title reveal" data-reveal>
-            Get the brief
+            Get the free weekly brief
           </h2>
           <p class="section__lede reveal" data-reveal>
-            Free. Weekly. Linked to the record.
+            Sent before San José City Council meets. No paywall. Every factual
+            claim linked to the City’s official record.
           </p>
           <form
             class="subscribe reveal"
