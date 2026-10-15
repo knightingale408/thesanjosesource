@@ -710,3 +710,11 @@ a:hover {
   .nav__brand, .nav__link { white-space: nowrap; }
   .nav__links { flex-wrap: wrap; gap: 0.5rem 1rem; }
 }
+
+/* —— Subscribe button (replaces the email form, Oct 15, 2026) —— */
+.subscribe-cta {
+  margin-top: 1.75rem;
+  display: grid;
+  justify-items: start;
+  gap: 0.75rem;
+}

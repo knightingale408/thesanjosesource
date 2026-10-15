@@ -209,37 +209,18 @@
             Sent before San José City Council meets. No paywall. Every factual
             claim linked to the City’s official record.
           </p>
-          <form
-            class="subscribe reveal"
-            data-reveal
-            id="subscribe-form"
-            action="https://thesanjosesource.substack.com/api/v1/free?nojs=true"
-            method="post"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <label class="sr-only" for="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              required
-              placeholder="you@example.com"
-              aria-describedby="subscribe-note"
-            />
-            <button class="btn btn--gold" type="submit">Subscribe</button>
-            <p class="subscribe__note" id="subscribe-note">
-              Free on
-              <a
-                href="https://thesanjosesource.substack.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Substack</a
-              >. Unsubscribe anytime.
+          <div class="subscribe-cta reveal" data-reveal>
+            <a
+              class="btn btn--gold"
+              href="https://thesanjosesource.substack.com/subscribe"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Subscribe free on Substack</a
+            >
+            <p class="subscribe__note">
+              Opens Substack, where you enter your email. Unsubscribe anytime.
             </p>
-            <p class="subscribe__status" id="subscribe-status" role="status" hidden></p>
-          </form>
+          </div>
         </div>
       </section>
     </main>
