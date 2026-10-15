@@ -718,3 +718,20 @@ a:hover {
   justify-items: start;
   gap: 0.75rem;
 }
+
+/* —— Reader support (one-time $25 via Stripe, Oct 15, 2026) —— */
+.support {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--mist);
+}
+
+.support__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.support__text {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
