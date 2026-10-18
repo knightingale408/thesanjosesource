@@ -557,6 +557,18 @@ a:hover {
   text-wrap: balance;
 }
 
+.brief__title--long {
+  font-size: clamp(1.7rem, 4.2vw, 2.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.brief__dek {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+  color: var(--ink-soft);
+}
+
 .brief__meta {
   margin: 0 0 1.25rem;
   color: var(--muted);
@@ -733,5 +745,11 @@ a:hover {
 
 .support__text {
   margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.coverage__label {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
   color: var(--muted);
 }
