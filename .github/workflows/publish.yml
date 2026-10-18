@@ -1,0 +1,31 @@
+# Publishes thesanjosesource.com from this repo.
+# Every push to main waits for Jay's approval (environment "production",
+# required reviewer: knightingale408). After approval it publishes ALL site
+# files to here.now and checks the live site matches the repo byte for byte.
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["README.md"]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://thesanjosesource.com/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish ALL files to here.now and verify live = repo
+        env:
+          HERENOW_API_KEY: ${{ secrets.HERENOW_API_KEY }}
+        run: python3 .github/scripts/publish.py
