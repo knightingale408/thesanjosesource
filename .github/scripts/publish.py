@@ -12,7 +12,7 @@ LIVE_BASE = "https://thesanjosesource.com/"
 API = "https://here.now/api/v1"
 CLIENT = "github-actions/thesanjosesource"
 # Repo-only files that are never part of the website.
-EXCLUDE_EXACT = {"README.md", ".nojekyll", ".gitattributes", "CNAME"}
+EXCLUDE_EXACT = {"README.md", ".nojekyll", ".gitattributes", ".gitignore", "CNAME"}
 EXCLUDE_PREFIX = (".github/",)
 
 TYPES = {
