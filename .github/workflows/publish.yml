@@ -24,7 +24,7 @@ jobs:
       name: production
       url: https://thesanjosesource.com/
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Publish ALL files to here.now and verify live = repo
         env:
           HERENOW_API_KEY: ${{ secrets.HERENOW_API_KEY }}
