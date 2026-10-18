@@ -76,7 +76,7 @@ def main():
         for p in files:
             url = LIVE_BASE + ("" if p == "index.html" else p.removesuffix("index.html")) + f"?v={bust}-{attempt}"
             try:
-                with urllib.request.urlopen(urllib.request.Request(url, headers={"Cache-Control": "no-cache"}), timeout=60) as r:
+                with urllib.request.urlopen(urllib.request.Request(url, headers={"Cache-Control": "no-cache", "User-Agent": "Mozilla/5.0 (compatible; thesanjosesource-publish)"}), timeout=60) as r:
                     live = r.read()
             except Exception as e:
                 bad.append(f"{p}: {e}"); continue
