@@ -1,3 +1,9 @@
+> **Purpose:** Nonpartisan weekly brief on San José City Council spending — budgets, fees, promised-vs-actual tracking.
+> **Status:** Active — public, publishing (30 commits).
+> **Stack:** Static HTML/CSS/JS, GitHub Actions, GitHub Pages.
+
+---
+
 # The San Jose Source
 
 A free, nonpartisan weekly brief on San José City Council money decisions: budgets, fees, costs and what the City said a project would cost and when it would finish. Every factual claim links to the City's official record, mainly agendas and staff reports on [Legistar](https://sanjose.legistar.com) and City budget documents.
