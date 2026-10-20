@@ -1,0 +1,34 @@
+# Checks every link on the site (including Legistar and City citations).
+# Report only: it never edits pages or publishes anything. A broken link
+# fails the run, and GitHub emails the repo owner. Fixes go through the
+# normal edit -> approve -> publish process.
+name: Check links
+
+on:
+  schedule:
+    - cron: "17 15 * * 1"   # Mondays ~8:17 AM PT
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429: sanjoseca.gov and some City hosts block automated
+          # checkers, so those are treated as reachable, not broken.
+          # Real failures (404, 410, DNS errors, timeouts) still fail the run.
+          args: >-
+            --no-progress
+            --accept 200..=299,403,429
+            --max-retries 3
+            --timeout 30
+            --root-dir ${{ github.workspace }}
+            './**/*.html'
+          fail: true
