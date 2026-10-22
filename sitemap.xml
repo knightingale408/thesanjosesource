@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thesanjosesource.com/</loc>
-  </url>
-  <url>
-    <loc>https://thesanjosesource.com/brief/1/</loc>
-  </url>
-  <url>
-    <loc>https://thesanjosesource.com/brief/2/</loc>
   </url>
   <url>
     <loc>https://thesanjosesource.com/tracker/</loc>
   </url>
   <url>
     <loc>https://thesanjosesource.com/about/</loc>
+  </url>
+  <url>
+    <loc>https://thesanjosesource.com/brief/1/</loc>
+  </url>
+  <url>
+    <loc>https://thesanjosesource.com/brief/2/</loc>
   </url>
 </urlset>

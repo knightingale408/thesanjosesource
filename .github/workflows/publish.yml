@@ -25,6 +25,11 @@ jobs:
       url: https://thesanjosesource.com/
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build brief pages from content/
+        run: python3 build.py
       - name: Publish ALL files to here.now and verify live = repo
         env:
           HERENOW_API_KEY: ${{ secrets.HERENOW_API_KEY }}

@@ -20,6 +20,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="The San Jose Source RSS Feed"
+      href="https://thesanjosesource.com/feed.xml"
+    />
     <meta property="og:site_name" content="The San Jose Source" />
     <meta property="og:title" content="The San Jose Source" />
     <meta property="og:description" content="San José decisions, public money, and what happens next. Free, plain-English reporting by J Gonzales, with every claim linked to the official record." />
@@ -91,7 +97,9 @@
           money decisions, with every claim linked to the official record.
         </p>
         <div class="hero__cta reveal" data-reveal>
+          <!-- build:hero-latest-start -->
           <a class="btn btn--gold" href="/brief/2/">Latest brief</a>
+          <!-- build:hero-latest-end -->
           <a class="btn btn--ghost" href="#subscribe">Subscribe free</a>
         </div>
       </div>
@@ -190,18 +198,23 @@
           <h2 id="brief-title" class="section__title reveal" data-reveal>
             Recent briefs
           </h2>
+          <!-- build:coverage-start -->
+          <div class="section__lede reveal" data-reveal>
+            <p>
+              <a href="/brief/2/"><strong>San José’s fire stations and police training center: target dates, budgets and opening plans</strong></a>
+            </p>
+            <p class="coverage__label">Promised vs. Actual · Oct 15, 2026 · Brief No. 2</p>
+            <p>What the City first planned for three Measure T fire stations and the police training center, and where each stands today.</p>
+          </div>
+          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier briefs</h3>
           <ul class="section__lede reveal" data-reveal>
-            <li>
-              <a href="/brief/2/"><strong>San José’s fire stations and police training center: target dates, budgets and opening plans</strong></a><br />
-              <span class="coverage__label">Promised vs. Actual · Oct 15, 2026 · Brief No. 2</span><br />
-              What the City first planned for three Measure T fire stations and the police training center, and where each stands today.
-            </li>
             <li>
               <a href="/brief/1/"><strong>Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget</strong></a><br />
               <span class="coverage__label">Weekly brief · Oct 12, 2026 (corrected Oct 14) · Brief No. 1</span><br />
               What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.
             </li>
           </ul>
+          <!-- build:coverage-end -->
           <p class="section__lede reveal" data-reveal>
             <strong>Coming up, Oct 20:</strong> the City Council takes up the City
             Manager&rsquo;s 2025-26 Annual Report, which closes out last year&rsquo;s budget and

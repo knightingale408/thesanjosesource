@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The San Jose Source</title>
+    <link>https://thesanjosesource.com/</link>
+    <description>San José decisions, public money, and what happens next.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Oct 2026 07:44:23 +0000</lastBuildDate>
+    <item>
+      <title>San José’s fire stations and police training center: target dates, budgets and opening plans</title>
+      <link>https://thesanjosesource.com/brief/2/</link>
+      <guid isPermaLink="true">https://thesanjosesource.com/brief/2/</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What the City first planned for three Measure T fire stations and the police training center, and where each stands today.</description>
+    </item>
+    <item>
+      <title>Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget</title>
+      <link>https://thesanjosesource.com/brief/1/</link>
+      <guid isPermaLink="true">https://thesanjosesource.com/brief/1/</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.</description>
+    </item>
+  </channel>
+</rss>
