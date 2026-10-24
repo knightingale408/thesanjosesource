@@ -1,0 +1,211 @@
+{
+  "_about": "Detailed Promised vs. Actual records carried over from the old san-jose-source repo (sj-source/tracker/promised-vs-actual.json, last updated there Oct 2026). NOT PUBLISHED: research/ is excluded from the site. Every field below is UNVERIFIED until Jay checks it against the linked source; set review.status to 'verified' (with date) before any of it moves to promised-vs-actual.csv or a brief.",
+  "title": "Promised vs Actual",
+  "publication": "The San Jose Source",
+  "issue": 2,
+  "as_of": "2026-10-12",
+  "disclaimer": "Summaries of public records from City of San José / Valley Water agenda materials. Not affiliated with the City. Every claim links to the source record.",
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "measure-t-fs8",
+      "name": "Relocated Fire Station 8",
+      "category": "public_safety",
+      "program": "Measure T (November 2018 GO bond)",
+      "location": "601 E. Santa Clara Street",
+      "promised": {
+        "date": "2026-05",
+        "date_label": "May 2026 beneficial use",
+        "budget_usd": null,
+        "budget_label": "Part of Measure T public-safety allocation ($227.1M of $650M bond)",
+        "notes": "Prior projected beneficial-use date cited in the September 2026 Measure T status report."
+      },
+      "actual": {
+        "date": "2026-07-21",
+        "date_label": "Temporary Certificate of Occupancy July 21, 2026; crew began operations July 22, 2026",
+        "budget_usd": null,
+        "budget_label": null,
+        "notes": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections."
+      },
+      "status": "completed_late",
+      "delta": {
+        "schedule": "~2 months after May 2026 projection",
+        "budget": null
+      },
+      "sources": [
+        {
+          "label": "26-1045 Measure T status report (Council 2026-09-29)",
+          "legislation_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=16337&GUID=657287EB-79BE-4F19-AC6B-E7612C793DB0",
+          "attachment_url": "https://legistar.granicus.com/sanjose/attachments/bfad3003-d13b-4a58-94a4-bd9d7b92efc0.pdf",
+          "retrieved": "2026-10-12"
+        }
+      ],
+      "review": {
+        "status": "unverified",
+        "checked_by": null,
+        "checked_on": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "measure-t-fs32",
+      "name": "New Fire Station 32",
+      "category": "public_safety",
+      "program": "Measure T (November 2018 GO bond)",
+      "location": "1138 Olinder Court",
+      "promised": {
+        "date": "2026-04",
+        "date_label": "Spring 2026 beneficial use",
+        "budget_usd": null,
+        "budget_label": "Activation funded in prior plan; 2026-27 Adopted Budget deferred activation two years (through 2028-29) as a balancing strategy",
+        "notes": "Prior projected timeframe cited in the September 2026 Measure T status report."
+      },
+      "actual": {
+        "date": "2026-09",
+        "date_label": "Beneficial use now expected September 2026; activation deferred to 2028-29 pending 2027-28 budget reevaluation",
+        "budget_usd": null,
+        "budget_label": "Operating activation delayed for budget balancing; may be prioritized earlier than 2028-29 if conditions improve",
+        "notes": "Construction delay tied to generator procurement / vendor supply chain. Station may reach beneficial use before funded activation."
+      },
+      "status": "slipped",
+      "delta": {
+        "schedule": "Beneficial use: spring → September 2026; activation: deferred ~2 years",
+        "budget": "Activation deferred in 2026-27 Adopted Budget"
+      },
+      "sources": [
+        {
+          "label": "26-1045 Measure T status report (Council 2026-09-29)",
+          "legislation_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=16337&GUID=657287EB-79BE-4F19-AC6B-E7612C793DB0",
+          "attachment_url": "https://legistar.granicus.com/sanjose/attachments/bfad3003-d13b-4a58-94a4-bd9d7b92efc0.pdf",
+          "retrieved": "2026-10-12"
+        }
+      ],
+      "review": {
+        "status": "unverified",
+        "checked_by": null,
+        "checked_on": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "measure-t-police-training",
+      "name": "Police Training and Academy Facility",
+      "category": "public_safety",
+      "program": "Measure T (November 2018 GO bond)",
+      "location": "300 Enzo Drive",
+      "promised": {
+        "date": "2025-12",
+        "date_label": "Originally scheduled for completion late 2025",
+        "budget_usd": null,
+        "budget_label": "2026-27 Adopted Budget deferred activation two years (until 2028-29)",
+        "notes": "Original completion target cited in the September 2026 Measure T status report."
+      },
+      "actual": {
+        "date": "2026-12",
+        "date_label": "Beneficial use now anticipated December 2026; activation deferred to 2028-29 pending 2027-28 budget reevaluation",
+        "budget_usd": null,
+        "budget_label": "Operating activation delayed for budget balancing; may be prioritized earlier than 2028-29 if conditions improve",
+        "notes": "Unforeseen conditions during construction impacted the schedule."
+      },
+      "status": "slipped",
+      "delta": {
+        "schedule": "Completion: late 2025 → December 2026 beneficial use; activation deferred ~2 years",
+        "budget": "Activation deferred in 2026-27 Adopted Budget"
+      },
+      "sources": [
+        {
+          "label": "26-1045 Measure T status report (Council 2026-09-29)",
+          "legislation_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=16337&GUID=657287EB-79BE-4F19-AC6B-E7612C793DB0",
+          "attachment_url": "https://legistar.granicus.com/sanjose/attachments/bfad3003-d13b-4a58-94a4-bd9d7b92efc0.pdf",
+          "retrieved": "2026-10-12"
+        }
+      ],
+      "review": {
+        "status": "unverified",
+        "checked_by": null,
+        "checked_on": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "coyote-creek-phase-2",
+      "name": "Coyote Creek Flood Protection Project (Phase 2)",
+      "category": "public_safety",
+      "program": "Valley Water / City of San José joint update",
+      "location": "Coyote Creek corridor",
+      "promised": {
+        "date": "2028-12",
+        "date_label": "Construction completion — end of 2028 (current schedule)",
+        "budget_usd": null,
+        "budget_label": null,
+        "notes": "Phase 2 board contract noted July 24, 2026; construction window October 2026–December 2028 per joint-meeting presentation."
+      },
+      "actual": {
+        "date": null,
+        "date_label": "Not yet complete — still on the end-of-2028 schedule as of October 13, 2026 briefing",
+        "budget_usd": null,
+        "budget_label": null,
+        "notes": "Anderson Dam tunnel work described as near completion in the same update. Track against end-2028 promise."
+      },
+      "status": "on_track",
+      "delta": {
+        "schedule": "No slip reported vs end-2028 completion in the Oct 13 briefing",
+        "budget": null
+      },
+      "sources": [
+        {
+          "label": "26-1099 Anderson Dam / Coyote Creek update (Joint Council–Valley Water 2026-10-13)",
+          "legislation_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=16384&GUID=5E9BDE8E-1AED-4B9E-8605-7C84BC73AE24",
+          "attachment_url": "https://legistar.granicus.com/sanjose/attachments/d02c90de-cba5-47fd-9ce2-2038a1c81c93.pdf",
+          "retrieved": "2026-10-12"
+        }
+      ],
+      "review": {
+        "status": "unverified",
+        "checked_by": null,
+        "checked_on": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "pure-water-silicon-valley",
+      "name": "Pure Water Silicon Valley (full-scale facility)",
+      "category": "budget",
+      "program": "Valley Water / Cities of San José & Santa Clara",
+      "location": "Adjacent to existing SVAWPC",
+      "promised": {
+        "date": "2035",
+        "date_label": "Full-scale facility capable of up to 24,000 acre-feet/year by 2035",
+        "budget_usd": 3295950,
+        "budget_label": "Grants cited: $1,092,000 EPA Community Project Funding (demo planning) + $2,203,950 EPA Region 9 (RO concentrate nature-based study)",
+        "notes": "Two-project path: Demonstration (pilot 2025–2028; learning center 2025–2030) then full-scale facility (2028–2035)."
+      },
+      "actual": {
+        "date": null,
+        "date_label": "Not yet built — October 13, 2026 update restates 2035 full-scale target; grant dollars secured/in agreement process",
+        "budget_usd": 3295950,
+        "budget_label": "$1,092,000 Community Project Funding secured (USEPA agreement in process); $2,203,950 Region 9 grant funding cited",
+        "notes": "Letter of Intent / option / exclusive negotiation agreements with cities described as executed for demo and full-scale land set-aside."
+      },
+      "status": "on_track",
+      "delta": {
+        "schedule": "No slip vs 2035 full-scale target in the Oct 13 briefing",
+        "budget": "Planning/feasibility grants secured; construction funding not yet a promised-vs-actual comparison"
+      },
+      "sources": [
+        {
+          "label": "26-1100 Pure Water Silicon Valley update (Joint Council–Valley Water 2026-10-13)",
+          "legislation_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=16385&GUID=5E528CA8-2638-4B09-8427-7EB2B6482BE8",
+          "attachment_url": "https://legistar.granicus.com/sanjose/attachments/c8babafb-47ab-4af4-878e-0771a105b5be.pdf",
+          "retrieved": "2026-10-12"
+        }
+      ],
+      "review": {
+        "status": "unverified",
+        "checked_by": null,
+        "checked_on": null,
+        "notes": null
+      }
+    }
+  ]
+}
