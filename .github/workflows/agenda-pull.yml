@@ -1,0 +1,44 @@
+# Friday agenda pull. Read-only: it never commits, edits pages or publishes.
+# It runs tools/legistar_pull.py for the next three weeks of City Council
+# meetings and attaches the result to the run as a downloadable file
+# (Actions tab > "Agenda pull" > latest run > Artifacts).
+name: Agenda pull
+
+on:
+  schedule:
+    - cron: "17 16 * * 5"   # Fridays ~9:17 AM PT (8:17 AM in winter)
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Start date YYYY-MM-DD (blank = 7 days ago)"
+        required: false
+      until:
+        description: "End date YYYY-MM-DD (blank = 21 days from today)"
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull high-impact Council items from Legistar
+        env:
+          SINCE: ${{ github.event.inputs.since }}
+          UNTIL: ${{ github.event.inputs.until }}
+        run: |
+          args="--json --out pull-output"
+          if [ -n "$SINCE" ]; then args="$args --since $SINCE"; else args="$args --days 7"; fi
+          if [ -n "$UNTIL" ]; then args="$args --until $UNTIL"; fi
+          python3 tools/legistar_pull.py $args
+          cat pull-output/*.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agenda-pull
+          path: pull-output/
+          retention-days: 30
