@@ -6,7 +6,7 @@
     <title>The San Jose Source</title>
     <meta
       name="description"
-      content="A free weekly brief on San José City Council money decisions, with every claim linked to the record. www.TheSanJoseSource.com"
+      content="San José decisions, public money, and what happens next. Free, plain-English reporting by J Gonzales, with every claim linked to the official record. www.TheSanJoseSource.com"
     />
     <link rel="canonical" href="https://thesanjosesource.com/" />
     <link rel="icon" href="./favicon.ico" sizes="any" />
@@ -20,9 +20,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="The San Jose Source RSS Feed"
+      href="https://thesanjosesource.com/feed.xml"
+    />
     <meta property="og:site_name" content="The San Jose Source" />
     <meta property="og:title" content="The San Jose Source" />
-    <meta property="og:description" content="A free weekly brief on San José City Council money decisions with every claim linked to the official record." />
+    <meta property="og:description" content="San José decisions, public money, and what happens next. Free, plain-English reporting by J Gonzales, with every claim linked to the official record." />
     <meta property="og:url" content="https://thesanjosesource.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://thesanjosesource.com/assets/og.jpg" />
@@ -32,9 +38,28 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@SanJoseSource" />
     <meta name="twitter:title" content="The San Jose Source" />
-    <meta name="twitter:description" content="A free weekly brief on San José City Council money decisions with every claim linked to the official record." />
+    <meta name="twitter:description" content="San José decisions, public money, and what happens next. Free, plain-English reporting by J Gonzales, with every claim linked to the official record." />
     <meta name="twitter:image" content="https://thesanjosesource.com/assets/og.jpg" />
     <meta name="twitter:image:alt" content="The San Jose Source: City money, before the vote." />
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "The San Jose Source",
+      "url": "https://thesanjosesource.com/",
+      "logo": "https://thesanjosesource.com/assets/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "J Gonzales"
+      },
+      "publishingPrinciples": "https://thesanjosesource.com/about/",
+      "correctionsPolicy": "https://thesanjosesource.com/about/",
+      "sameAs": [
+        "https://thesanjosesource.substack.com/",
+        "https://x.com/SanJoseSource"
+      ]
+    }
+    </script>
 </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -57,7 +82,7 @@
         <div class="nav__links">
           <a class="nav__link" href="#coverage">Briefs</a>
           <a class="nav__link" href="./tracker/">Promised vs. Actual</a>
-          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="about/">About</a>
           <a class="nav__link" href="#subscribe">Subscribe</a>
         </div>
       </nav>
@@ -65,14 +90,16 @@
       <div class="hero__copy">
         <p class="hero__brand reveal" data-reveal>The San Jose Source</p>
         <h1 class="hero__headline reveal" data-reveal>
-          City money, before the vote.
+          San José decisions, public money, and what happens next.
         </h1>
         <p class="hero__lede reveal" data-reveal>
-          A free weekly brief on San José City Council money decisions, with
-          every claim linked to the record.
+          Free, plain-English reporting by J Gonzales on San José City Council
+          money decisions, with every claim linked to the official record.
         </p>
         <div class="hero__cta reveal" data-reveal>
+          <!-- build:hero-latest-start -->
           <a class="btn btn--gold" href="/brief/2/">Latest brief</a>
+          <!-- build:hero-latest-end -->
           <a class="btn btn--ghost" href="#subscribe">Subscribe free</a>
         </div>
       </div>
@@ -90,6 +117,9 @@
             version: what is on the agenda, what it costs, and where it sits in
             the budget.
           </p>
+          <p class="section__lede reveal" data-reveal>
+            <a href="about/">Who writes it, how we use AI, and how it’s funded →</a>
+          </p>
         </div>
       </section>
 
@@ -99,22 +129,29 @@
             What’s in each brief
           </h2>
           <p class="section__lede reveal" data-reveal>
-            Three parts. Facts first. Opinion labeled.
+            Fewer matters, covered more completely. Facts first. Opinion labeled.
           </p>
           <ol class="issue-list">
             <li class="issue-list__item reveal" data-reveal>
-              <span class="issue-list__label">Preview</span>
+              <span class="issue-list__label">What’s decided</span>
               <p>
-                What’s up next that moves money — costs, fee changes, and staff
-                recommendations.
+                What the City proposed or decided on public money, housing, fees
+                and public safety, from the official record.
               </p>
             </li>
             <li class="issue-list__item reveal" data-reveal>
-              <span class="issue-list__label">Recap</span>
-              <p>What passed, from the official record.</p>
+              <span class="issue-list__label">The money</span>
+              <p>What the financial terms actually establish, and who is affected.</p>
             </li>
             <li class="issue-list__item reveal" data-reveal>
-              <span class="issue-list__label">My take</span>
+              <span class="issue-list__label">What’s next</span>
+              <p>
+                The next vote or deadline, and how to comment while there’s still
+                time.
+              </p>
+            </li>
+            <li class="issue-list__item reveal" data-reveal>
+              <span class="issue-list__label">J Gonzales’s take</span>
               <p>
                 A short, clearly marked opinion section. Kept separate from the
                 facts.
@@ -161,25 +198,30 @@
           <h2 id="brief-title" class="section__title reveal" data-reveal>
             Recent briefs
           </h2>
+          <!-- build:coverage-start -->
+          <div class="section__lede reveal" data-reveal>
+            <p>
+              <a href="/brief/2/"><strong>San José’s fire stations and police training center: target dates, budgets and opening plans</strong></a>
+            </p>
+            <p class="coverage__label">Promised vs. Actual · Oct 15, 2026 · Brief No. 2</p>
+            <p>What the City first planned for three Measure T fire stations and the police training center, and where each stands today.</p>
+          </div>
+          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier briefs</h3>
           <ul class="section__lede reveal" data-reveal>
-            <li>
-              <a href="/brief/2/"><strong>San José’s fire stations and police training center: target dates, budgets and opening plans</strong></a><br />
-              <span class="coverage__label">Promised vs. Actual · Oct 15, 2026 · Brief No. 2</span><br />
-              What the City first planned for three Measure T fire stations and the police training center, and where each stands today.
-            </li>
             <li>
               <a href="/brief/1/"><strong>Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget</strong></a><br />
               <span class="coverage__label">Weekly brief · Oct 12, 2026 (corrected Oct 14) · Brief No. 1</span><br />
               What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.
             </li>
           </ul>
+          <!-- build:coverage-end -->
           <p class="section__lede reveal" data-reveal>
             <strong>Coming up, Oct 20:</strong> the City Council takes up the City
             Manager&rsquo;s 2025-26 Annual Report, which closes out last year&rsquo;s budget and
             recommends budget adjustments, including $1.0 million for added site work
             at Fire Station 36 and a partial activation of Fire Station 32
             (<a
-              href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=16368&GUID=99C7E1FE-B9BB-4CC9-B8BA-705DB9F40613"
+              href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC"
               target="_blank"
               rel="noopener noreferrer"
               >file 26-1076</a
@@ -187,7 +229,7 @@
             Independent Police Auditor&rsquo;s 2025 year-end report and the Police
             Department&rsquo;s response to its 12 recommendations
             (<a
-              href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=16370&GUID=32CE8DC6-DA1B-4F68-ACE6-B0E54E7A5289"
+              href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279245&GUID=B1A83200-9FE4-4F67-AFAC-11D81E76E0A0"
               target="_blank"
               rel="noopener noreferrer"
               >file 26-1078</a
