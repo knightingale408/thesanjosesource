@@ -2,6 +2,9 @@
 # Every push to main waits for Jay's approval (environment "production",
 # required reviewer: knightingale408). After approval it publishes ALL site
 # files to here.now and checks the live site matches the repo byte for byte.
+# This file stops before building or uploading unless github.sha is the
+# current origin/main HEAD. A re-run of an older commit still uses the
+# workflow file stored in that commit.
 name: Publish site
 
 on:
@@ -18,13 +21,43 @@ permissions:
   contents: read
 
 jobs:
+  on-current-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Stop unless github.sha is current origin/main
+        run: |
+          set -eu
+          git fetch --no-tags origin main
+          main_sha="$(git rev-parse origin/main)"
+          this_sha="${{ github.sha }}"
+          echo "github.sha=${this_sha}"
+          echo "origin/main=${main_sha}"
+          if [ "${this_sha}" != "${main_sha}" ]; then
+            echo "::error::Refusing to publish. github.sha (${this_sha}) is not the current origin/main HEAD (${main_sha})."
+            exit 1
+          fi
+
   publish:
+    needs: on-current-main
     runs-on: ubuntu-latest
     environment:
       name: production
       url: https://thesanjosesource.com/
     steps:
       - uses: actions/checkout@v5
+      - name: Stop unless github.sha is still current origin/main
+        run: |
+          set -eu
+          git fetch --no-tags origin main
+          main_sha="$(git rev-parse origin/main)"
+          this_sha="${{ github.sha }}"
+          echo "github.sha=${this_sha}"
+          echo "origin/main=${main_sha}"
+          if [ "${this_sha}" != "${main_sha}" ]; then
+            echo "::error::Refusing to publish. github.sha (${this_sha}) is not the current origin/main HEAD (${main_sha})."
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
