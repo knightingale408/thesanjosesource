@@ -49,6 +49,10 @@ Lychee v0.24.2, same acceptance rule as `.github/workflows/link-check.yml`
 - 268 total, 77 unique, 257 OK, 10 excluded, 1 redirect, 1 error.
 - The only error: `[404] https://thesanjosesource.com/corrections/` in
   `corrections/index.html` (canonical link, line 11).
+- The pull request's Check links run
+  (https://github.com/knightingale408/thesanjosesource/actions/runs/40175747443,
+  2026-10-25 08:13 UTC) reported the same counts: 268 total, 257 successful,
+  1 error, that same URL. The check is red for that known 404 only.
 
 ### Why /corrections/ 404s
 
