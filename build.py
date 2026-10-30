@@ -622,6 +622,7 @@ def write_sitemap(brief_urls: list[str]) -> None:
         f"{SITE_BASE}/",
         f"{SITE_BASE}/tracker/",
         f"{SITE_BASE}/about/",
+        f"{SITE_BASE}/corrections/",
     ]
     all_urls = static + brief_urls
     urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
