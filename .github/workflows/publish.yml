@@ -2,9 +2,10 @@
 # Every push to main waits for Jay's approval (environment "production",
 # required reviewer: knightingale408). After approval it publishes ALL site
 # files to here.now and checks the live site matches the repo byte for byte.
-# This file stops before building or uploading unless github.sha is the
-# current origin/main HEAD. A re-run of an older commit still uses the
-# workflow file stored in that commit.
+# After that publish succeeds, it runs the same Lychee check as link-check.yml
+# against the live pages. This file stops before building or uploading unless
+# github.sha is the current origin/main HEAD. A re-run of an older commit
+# still uses the workflow file stored in that commit.
 name: Publish site
 
 on:
@@ -58,7 +59,7 @@ jobs:
             echo "::error::Refusing to publish. github.sha (${this_sha}) is not the current origin/main HEAD (${main_sha})."
             exit 1
           fi
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Build brief pages from content/
@@ -67,3 +68,33 @@ jobs:
         env:
           HERENOW_API_KEY: ${{ secrets.HERENOW_API_KEY }}
         run: python3 .github/scripts/publish.py
+      - name: List published pages for the link check
+        if: success()
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          root = ET.parse("sitemap.xml").getroot()
+          ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+          locs = [el.text.strip() for el in root.iter(f"{ns}loc") if el.text and el.text.strip()]
+          if not locs:
+              raise SystemExit("sitemap.xml has no URLs to check")
+          Path("live-pages.txt").write_text("\n".join(locs) + "\n", encoding="utf-8")
+          print("Live pages:")
+          print("\n".join(locs))
+          PY
+      - name: Check links on the live site
+        if: success()
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Same checker, accept list, retries, and timeout as link-check.yml.
+          # Inputs are the live page URLs from the sitemap just published,
+          # so Lychee fetches those pages and checks the links on them.
+          args: >-
+            --no-progress
+            --accept 200..=299,403,429
+            --max-retries 3
+            --timeout 30
+            --files-from ${{ github.workspace }}/live-pages.txt
+          fail: true

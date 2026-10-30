@@ -18,6 +18,7 @@ Optional: dek, eyebrow, series, homepage_blurb, coverage_label, date_modified,
 from __future__ import annotations
 
 import html
+import importlib.util
 import json
 import re
 import sys
@@ -617,14 +618,60 @@ def discover_brief_urls_on_disk() -> list[str]:
     return urls
 
 
+def load_publish_excludes() -> tuple[set[str], tuple[str, ...]]:
+    """EXCLUDE_EXACT and EXCLUDE_PREFIX from the publish script.
+
+    Hand-written pages under those paths are not part of the site, so they
+    stay out of the sitemap.
+    """
+    script = ROOT / ".github" / "scripts" / "publish.py"
+    spec = importlib.util.spec_from_file_location("site_publish", script)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot load publish excludes from {script}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return set(module.EXCLUDE_EXACT), tuple(module.EXCLUDE_PREFIX)
+
+
+def discover_handwritten_page_urls() -> list[str]:
+    """Every index.html page, except publish exclusions and brief/ pages.
+
+    Brief URLs are supplied separately. Order is / first, then the other
+    pages sorted by URL.
+    """
+    exclude_exact, exclude_prefix = load_publish_excludes()
+    found: list[str] = []
+    for path in ROOT.rglob("index.html"):
+        rel_path = path.relative_to(ROOT)
+        if any(part.startswith(".") for part in rel_path.parts):
+            continue
+        rel = rel_path.as_posix()
+        if rel in exclude_exact or rel.startswith(exclude_prefix):
+            continue
+        if rel.startswith("brief/"):
+            continue
+        if rel == "index.html":
+            found.append(f"{SITE_BASE}/")
+        else:
+            directory = rel[: -len("index.html")]
+            found.append(f"{SITE_BASE}/{directory}")
+    home = f"{SITE_BASE}/"
+    others = sorted(url for url in found if url != home)
+    ordered: list[str] = []
+    if home in found:
+        ordered.append(home)
+    ordered.extend(others)
+    return ordered
+
+
 def write_sitemap(brief_urls: list[str]) -> None:
-    static = [
-        f"{SITE_BASE}/",
-        f"{SITE_BASE}/tracker/",
-        f"{SITE_BASE}/about/",
-        f"{SITE_BASE}/corrections/",
-    ]
-    all_urls = static + brief_urls
+    all_urls: list[str] = []
+    seen: set[str] = set()
+    for loc in discover_handwritten_page_urls() + list(brief_urls):
+        if loc in seen:
+            continue
+        seen.add(loc)
+        all_urls.append(loc)
     urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     for loc in all_urls:
         url_el = ET.SubElement(urlset, "url")
