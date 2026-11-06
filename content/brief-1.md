@@ -4,8 +4,8 @@ description: What the San José City Council decided on housing, fees and budget
 date: 2026-10-12
 series: Weekly brief
 homepage_blurb: What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.
-coverage_label: Weekly brief · Oct 12, 2026 (corrected Oct 14) · Brief No. 1
-eyebrow: Weekly brief · No. 1 · Published October 12, 2026 · Corrected October 14 · Updated October 17
+coverage_label: Issue #1 · Council, Sept. 15–Oct. 6 · Oct 12, 2026 (corrected Oct 14)
+eyebrow: Issue #1 · Council, Sept. 15–Oct. 6 · Published October 12, 2026 · Corrected October 14 · Updated October 17
 body_format: html
 og_title: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget
 og_description: What the San José City Council decided on housing, fees and budget reports from Sept. 15 to Oct. 6, why police recruiting overtime ran $631,986 over budget, and what the Council hears Oct. 20. Corrected Oct. 14, 2026.
@@ -135,6 +135,10 @@ dek: Also: what the Council decided on housing and homelessness from Sept. 15 to
         <section class="brief-block reveal" data-reveal aria-labelledby="corrections-title">
           <h2 id="corrections-title" class="brief-block__title">Corrections and updates</h2>
           <p>We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.</p>
+          <h3 class="brief-block__sub">November 5, 2026 — issue label</h3>
+          <ul>
+            <li><strong>Changed</strong> the label above the headline to our new numbering style. Original: “Weekly brief · No. 1 · Published October 12, 2026 · Corrected October 14 · Updated October 17”. No facts, figures, sources or wording in the brief changed.</li>
+          </ul>
           <h3 class="brief-block__sub">October 17, 2026 — reorganized and plain-language update</h3>
           <ul>
             <li><strong>Reorganized</strong> the page into: What matters this week · The money · What the Council decided · What happens next · J Gonzales’s take · Sources · Corrections and updates. The sections “This week’s brief”, “Why it matters”, “How to read the items”, “Consent vs. debate”, “Money figures”, “Vote table” and “Coming up, follow-through, comment” were merged into those sections. Their facts, figures, votes and sources are kept; repeated explanations and our internal reading-order groupings (high-, medium- and routine-impact) were removed. The previous version is preserved in this site’s public change history on <a href="https://github.com/knightingale408/thesanjosesource/commits/main" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
