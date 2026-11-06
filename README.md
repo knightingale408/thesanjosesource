@@ -21,8 +21,8 @@ This repo is the master copy of the website. It is plain static HTML/CSS/JS with
 | Path | What it is |
 |---|---|
 | `index.html` | Homepage: latest coverage, Promised vs. Actual teaser, subscribe and support links |
-| `brief/1/` | Brief #1: Council housing and fee decisions Sept. 15–Oct. 6 and police recruiting overtime (with corrections log) |
-| `brief/2/` | Brief #2: Measure T fire stations and police training center, planned vs. actual |
+| `brief/1/` | Issue #1: Council housing and fee decisions Sept. 15–Oct. 6 and police recruiting overtime (with corrections log) |
+| `brief/2/` | Issue #2: Measure T fire stations and police training center, planned vs. actual |
 | `tracker/` | Promised vs. Actual tracker: the City's first target dates and what happened |
 | `styles.css`, `app.js` | Shared styles and small scroll/nav script |
 | `assets/` | Logo, icons, hero and link-preview images |

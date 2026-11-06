@@ -81,7 +81,7 @@ class Brief:
     def default_eyebrow(self) -> str:
         if self.eyebrow:
             return self.eyebrow
-        return f"{self.series} · Brief No. {self.number} · Published {self.formatted_date_long()}"
+        return f"Issue #{self.number} · {self.series} · Published {self.formatted_date_long()}"
 
     def default_homepage_blurb(self) -> str:
         if self.homepage_blurb:
@@ -91,7 +91,7 @@ class Brief:
     def default_coverage_label(self) -> str:
         if self.coverage_label:
             return self.coverage_label
-        return f"{self.series} · {self.formatted_date_short()} · Brief No. {self.number}"
+        return f"Issue #{self.number} · {self.series} · {self.formatted_date_short()}"
 
 
 def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
@@ -477,7 +477,7 @@ def render_brief_page(brief: Brief) -> str:
       <nav class="nav nav--light" aria-label="Primary">
         <a class="nav__brand" href="../../">The San Jose Source</a>
         <div class="nav__links">
-          <a class="nav__link" href="../../#coverage">Briefs</a>
+          <a class="nav__link" href="../../#coverage">Issues</a>
           <a class="nav__link" href="../../tracker/">Promised vs. Actual</a>
           <a class="nav__link" href="../../about/">About</a>
           <a class="nav__link" href="../../#subscribe">Subscribe</a>
@@ -566,7 +566,7 @@ def render_coverage_block(sorted_briefs: list[Brief]) -> str:
             </li>"""
             )
         archive_html = (
-            '\n          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier briefs</h3>\n'
+            '\n          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier issues</h3>\n'
             '          <ul class="section__lede reveal" data-reveal>\n'
             + "\n".join(items)
             + "\n          </ul>"
@@ -581,7 +581,7 @@ def render_coverage_block(sorted_briefs: list[Brief]) -> str:
 
 def render_hero_latest(latest: Brief) -> str:
     url = f"/brief/{latest.number}/"
-    return f'\n          <a class="btn btn--gold" href="{url}">Latest brief</a>\n          '
+    return f'\n          <a class="btn btn--gold" href="{url}">Latest issue</a>\n          '
 
 
 def update_index(briefs: list[Brief]) -> None:
