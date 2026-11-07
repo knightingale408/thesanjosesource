@@ -81,7 +81,7 @@ class Brief:
     def default_eyebrow(self) -> str:
         if self.eyebrow:
             return self.eyebrow
-        return f"{self.series} · Brief No. {self.number} · Published {self.formatted_date_long()}"
+        return f"Brief #{self.number} · {self.series} · Published {self.formatted_date_long()}"
 
     def default_homepage_blurb(self) -> str:
         if self.homepage_blurb:
@@ -91,7 +91,7 @@ class Brief:
     def default_coverage_label(self) -> str:
         if self.coverage_label:
             return self.coverage_label
-        return f"{self.series} · {self.formatted_date_short()} · Brief No. {self.number}"
+        return f"Brief #{self.number} · {self.series} · {self.formatted_date_short()}"
 
 
 def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
