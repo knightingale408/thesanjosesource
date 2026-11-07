@@ -14,6 +14,15 @@ Add one markdown file per brief:
 
 Each file has **YAML front matter** at the top (between `---` lines), then the **body** (markdown or HTML).
 
+### Naming and numbering (adopted Nov. 7, 2026)
+
+- **The public word is "Brief."** Every page leads with its headline. The small label above it reads `Brief #N · what it covers · Published date` (set `eyebrow` and `coverage_label`; the build fills in a default if you leave them out).
+- **Numbers follow publish order.** A number is assigned only when a brief goes live. Drafts never hold a number, and published briefs are never renumbered. The next brief to publish is **#3**.
+- **File number = brief number = address.** `content/brief-3.md` is Brief #3 at `/brief/3/`.
+- **Off-schedule posts are "Updates," not briefs.** A mid-week follow-up or single-topic extra gets the label `Update · date` and no number.
+- **Substack matches the site.** Substack title: `Brief #N — headline` (the format already in use). X posts lead with the headline and link to the website page.
+- **Label changes are logged** on the Corrections page with the original wording.
+
 ### Required front matter
 
 - **title** — Headline on the brief page  
@@ -39,7 +48,7 @@ description: Plain-English summary for Google, Substack previews, and social lin
 date: 2026-10-22
 series: Weekly brief
 homepage_blurb: One sentence for the homepage listing.
-coverage_label: Weekly brief · Oct 22, 2026 · Brief No. 3
+coverage_label: Brief #3 · Council, [meeting date] · [publish date]
 dek: Optional subtitle under the headline.
 ---
 
