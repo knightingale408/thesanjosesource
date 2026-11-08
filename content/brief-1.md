@@ -10,7 +10,7 @@ body_format: html
 og_title: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget
 og_description: What the San José City Council decided on housing, fees and budget reports from Sept. 15 to Oct. 6, why police recruiting overtime ran $631,986 over budget, and what the Council hears Oct. 20. Corrected Oct. 14, 2026.
 page_title: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget — The San Jose Source
-date_modified: 2026-10-17
+date_modified: 2026-11-09
 dek: Also: what the Council decided on housing and homelessness from Sept. 15 to Oct. 6, and the police auditor’s year-end report coming Oct. 20.
 ---
 
