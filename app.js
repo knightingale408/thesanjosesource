@@ -168,18 +168,17 @@ function cellStatus(status) {
 }
 
 function statusClass(status) {
+  // The four labels in the style guide (section 5). Colors are neutral cues,
+  // not judgments; older labels fall through to the closest match.
   const s = (status || "").toLowerCase();
-  if (s.includes("completed") || s.includes("late")) {
+  if (s.startsWith("delivered") || s.includes("completed")) {
+    return "tracker-pill--on-track";
+  }
+  if (s.startsWith("later than") || s.includes("slipped")) {
     return "tracker-pill--late";
   }
-  if (s.includes("slipped")) {
-    return "tracker-pill--slipped";
-  }
-  if (s.includes("design")) {
+  if (s.includes("schedule") || s.includes("on track")) {
     return "tracker-pill--design";
-  }
-  if (s.includes("on track")) {
-    return "tracker-pill--on-track";
   }
   return "tracker-pill--neutral";
 }
