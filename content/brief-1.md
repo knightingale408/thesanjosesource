@@ -5,20 +5,20 @@ date: 2026-10-12
 series: Weekly brief
 homepage_blurb: What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.
 coverage_label: Brief #1 · Council, Sept. 15–Oct. 6 · Oct 12, 2026 (corrected Oct 14)
-eyebrow: Brief #1 · Council, Sept. 15–Oct. 6 · Published October 12, 2026 · Corrected October 14 · Updated October 17
+eyebrow: Brief #1 · Council, Sept. 15–Oct. 6 · Published October 12, 2026 · Corrected October 14 · Updated November 9
 body_format: html
 og_title: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget
 og_description: What the San José City Council decided on housing, fees and budget reports from Sept. 15 to Oct. 6, why police recruiting overtime ran $631,986 over budget, and what the Council hears Oct. 20. Corrected Oct. 14, 2026.
 page_title: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget — The San Jose Source
-date_modified: 2026-10-17
+date_modified: 2026-11-09
 dek: Also: what the Council decided on housing and homelessness from Sept. 15 to Oct. 6, and the police auditor’s year-end report coming Oct. 20.
 ---
 
 <aside class="brief-block reveal" data-reveal aria-labelledby="update-notice-title" style="border-top-color: var(--gold); background: rgba(224, 161, 26, 0.08); padding: 1rem 1.1rem;">
-          <h2 id="update-notice-title" class="brief-block__title" style="color: var(--ink); font-size: 1.1rem;">Corrected October 14, 2026 · Updated October 17, 2026</h2>
+          <h2 id="update-notice-title" class="brief-block__title" style="color: var(--ink); font-size: 1.1rem;">Corrected October 14, 2026 · Updated November 9, 2026</h2>
           <p><strong>Correction, October 14, 2026:</strong> this brief originally said no votes or dollar figures were posted for the Council items from September 15 to October 6. That was wrong. We relied only on empty fields in the city’s data feed and did not check the City Clerk’s draft minutes, which were posted after each meeting and before this brief went out. Those minutes record what happened to every item, and two of the actions carry dollar figures. We have corrected the affected lines and added the outcomes below.</p>
           <p>This brief was first published October 12, 2026. On October 13, 2026 we added a section on police recruiting overtime and corrected two summary lines that the new section made inaccurate. Nothing was removed without a record. Every change, with the original wording, is listed under <a href="#corrections-title">Corrections and updates</a> at the end of this page.</p>
-          <p><strong>Status, October 17, 2026:</strong> the October 15 committee meeting on police recruiting has been held. As of October 16 the City had not posted minutes or an action for that item; we will add the outcome when it is posted. On October 17 we reorganized this page and rewrote some wording in plain language. No facts, figures or sources changed; see <a href="#corrections-title">Corrections and updates</a>.</p>
+          <p><strong>Status, October 17, 2026:</strong> the October 15 committee meeting on police recruiting has been held. Its draft minutes, posted later, record that the committee accepted the report, 5-0-0 (outcome added November 9, 2026). On October 17 we reorganized this page and rewrote some wording in plain language. No facts, figures or sources changed; see <a href="#corrections-title">Corrections and updates</a>.</p>
         </aside>
 
         <section class="brief-block reveal" data-reveal aria-labelledby="summary-title">
@@ -100,7 +100,7 @@ dek: Also: what the Council decided on housing and homelessness from Sept. 15 to
           <ul>
             <li><strong>Oct. 20, City Council (item 4.1):</strong> the Interim Independent Police Auditor presents the 2025 year-end report, covering complaints and audits of Internal Affairs investigations in 2025. The Police Department’s memo responds to the report’s 12 policy recommendations and says it agrees or partly agrees with most of them. Staff recommend that the Council accept both the report and the department’s response. Neither memo lists a dollar amount, and the agenda describes the item as one that involves no approval of a City action. Sources: <a href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279245&amp;GUID=B1A83200-9FE4-4F67-AFAC-11D81E76E0A0" target="_blank" rel="noopener noreferrer">file 26-1078</a>, <a href="https://legistar.granicus.com/sanjose/attachments/f21053b4-ddb9-47c5-9aa8-04e546567050.pdf" target="_blank" rel="noopener noreferrer">auditor’s memo</a>, <a href="https://legistar.granicus.com/sanjose/attachments/1a500487-d5b7-4ca8-a1db-9133ab1a15a4.pdf" target="_blank" rel="noopener noreferrer">Police Department response</a></li>
             <li><strong>How to comment on Oct. 20:</strong> the agenda says written comments can be sent through eComment on the Legistar calendar, or emailed to city.clerk@sanjoseca.gov no earlier than 10 days before the meeting and no later than 5:00 p.m. the day before. You can also speak in person (Speaker’s Card) or by phone at (888) 475 4499, Webinar ID 982 2147 4336. Sources: <a href="https://legistar.granicus.com/sanjose/meetings/2026/10/8107_A_City_Council_26-10-20_Amended_Agenda.pdf" target="_blank" rel="noopener noreferrer">October 20 agenda</a>, <a href="https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8107&amp;GID=317&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">meeting page</a></li>
-            <li><strong>Police recruiting report (Oct. 15 committee):</strong> the meeting was held. As of Oct. 16 the City had not posted minutes or an action for the item. Source: <a href="https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8068&amp;GID=317&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">meeting page</a></li>
+            <li><strong>Police recruiting report (Oct. 15 committee):</strong> the committee accepted the report, 5-0-0, with all five members present. Sources: <a href="https://sanjose.legistar.com/View.ashx?M=M&amp;ID=1423804&amp;GUID=AD45661A-565C-4A44-9F74-709892E422E2&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">Oct. 15 committee draft minutes, item 2</a>, <a href="https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8068&amp;GID=317&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">meeting page</a></li>
             <li><strong>Arena Hotel and Homekey:</strong> the Oct. 6 action requires staff to report back in six months and return to the Council with final Homekey terms before signing. Sources: <a href="https://sanjose.legistar.com/View.ashx?M=M&amp;ID=1423854&amp;GUID=4A9BE965-6E01-4140-90DF-C4EC11259066&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">Oct 6 draft minutes, p. 10</a>, <a href="https://sanjose.legistar.com/LegislationDetail.aspx?ID=8219619&amp;GUID=D0AE2B98-0140-4E2B-A900-DE69437A5316" target="_blank" rel="noopener noreferrer">file 26-1035</a></li>
           </ul>
         </section>
@@ -135,6 +135,13 @@ dek: Also: what the Council decided on housing and homelessness from Sept. 15 to
         <section class="brief-block reveal" data-reveal aria-labelledby="corrections-title">
           <h2 id="corrections-title" class="brief-block__title">Corrections and updates</h2>
           <p>We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.</p>
+          <h3 class="brief-block__sub">November 9, 2026 — outcome added</h3>
+          <ul>
+            <li><strong>Added</strong> the outcome of the October 15 police recruiting item from the committee’s draft minutes: the report was accepted, 5-0-0. Source: <a href="https://sanjose.legistar.com/View.ashx?M=M&amp;ID=1423804&amp;GUID=AD45661A-565C-4A44-9F74-709892E422E2&amp;G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF" target="_blank" rel="noopener noreferrer">Oct. 15 committee draft minutes, item 2</a>.</li>
+            <li><strong>Changed</strong> the status note at the top. Original: “As of October 16 the City had not posted minutes or an action for that item; we will add the outcome when it is posted.”</li>
+            <li><strong>Changed</strong> the police recruiting line under What happens next. Original: “the meeting was held. As of Oct. 16 the City had not posted minutes or an action for the item.”</li>
+            <li><strong>Changed</strong> “Updated October 17” to “Updated November 9” in the label and the notice heading.</li>
+          </ul>
           <h3 class="brief-block__sub">November 7, 2026 — brief label</h3>
           <ul>
             <li><strong>Changed</strong> the label above the headline to our numbering style. Original: “Weekly brief · No. 1 · Published October 12, 2026 · Corrected October 14 · Updated October 17”. No facts, figures, sources or wording in the brief changed.</li>
