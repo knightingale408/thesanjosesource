@@ -19,7 +19,7 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 - Source for each brief: `content/brief-N.md` (front matter plus body). Read `content/README.md` before adding one.
 - `python3 build.py` builds `brief/N/index.html`, refreshes the homepage list, `feed.xml` and `sitemap.xml`. **Run it after any change to `content/` or `build.py`, and commit the generated files in the same PR**, so the repo matches what goes live.
 - Static HTML/CSS/JS. No frameworks, no npm, no build tools beyond `build.py`.
-- `tools/`, `research/`, `content/` and `.github/` are never published. Everything else in the repo is public on the live site, so don't add notes, keys or drafts at the root.
+- `.github/scripts/publish.py` defines the deployment file list through `EXCLUDE_EXACT` and `EXCLUDE_PREFIX`, excluding repository-only files and directories. All other tracked files are uploaded to the public site; keep private notes, keys and drafts out of those paths.
 
 ## Naming and numbering (adopted Nov 7, 2026)
 
