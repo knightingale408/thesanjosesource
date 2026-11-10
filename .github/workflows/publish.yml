@@ -11,7 +11,7 @@ name: Publish site
 on:
   push:
     branches: [main]
-    paths-ignore: ["README.md", "tools/**", "research/**", ".github/workflows/agenda-pull.yml"]
+    paths-ignore: ["README.md", "AGENTS.md", "tools/**", "research/**", ".github/workflows/agenda-pull.yml"]
   workflow_dispatch:
 
 concurrency:
