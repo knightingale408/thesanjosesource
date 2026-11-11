@@ -1,0 +1,2 @@
+source_id,document_title,meeting_date,agenda_item,page_start,page_end,source_document_url,archived_document_url,retrieved_at,document_sha256,source_type
+sj-test-report,Test status report,2026-01-15,6.1,1,9,https://example.gov/report.pdf,https://archive.example/1.pdf,2026-01-16,0000000000000000000000000000000000000000000000000000000000000000,council_report
