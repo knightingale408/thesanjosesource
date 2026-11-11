@@ -262,6 +262,14 @@ a:hover {
   transform: translateY(0);
 }
 
+.btn:focus-visible,
+.nav__link:focus-visible,
+.nav__brand:focus-visible,
+.skip:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .btn--gold {
   background: var(--gold);
   color: var(--gold-ink);
