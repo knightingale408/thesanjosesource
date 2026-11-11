@@ -24,10 +24,14 @@ jobs:
           # 403/429: sanjoseca.gov and some City hosts block automated
           # checkers, so those are treated as reachable, not broken.
           # Real failures (404, 410, DNS errors, timeouts) still fail the run.
+          # Concurrency is capped at 4 so Legistar/Granicus doesn't throttle
+          # us and return 404s for links that are actually fine.
           args: >-
             --no-progress
             --accept 200..=299,403,429
+            --max-concurrency 4
             --max-retries 3
+            --retry-wait-time 5
             --timeout 30
             --root-dir ${{ github.workspace }}
             './**/*.html'

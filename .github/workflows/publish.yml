@@ -88,13 +88,18 @@ jobs:
         if: success()
         uses: lycheeverse/lychee-action@v2
         with:
-          # Same checker, accept list, retries, and timeout as link-check.yml.
+          # Same checker, accept list, retries and timeout as link-check.yml.
+          # Concurrency is capped at 4: Legistar/Granicus starts refusing
+          # requests (as 404s) when lychee's default 128 parallel requests
+          # hit it, which failed run #29 on links that are actually fine.
           # Inputs are the live page URLs from the sitemap just published,
           # so Lychee fetches those pages and checks the links on them.
           args: >-
             --no-progress
             --accept 200..=299,403,429
+            --max-concurrency 4
             --max-retries 3
+            --retry-wait-time 5
             --timeout 30
             --files-from ${{ github.workspace }}/live-pages.txt
           fail: true
