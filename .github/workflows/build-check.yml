@@ -1,0 +1,48 @@
+# Confirms a pull request committed the pages build.py generates.
+# Read-only: it never edits files or publishes anything.
+name: Check build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  built-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Regenerated pages match the commit
+        run: |
+          set -eu
+          python3 build.py
+          if ! git diff --exit-code -- brief/ index.html feed.xml sitemap.xml; then
+            echo "::error::Generated files do not match this commit. Run python3 build.py and commit brief/, index.html, feed.xml and sitemap.xml in this pull request."
+            git diff --stat -- brief/ index.html feed.xml sitemap.xml
+            exit 1
+          fi
+      - name: Legistar links use the website ID and GUID
+        run: |
+          set -eu
+          fail=0
+          while IFS= read -r -d '' f; do
+            if ! python3 check_links.py --offline "$f"; then
+              fail=1
+            fi
+          done < <(find . -name '*.html' -not -path './.git/*' -print0)
+          if [ -d content ]; then
+            while IFS= read -r -d '' f; do
+              if ! python3 check_links.py --offline "$f"; then
+                fail=1
+              fi
+            done < <(find content -name '*.md' -print0)
+          fi
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::A Legistar link is missing its website GUID, or it points at the Web API. See the check output above."
+            exit 1
+          fi

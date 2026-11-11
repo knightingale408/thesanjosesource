@@ -17,6 +17,7 @@ import re
 import sys
 import time
 from dataclasses import dataclass, field
+from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, unquote, urlparse
@@ -69,7 +70,7 @@ def extract_urls(text: str) -> list[str]:
 
 
 def strip_url_wrapper(raw: str) -> str:
-    url = raw.strip()
+    url = unescape(raw.strip())
     if url.startswith("<") and url.endswith(">"):
         url = url[1:-1].strip()
     return unquote(url)
@@ -86,22 +87,35 @@ def should_skip_http(url: str) -> bool:
     return False
 
 
-def legistar_guid_warning(url: str) -> str | None:
+def legistar_format_errors(url: str) -> list[str]:
+    """Public Legistar links must be the website page, not the Web API id.
+
+    HTML stores query separators as &amp;. Callers must unescape first
+    (strip_url_wrapper does) or every GUID looks missing.
+    """
+    errors: list[str] = []
     lower = url.lower()
-    if "legistar" not in lower and "legislationdetail.aspx" not in lower:
-        return None
-    if "legislationdetail.aspx" not in lower:
-        return None
+    if "webapi.legistar.com" in lower:
+        errors.append(
+            "Legistar Web API link (webapi.legistar.com). Public pages use the "
+            "website ID and GUID from LegislationDetail.aspx or View.ashx. "
+            'API MatterId links open "Invalid parameters!".'
+        )
     parsed = urlparse(url)
     qs = parse_qs(parsed.query, keep_blank_values=True)
-    has_id = any(k.lower() == "id" for k in qs)
     has_guid = any(k.lower() == "guid" for k in qs)
-    if has_id and not has_guid:
-        return (
-            'Legistar "Invalid parameters!" risk: LegislationDetail.aspx has ID '
-            "but no GUID. Use the full Legistar URL from the City record."
+    if "legislationdetail.aspx" in lower:
+        has_id = any(k.lower() == "id" for k in qs)
+        if has_id and not has_guid:
+            errors.append(
+                'Legistar "Invalid parameters!" risk: LegislationDetail.aspx has ID '
+                "but no GUID. Use the website URL from the City record."
+            )
+    if "view.ashx" in lower and not has_guid:
+        errors.append(
+            "View.ashx link has no GUID. Use the website URL from the meeting page."
         )
-    return None
+    return errors
 
 
 def http_check(url: str, timeout: int) -> tuple[str, list[str], list[str]]:
@@ -146,16 +160,14 @@ def http_check(url: str, timeout: int) -> tuple[str, list[str], list[str]]:
         return "timeout", warnings, errors
 
 
-def check_url(url: str, timeout: int) -> LinkResult:
+def check_url(url: str, timeout: int, offline: bool = False) -> LinkResult:
     result = LinkResult(url=url)
-    legistar = legistar_guid_warning(url)
-    if legistar:
-        result.warnings.append(legistar)
+    result.errors.extend(legistar_format_errors(url))
 
-    if should_skip_http(url):
-        result.status = "skipped"
+    if offline or should_skip_http(url):
+        result.status = "format-only" if offline else "skipped"
         result.ok = not result.has_error
-        if not url.startswith("#") and not urlparse(url).scheme:
+        if not offline and not url.startswith("#") and not urlparse(url).scheme:
             result.warnings.append("Relative or non-http URL (not fetched)")
         return result
 
@@ -169,7 +181,7 @@ def check_url(url: str, timeout: int) -> LinkResult:
 
 def print_detail(results: list[LinkResult]) -> None:
     for item in results:
-        if item.status == "skipped" and not item.warnings and not item.errors:
+        if item.status in ("skipped", "format-only") and not item.warnings and not item.errors:
             continue
         flag = "OK"
         if item.has_error:
@@ -185,7 +197,7 @@ def print_detail(results: list[LinkResult]) -> None:
 
 
 def print_summary(results: list[LinkResult]) -> None:
-    checked = [r for r in results if r.status != "skipped"]
+    checked = [r for r in results if r.status not in ("skipped", "format-only")]
     passed = [r for r in checked if r.ok and not r.has_warning]
     warn = [r for r in results if r.has_warning and not r.has_error]
     err = [r for r in results if r.has_error]
@@ -220,6 +232,11 @@ def main(argv: list[str] | None = None) -> int:
         help=f"HTTP timeout in seconds (default {DEFAULT_TIMEOUT})",
     )
     parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Check Legistar ID+GUID format only. Do not fetch URLs.",
+    )
+    parser.add_argument(
         "-q",
         "--quiet",
         action="store_true",
@@ -242,8 +259,9 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Checking {len(urls)} URL(s) in {path} …")
     results: list[LinkResult] = []
     for url in urls:
-        results.append(check_url(url, args.timeout))
-        time.sleep(0.15)
+        results.append(check_url(url, args.timeout, offline=args.offline))
+        if not args.offline:
+            time.sleep(0.15)
 
     if not args.quiet:
         print_detail(results)

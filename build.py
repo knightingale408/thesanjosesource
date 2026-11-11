@@ -687,9 +687,8 @@ def rss_description(brief: Brief) -> str:
     return html.escape(brief.default_homepage_blurb())
 
 
-def write_feed(briefs: list[Brief]) -> None:
+def render_feed(briefs: list[Brief], last_build: str) -> str:
     sorted_briefs = sort_briefs_newest_first(briefs)
-    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     items = []
     for brief in sorted_briefs:
         pub = brief.date.strftime("%a, %d %b %Y %H:%M:%S +0000")
@@ -702,20 +701,42 @@ def write_feed(briefs: list[Brief]) -> None:
       <description>{rss_description(brief)}</description>
     </item>"""
         )
-    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>The San Jose Source</title>
     <link>{SITE_BASE}/</link>
     <description>San José decisions, public money, and what happens next.</description>
     <language>en-us</language>
-    <lastBuildDate>{now}</lastBuildDate>
+    <lastBuildDate>{last_build}</lastBuildDate>
 {chr(10).join(items)}
   </channel>
 </rss>
 """
+
+
+def write_feed(briefs: list[Brief]) -> None:
+    """Rewrite feed.xml only when an item changed.
+
+    lastBuildDate is the clock time of a content change. A fresh build of
+    the same briefs keeps the committed timestamp, so CI can require a
+    clean diff without a new date on every run.
+    """
     out = ROOT / "feed.xml"
-    out.write_text(feed, encoding="utf-8", newline="\n")
+    existing = out.read_text(encoding="utf-8") if out.is_file() else ""
+    placeholder = "STABLE"
+    fresh = render_feed(briefs, placeholder)
+    existing_norm = re.sub(
+        r"<lastBuildDate>.*?</lastBuildDate>",
+        f"<lastBuildDate>{placeholder}</lastBuildDate>",
+        existing,
+        count=1,
+    )
+    if existing and existing_norm == fresh:
+        print(f"Feed unchanged {out.relative_to(ROOT)}")
+        return
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    out.write_text(render_feed(briefs, now), encoding="utf-8", newline="\n")
     print(f"Wrote {out.relative_to(ROOT)}")
 
 

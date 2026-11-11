@@ -20,6 +20,8 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 - `python3 build.py` builds `brief/N/index.html`, refreshes the homepage list, `feed.xml` and `sitemap.xml`. **Run it after any change to `content/` or `build.py`, and commit the generated files in the same PR**, so the repo matches what goes live.
 - Static HTML/CSS/JS. No frameworks, no npm, no build tools beyond `build.py`.
 - `.github/scripts/publish.py` defines the deployment file list through `EXCLUDE_EXACT` and `EXCLUDE_PREFIX`, excluding repository-only files and directories. All other tracked files are uploaded to the public site; keep private notes, keys and drafts out of those paths.
+- `python3 build.py` rewrites `feed.xml` only when a brief item changed. The committed `lastBuildDate` stays put on a rebuild of the same briefs, so a clean `git diff` after `build.py` means the generated pages match the commit.
+- `.github/workflows/build-check.yml` runs that check on every pull request. A `content/` change that does not commit the regenerated `brief/`, `index.html`, `feed.xml` and `sitemap.xml` fails CI.
 
 ## Naming and numbering (adopted Nov 7, 2026)
 
@@ -40,6 +42,15 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 - Every change to a published page gets an entry in that page's "Corrections and updates" list **and** on `corrections/index.html`, quoting the original wording and dating the change.
 - Corrections go at the top of the affected page. Nothing is removed without a record.
+
+## Link checks
+
+Two checkers, used for different jobs:
+
+- `python3 check_links.py <file>` is the pre-publish check for one brief or page. It is the checker that rejects a public Legistar link built from the Web API. `LegislationDetail.aspx` must include both `ID` and `GUID`, `View.ashx` must include `GUID`, and `webapi.legistar.com` is not a citation. Those are errors, not warnings. `--offline` checks that format only and does not fetch URLs. HTML `&amp;` in query strings is unescaped before the check.
+- Lychee (`.github/workflows/link-check.yml`) is the sitewide HTTP check. It runs on every pull request, on Monday mornings, and again against the live sitemap after a publish. It follows the links on the pages. HTTP 403 and 429 count as reachable, because some City hosts block automated clients, and concurrency is capped so Legistar does not answer with false 404s. Lychee does not know the GUID rule; `check_links.py` does.
+
+A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` or `check_links.py` does not start **Publish site**. A change to `publish.yml` does, on purpose.
 
 ## Before you open a PR
 

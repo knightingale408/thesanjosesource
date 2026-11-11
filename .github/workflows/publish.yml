@@ -11,7 +11,18 @@ name: Publish site
 on:
   push:
     branches: [main]
-    paths-ignore: ["README.md", "AGENTS.md", "tools/**", "research/**", ".github/workflows/agenda-pull.yml"]
+    # Workflow-only and repo-only files. A change to publish.yml itself still
+    # triggers a run, so a change to publish behavior gets one validation
+    # republish. check_links.py is excluded from the site upload.
+    paths-ignore:
+      - "README.md"
+      - "AGENTS.md"
+      - "tools/**"
+      - "research/**"
+      - "check_links.py"
+      - ".github/workflows/agenda-pull.yml"
+      - ".github/workflows/link-check.yml"
+      - ".github/workflows/build-check.yml"
   workflow_dispatch:
 
 concurrency:
