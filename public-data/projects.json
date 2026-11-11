@@ -29,7 +29,8 @@
           "document_sha256": "",
           "source_type": "council_report",
           "_row": 2
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": null,
@@ -51,6 +52,7 @@
             "source_type": "council_report",
             "_row": 3
           },
+          "source_pages": null,
           "as_of": "2026-09-29",
           "review_status": "pending_review"
         },
@@ -73,6 +75,7 @@
             "source_type": "council_report",
             "_row": 3
           },
+          "source_pages": null,
           "as_of": "2026-09-29",
           "review_status": "pending_review"
         }
@@ -118,6 +121,7 @@
             "source_type": "council_report",
             "_row": 3
           },
+          "source_pages": null,
           "review_status": "pending_review"
         }
       ],
@@ -150,7 +154,8 @@
           "document_sha256": "",
           "source_type": "council_report",
           "_row": 2
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": null,
@@ -172,6 +177,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         },
@@ -194,6 +200,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         }
@@ -239,6 +246,7 @@
             "source_type": "council_report",
             "_row": 3
           },
+          "source_pages": null,
           "review_status": "pending_review"
         },
         {
@@ -266,6 +274,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "review_status": "pending_review"
         }
       ],
@@ -298,7 +307,8 @@
           "document_sha256": "",
           "source_type": "council_report",
           "_row": 2
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": null,
@@ -320,6 +330,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         },
@@ -342,6 +353,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         }
@@ -387,6 +399,7 @@
             "source_type": "council_report",
             "_row": 3
           },
+          "source_pages": null,
           "review_status": "pending_review"
         },
         {
@@ -414,6 +427,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "review_status": "pending_review"
         }
       ],
@@ -446,7 +460,8 @@
           "document_sha256": "",
           "source_type": "budget_document",
           "_row": 5
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": {
@@ -467,6 +482,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         },
@@ -488,6 +504,7 @@
             "source_type": "memorandum",
             "_row": 6
           },
+          "source_pages": null,
           "as_of": "2026-10-15",
           "review_status": "pending_review"
         },
@@ -510,6 +527,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
           "review_status": "pending_review"
         }
@@ -555,6 +573,7 @@
             "source_type": "memorandum",
             "_row": 6
           },
+          "source_pages": null,
           "review_status": "pending_review"
         },
         {
@@ -582,6 +601,7 @@
             "source_type": "council_report",
             "_row": 7
           },
+          "source_pages": "19, 117, 178",
           "review_status": "pending_review"
         }
       ],
@@ -614,7 +634,8 @@
           "document_sha256": "",
           "source_type": "council_report",
           "_row": 8
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": null,
@@ -638,6 +659,7 @@
             "source_type": "council_report",
             "_row": 8
           },
+          "source_pages": null,
           "as_of": "2026-10-13",
           "review_status": "pending_review"
         }
@@ -683,6 +705,7 @@
             "source_type": "council_report",
             "_row": 8
           },
+          "source_pages": null,
           "review_status": "pending_review"
         }
       ],
@@ -715,7 +738,8 @@
           "document_sha256": "",
           "source_type": "council_report",
           "_row": 9
-        }
+        },
+        "review_status": "pending_review"
       },
       "position": {
         "budget": null,
@@ -739,6 +763,7 @@
             "source_type": "council_report",
             "_row": 9
           },
+          "source_pages": null,
           "as_of": "2026-10-13",
           "review_status": "pending_review"
         }
@@ -784,6 +809,7 @@
             "source_type": "council_report",
             "_row": 9
           },
+          "source_pages": null,
           "review_status": "pending_review"
         }
       ],

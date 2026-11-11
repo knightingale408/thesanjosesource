@@ -105,6 +105,7 @@ def merge_position(updates, allowed, sources_by_id=None):
                 "label": u.get("reported_budget_label") or None,
                 "source_id": u.get("source_id"),
                 "source": (sources_by_id or {}).get(u.get("source_id")),
+                "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
                 "review_status": u.get("review_status"),
             }
@@ -114,16 +115,21 @@ def merge_position(updates, allowed, sources_by_id=None):
                 "label": u.get("reported_completion_label") or None,
                 "source_id": u.get("source_id"),
                 "source": (sources_by_id or {}).get(u.get("source_id")),
+                "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
                 "review_status": u.get("review_status"),
             }
-        if (u.get("lifecycle_stage") or "").strip() or (u.get("status_code") or "").strip() or (u.get("change_reason") or "").strip():
+        # A budget-only amendment may carry a change_reason but report neither
+        # a lifecycle stage nor a status code; it must not overwrite the
+        # earlier status with nulls. The reason still shows in history.
+        if (u.get("lifecycle_stage") or "").strip() or (u.get("status_code") or "").strip():
             status = {
                 "lifecycle_stage": u.get("lifecycle_stage") or None,
                 "status_code": u.get("status_code") or None,
                 "change_reason": u.get("change_reason") or None,
                 "source_id": u.get("source_id"),
                 "source": (sources_by_id or {}).get(u.get("source_id")),
+                "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
                 "review_status": u.get("review_status"),
             }
@@ -145,6 +151,7 @@ def _history(updates, sources_by_id):
             "change_reason": u.get("change_reason") or None,
             "source_id": u.get("source_id"),
             "source": sources_by_id.get(u.get("source_id")),
+            "source_pages": u.get("source_pages") or None,
             "review_status": u.get("review_status"),
         })
     return out
@@ -192,6 +199,7 @@ def current_view(projects, updates, sources, categories):
                 "completion_label": p.get("promised_completion_label") or None,
                 "source_id": p.get("baseline_source_id"),
                 "source": sources_by_id.get(p.get("baseline_source_id")),
+                "review_status": p.get("review_status") or None,
             },
             "position": position,
             "accepted_position": accepted_position,
@@ -200,11 +208,13 @@ def current_view(projects, updates, sources, categories):
             "history": history,
             "review_status": worst_review,
         }
-        cur_budget = position["budget"] or {}
-        cur_completion = position["completion"] or {}
-        record["budget_delta"] = budget_delta(p.get("baseline_budget_usd"), cur_budget.get("usd") if cur_budget else None)
+        # Deltas come from the accepted position only, so no unreviewed
+        # value can produce a published number (METHODOLOGY.md).
+        acc_budget = accepted_position["budget"] or {}
+        acc_completion = accepted_position["completion"] or {}
+        record["budget_delta"] = budget_delta(p.get("baseline_budget_usd"), acc_budget.get("usd") if acc_budget else None)
         record["schedule_delta"] = schedule_delta_months(
-            p.get("promised_completion"), cur_completion.get("date") if cur_completion else None)
+            p.get("promised_completion"), acc_completion.get("date") if acc_completion else None)
         out.append(record)
     return out
 

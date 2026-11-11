@@ -51,9 +51,9 @@ function initTracker(root) {
     delayed: "Later than first promised",
     complete: "Delivered",
     watch: "On the City's schedule",
-    over_budget: "Later than first promised",
+    over_budget: "Over the original budget",
     delayed_and_over_budget: "Later than first promised",
-    scope_changed: "Later than first promised",
+    scope_changed: "Scope has changed",
     paused: "No current date",
     cancelled: "No current date",
     insufficient_information: "No current date",
@@ -131,9 +131,11 @@ function initTracker(root) {
       const value = (params.get(dim) || "").trim().toLowerCase();
       state[dim] = value || "all";
     }
+    // A hash that omits q resets the search, so navigating to a shared
+    // filter link never keeps a stale query applied.
     const q = (params.get("q") || "").trim();
-    if (q) {
-      state.q = q.toLowerCase();
+    state.q = q.toLowerCase();
+    if (document.activeElement !== searchInput) {
       searchInput.value = q;
     }
   }
@@ -177,6 +179,11 @@ function initTracker(root) {
       if (!container) {
         continue;
       }
+      // Rebuilding the buttons removes the button that currently has
+      // keyboard focus; remember it and restore focus after the rebuild.
+      const activeBtn = container.querySelector("button:focus");
+      const activeDim = activeBtn && activeBtn.dataset.dim;
+      const activeValue = activeBtn && activeBtn.dataset.value;
       const values = [];
       const seen = new Set();
       for (const p of projects) {
@@ -193,6 +200,14 @@ function initTracker(root) {
       container.appendChild(allBtn);
       for (const v of values) {
         container.appendChild(filterButton(dim.key, v.value, v.label, state[dim.key] === v.value));
+      }
+      if (activeDim === dim.key && activeValue) {
+        const restore = container.querySelector(
+          `button[data-dim="${activeDim}"][data-value="${activeValue}"]`
+        );
+        if (restore) {
+          restore.focus();
+        }
       }
     }
   }
@@ -360,11 +375,19 @@ function initTracker(root) {
     return card;
   }
 
+  const ACCEPTED_STATUSES = new Set(["accepted", "accepted_with_edits"]);
+
   function isAccepted(p) {
+    // A card counts as verified only when every reported concept and the
+    // baseline it is compared against have completed source review.
+    // Superseded or rejected history rows are irrelevant here.
+    if (!(p.baseline && ACCEPTED_STATUSES.has(p.baseline.review_status))) {
+      return false;
+    }
     const concepts = [p.position.budget, p.position.completion, p.position.status].filter(Boolean);
     return (
       concepts.length > 0 &&
-      concepts.every((c) => c.review_status === "accepted" || c.review_status === "accepted_with_edits")
+      concepts.every((c) => ACCEPTED_STATUSES.has(c.review_status))
     );
   }
 
@@ -450,6 +473,17 @@ function initTracker(root) {
       wrap.appendChild(note);
       return wrap;
     }
+    // Abnormal statuses are named in plain text before any progress
+    // rendering: a paused or cancelled project must not announce
+    // "4 of 5 stages reached".
+    const statusCode = p.position.status && p.position.status.status_code;
+    if (statusCode === "paused" || statusCode === "cancelled") {
+      const note = document.createElement("p");
+      note.className = "t-stepper__note";
+      note.textContent = `${STATUS_LABELS[statusCode] || statusCode}.`;
+      wrap.appendChild(note);
+      return wrap;
+    }
     const step = STAGE_STEP[stage];
     const list = document.createElement("ol");
     list.className = "t-stepper__list";
@@ -505,7 +539,7 @@ function initTracker(root) {
       why.textContent = `City's stated reason: ${h.change_reason}`;
       li.appendChild(why);
     }
-    const src = sourceLink(h.source);
+    const src = sourceLink(h.source, h.source_pages);
     if (src) {
       const p = document.createElement("p");
       p.className = "t-history__src";
@@ -513,10 +547,17 @@ function initTracker(root) {
       p.appendChild(src);
       li.appendChild(p);
     }
-    if (h.review_status && h.review_status !== "accepted" && h.review_status !== "accepted_with_edits") {
+    if (h.review_status && !ACCEPTED_STATUSES.has(h.review_status)) {
       const flag = document.createElement("p");
       flag.className = "t-history__flag";
-      flag.textContent = "Verification pending on this entry.";
+      // Rejected claims and claims awaiting evidence are distinct from a
+      // first review that simply has not happened yet.
+      flag.textContent =
+        h.review_status === "rejected"
+          ? "Rejected: this entry is not shown as a current fact."
+          : h.review_status === "needs_more_evidence"
+            ? "Needs more evidence before this entry is verified."
+            : "Verification pending on this entry.";
       li.appendChild(flag);
     }
     return li;
@@ -537,7 +578,7 @@ function initTracker(root) {
         continue;
       }
       seen.add(c.source_id);
-      const link = sourceLink(c.source || { source_id: c.source_id });
+      const link = sourceLink(c.source || { source_id: c.source_id }, c.source_pages);
       if (link) {
         links.push(link);
       }
@@ -559,7 +600,7 @@ function initTracker(root) {
     return footer;
   }
 
-  function sourceLink(source) {
+  function sourceLink(source, entryPages) {
     if (!source) {
       return null;
     }
@@ -567,7 +608,14 @@ function initTracker(root) {
     a.href = source.source_document_url || "#";
     a.target = "_blank";
     a.rel = "noopener noreferrer";
-    const pages = source.page_start ? ` (pp. ${source.page_start}${source.page_end && source.page_end !== source.page_start ? "-" + source.page_end : ""})` : "";
+    // Update-level page references win; source-level bounds are the
+    // fallback when the row does not cite specific pages.
+    let pages = "";
+    if (entryPages) {
+      pages = ` (pp. ${entryPages})`;
+    } else if (source.page_start) {
+      pages = ` (pp. ${source.page_start}${source.page_end && source.page_end !== source.page_start ? "-" + source.page_end : ""})`;
+    }
     a.textContent = (source.document_title || source.source_id) + pages;
     return a;
   }

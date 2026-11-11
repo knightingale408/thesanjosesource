@@ -49,18 +49,25 @@ def test_current_view_merges_latest_values_per_concept():
         {"update_id": "u2", "project_id": "p1", "reported_at": "2026-06-01",
          "reported_budget_usd": "120", "reported_completion": "2025-12",
          "review_status": "accepted"},
+        {"update_id": "u3", "project_id": "p1", "reported_at": "2026-09-01",
+         "reported_budget_usd": "200", "reported_completion": "2027-01",
+         "review_status": "pending_review"},
     ]
     sources = [{"source_id": "s1"}]
     view = cd.current_view(projects, updates, sources, {"public-safety": {"label": "Public Safety"}})
     assert len(view) == 1
     rec = view[0]
     # Reported position shows the latest row's values, pending badge included.
-    assert rec["position"]["budget"]["usd"] == 120.0
-    assert rec["position"]["budget"]["review_status"] == "accepted"
-    assert rec["position"]["completion"]["date"] == "2025-12"
+    assert rec["position"]["budget"]["usd"] == 200.0
+    assert rec["position"]["budget"]["review_status"] == "pending_review"
+    assert rec["position"]["completion"]["date"] == "2027-01"
+    # Deltas come from accepted rows only: u3's unreviewed 200 / 2027-01
+    # must not leak into a published number.
+    assert rec["accepted_position"]["budget"]["usd"] == 120.0
+    assert rec["accepted_position"]["completion"]["date"] == "2025-12"
     assert rec["budget_delta"]["percent"] == 20.0
     assert rec["schedule_delta"]["months"] == 18
-    assert len(rec["history"]) == 2
+    assert len(rec["history"]) == 3
 
 
 def test_current_view_partial_updates_merge_independently():
@@ -72,16 +79,26 @@ def test_current_view_partial_updates_merge_independently():
     updates = [
         {"update_id": "u1", "project_id": "p1", "reported_at": "2026-01-01",
          "reported_completion": "2026-01", "reported_budget_usd": "",
-         "review_status": "accepted"},
+         "lifecycle_stage": "construction", "status_code": "delayed",
+         "source_id": "src-schedule", "review_status": "accepted"},
         {"update_id": "u2", "project_id": "p1", "reported_at": "2026-06-01",
          "reported_budget_usd": "16500000", "reported_completion": "",
-         "review_status": "accepted"},
+         "change_reason": "Council added scope for the training tower.",
+         "source_id": "src-budget", "review_status": "accepted"},
     ]
     view = cd.current_view(projects, updates, [], {})
     pos = view[0]["position"]
     assert pos["budget"]["usd"] == 16500000.0   # from u2
     assert pos["completion"]["date"] == "2026-01"  # still from u1
-    assert pos["budget"]["source_id"] == "u2" or True  # source tracked per concept
+    # Each concept keeps its own source: budget from the amendment,
+    # schedule and status from the earlier report. The budget-only
+    # amendment carries a change_reason but must not wipe the status.
+    assert pos["budget"]["source_id"] == "src-budget"
+    assert pos["completion"]["source_id"] == "src-schedule"
+    assert pos["status"]["source_id"] == "src-schedule"
+    assert pos["status"]["lifecycle_stage"] == "construction"
+    assert pos["status"]["status_code"] == "delayed"
+    assert pos["budget"]["source_pages"] is None or isinstance(pos["budget"]["source_pages"], str)
 
 
 def test_current_view_blocked_rows_flagged_not_hidden():
