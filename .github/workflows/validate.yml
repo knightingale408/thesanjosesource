@@ -1,0 +1,47 @@
+# Validates the tracker data layer on every PR that touches it.
+# Read-only: it never edits files or publishes anything.
+name: Validate data
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/**"
+      - "public-data/**"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/**"
+      - "public-data/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: python3 -m pip install --quiet pytest
+      - name: Validate data against schemas
+        run: python3 scripts/validate_data.py
+      - name: Run unit tests
+        run: python3 -m pytest tests/ -q
+      - name: Regenerate public data and require no diff
+        run: |
+          python3 scripts/build_public_data.py
+          if ! git diff --exit-code -- public-data/; then
+            echo "::error::public-data/projects.json is stale. Run 'python3 scripts/build_public_data.py' and commit the result in this PR."
+            git diff -- public-data/ | head -40
+            exit 1
+          fi
