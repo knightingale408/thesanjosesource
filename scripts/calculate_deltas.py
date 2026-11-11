@@ -24,9 +24,21 @@ REPO = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().paren
 DATA = REPO / "data"
 
 
+ACCEPTED = {"accepted", "accepted_with_edits"}
+
+
 def load_csv(path):
     with open(path, newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    for row in rows:
+        for key, value in list(row.items()):
+            if isinstance(value, str):
+                row[key] = value.strip()
+    return rows
+
+
+def review_state(row):
+    return (row.get("review_status") or "").strip()
 
 
 def usd(value):
@@ -73,8 +85,16 @@ def schedule_delta_months(promised, current):
 
 
 def latest_accepted_update(updates, review_blocked):
-    """The latest update that is not blocked from production."""
-    accepted = [u for u in updates if u.get("review_status") not in review_blocked]
+    """The latest update explicitly accepted for production.
+
+    A status is accepted only when it is `accepted` or `accepted_with_edits`.
+    Anything else, including a padded `pending_review `, stays out. The
+    schema checker trims before its enum test, so this comparison trims too.
+    """
+    accepted = [
+        u for u in updates
+        if review_state(u) in ACCEPTED and review_state(u) not in review_blocked
+    ]
     if not accepted:
         return None
     return sorted(accepted, key=lambda u: (u.get("reported_at") or "", u.get("update_id", "")))[-1]
@@ -82,7 +102,10 @@ def latest_accepted_update(updates, review_blocked):
 
 def current_view(projects, updates, sources, categories, review_blocked):
     """Build the display view: canonical record + latest accepted update + deltas."""
-    sources_by_id = {s["source_id"]: s for s in sources}
+    sources_by_id = {
+        s["source_id"]: {k: v for k, v in s.items() if not str(k).startswith("_")}
+        for s in sources
+    }
     updates_by_project = {}
     for u in updates:
         updates_by_project.setdefault(u["project_id"], []).append(u)
@@ -102,6 +125,9 @@ def current_view(projects, updates, sources, categories, review_blocked):
                 "budget_label": p.get("baseline_budget_label") or None,
                 "completion": p.get("promised_completion") or None,
                 "completion_label": p.get("promised_completion_label") or None,
+                "source_id": p.get("baseline_source_id") or None,
+                "source": sources_by_id.get(p.get("baseline_source_id")),
+                "review_status": review_state(p) or None,
             },
             "latest": None,
             "budget_delta": None,
@@ -120,10 +146,14 @@ def current_view(projects, updates, sources, categories, review_blocked):
                 "change_reason": latest.get("change_reason") or None,
                 "source_id": latest.get("source_id"),
                 "source": sources_by_id.get(latest.get("source_id")),
-                "review_status": latest.get("review_status"),
+                "source_pages": latest.get("source_pages") or None,
+                "review_status": review_state(latest),
             }
-            record["budget_delta"] = budget_delta(p.get("baseline_budget_usd"), latest.get("reported_budget_usd"))
-            record["schedule_delta"] = schedule_delta_months(p.get("promised_completion"), latest.get("reported_completion"))
+            # Deltas cite the baseline. An unreviewed baseline must not
+            # produce a published number, even if a later update was accepted.
+            if review_state(p) in ACCEPTED:
+                record["budget_delta"] = budget_delta(p.get("baseline_budget_usd"), latest.get("reported_budget_usd"))
+                record["schedule_delta"] = schedule_delta_months(p.get("promised_completion"), latest.get("reported_completion"))
         out.append(record)
     return out
 

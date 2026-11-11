@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install test dependencies
@@ -40,8 +40,10 @@ jobs:
       - name: Regenerate public data and require no diff
         run: |
           python3 scripts/build_public_data.py
-          if ! git diff --exit-code -- public-data/; then
-            echo "::error::public-data/projects.json is stale. Run 'python3 scripts/build_public_data.py' and commit the result in this PR."
+          status="$(git status --porcelain -- public-data/)"
+          if [ -n "$status" ]; then
+            echo "::error::public-data/projects.json is stale or missing from the commit. Run 'python3 scripts/build_public_data.py' and commit the result in this PR."
+            echo "$status"
             git diff -- public-data/ | head -40
             exit 1
           fi

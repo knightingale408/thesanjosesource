@@ -13,7 +13,22 @@
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
         "completion": "2024",
-        "completion_label": "2024 (mid)"
+        "completion_label": "2024 (mid)",
+        "source_id": "sj-21-1392",
+        "source": {
+          "source_id": "sj-21-1392",
+          "document_title": "Measure T projects status report (Legistar file 21-1392)",
+          "meeting_date": "",
+          "agenda_item": "",
+          "page_start": "",
+          "page_end": "",
+          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+          "archived_document_url": "",
+          "retrieved_at": "2026-10-12",
+          "document_sha256": "",
+          "source_type": "council_report"
+        },
+        "review_status": "pending_review"
       },
       "latest": null,
       "budget_delta": null,
@@ -31,7 +46,22 @@
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
         "completion": "2024",
-        "completion_label": "2024 (fall)"
+        "completion_label": "2024 (fall)",
+        "source_id": "sj-21-1392",
+        "source": {
+          "source_id": "sj-21-1392",
+          "document_title": "Measure T projects status report (Legistar file 21-1392)",
+          "meeting_date": "",
+          "agenda_item": "",
+          "page_start": "",
+          "page_end": "",
+          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+          "archived_document_url": "",
+          "retrieved_at": "2026-10-12",
+          "document_sha256": "",
+          "source_type": "council_report"
+        },
+        "review_status": "pending_review"
       },
       "latest": null,
       "budget_delta": null,
@@ -49,7 +79,22 @@
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
         "completion": "2023",
-        "completion_label": "2023 (end)"
+        "completion_label": "2023 (end)",
+        "source_id": "sj-21-1392",
+        "source": {
+          "source_id": "sj-21-1392",
+          "document_title": "Measure T projects status report (Legistar file 21-1392)",
+          "meeting_date": "",
+          "agenda_item": "",
+          "page_start": "",
+          "page_end": "",
+          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+          "archived_document_url": "",
+          "retrieved_at": "2026-10-12",
+          "document_sha256": "",
+          "source_type": "council_report"
+        },
+        "review_status": "pending_review"
       },
       "latest": null,
       "budget_delta": null,
