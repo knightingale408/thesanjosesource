@@ -31,6 +31,28 @@ This repo is the master copy of the website. It is plain static HTML/CSS/JS with
 
 Preview of the current `main` branch: https://knightingale408.github.io/thesanjosesource/
 
+## The data layer (repo-only, not published)
+
+The tracker's evidence backbone. Kept out of the published site; the tracker
+frontend will consume `public-data/projects.json`.
+
+| Path | What it is |
+|---|---|
+| `data/projects.csv` | Canonical project records: identity + baseline commitment |
+| `data/project-updates.csv` | Append-only updates: each reported position, with review status |
+| `data/sources.csv` | Provenance records: document, meeting, pages, retrieval, hash |
+| `data/categories.json` | Category keys and labels |
+| `schemas/` | JSON Schemas for projects, updates, sources and brief front matter |
+| `scripts/validate_data.py` | Structural + editorial + plausibility checks; fails CI on errors |
+| `scripts/calculate_deltas.py` | Deterministic budget/schedule deltas |
+| `scripts/build_public_data.py` | Validates, then generates `public-data/projects.json` |
+| `tests/` | Unit tests with small fixtures |
+| `METHODOLOGY.md`, `DATA_DICTIONARY.md`, `CORRECTIONS.md`, `CONTRIBUTING.md` | Policy and field definitions |
+
+Working rules: updates are append-only, missing values are "not reported"
+(never zero), only accepted records reach production, and a PR that changes
+`data/` must include the regenerated `public-data/projects.json`.
+
 ## How the site gets updated
 
 1. Change files here. One clear commit per change.
