@@ -53,7 +53,7 @@
 
     <main id="main" class="brief">
       <article class="wrap wrap--reading wrap--wide">
-        <p class="eyebrow reveal" data-reveal>Promised vs. Actual · Updated November 9, 2026</p>
+        <p class="eyebrow reveal" data-reveal>Promised vs. Actual · Updated November 11, 2026</p>
         <h1 class="brief__title brief__title--long reveal" data-reveal>
           Six San José projects: the City’s first target dates, and what happened
         </h1>
@@ -62,7 +62,7 @@
           We only calculate a delay or a budget difference when the City
           documents give exact dates or amounts. Where they give only a month,
           a phrase such as “about two months,” or the same grant total for both
-          the plan and the result, the cell says <strong>not stated</strong>,
+          the plan and the result, the card shows <strong>not stated</strong>,
           meaning the linked documents do not give that number.
         </p>
         <p class="brief__lede reveal" data-reveal>
@@ -74,7 +74,7 @@
           <div
             id="tracker-app"
             class="tracker-app"
-            data-csv="../promised-vs-actual.csv"
+            data-json="../public-data/projects.json"
           >
             <div class="tracker-toolbar">
               <label class="tracker-search">
@@ -92,40 +92,27 @@
                 class="tracker-filters"
                 role="group"
                 aria-label="Filter by category"
+                id="tracker-filters-category"
+              ></div>
+              <div
+                class="tracker-filters"
+                role="group"
+                aria-label="Filter by status"
+                id="tracker-filters-status"
+              ></div>
+              <div
+                class="tracker-filters"
+                role="group"
+                aria-label="Filter by funding measure"
+                id="tracker-filters-fund"
+              ></div>
+              <button
+                type="button"
+                class="btn btn--outline tracker-clear"
+                id="tracker-clear"
               >
-                <button
-                  type="button"
-                  class="tracker-filter btn btn--outline is-active"
-                  data-category="All"
-                  aria-pressed="true"
-                >
-                  All
-                </button>
-                <button
-                  type="button"
-                  class="tracker-filter btn btn--outline"
-                  data-category="Public Safety"
-                  aria-pressed="false"
-                >
-                  Public Safety
-                </button>
-                <button
-                  type="button"
-                  class="tracker-filter btn btn--outline"
-                  data-category="Housing"
-                  aria-pressed="false"
-                >
-                  Housing
-                </button>
-                <button
-                  type="button"
-                  class="tracker-filter btn btn--outline"
-                  data-category="Capital Projects"
-                  aria-pressed="false"
-                >
-                  Capital Projects
-                </button>
-              </div>
+                Clear filters
+              </button>
             </div>
             <p
               class="tracker-meta"
@@ -134,25 +121,16 @@
             >
               Loading projects…
             </p>
-            <div class="brief-table-wrap tracker-table-wrap">
-              <table class="brief-table tracker-table" id="tracker-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Project</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Promised</th>
-                    <th scope="col">Revised</th>
-                    <th scope="col">Actual</th>
-                    <th scope="col">Slip (days)</th>
-                    <th scope="col">Budget variance</th>
-                    <th scope="col">Source</th>
-                  </tr>
-                </thead>
-                <tbody id="tracker-tbody"></tbody>
-              </table>
-            </div>
+            <noscript>
+              <p class="tracker-empty">
+                The project scorecards need JavaScript. The same figures are in
+                <a href="../brief/2/">Brief #2</a> and the
+                <a href="../promised-vs-actual.csv">underlying data file</a>.
+              </p>
+            </noscript>
+            <div class="t-cards" id="tracker-cards"></div>
             <p class="tracker-empty" id="tracker-empty" hidden>
-              No projects match your search. Try another keyword or category.
+              No projects match your filters. Try another keyword or category.
             </p>
           </div>
         </section>
@@ -184,6 +162,8 @@
             >.
           </p>
         </section>
+
+        <p class="brief__meta reveal" data-reveal><em><strong>Update, November 11, 2026:</strong> the Projects table is now a set of scorecards generated from the site's tracked data (public-data/projects.json), each showing what the City promised, the latest reported position, the project's stage, its change history and the evidence behind each value. Same six projects, same dates, figures and sources; the wording "the cell says <strong>not stated</strong>" became "the card shows <strong>not stated</strong>." Filters now cover category, status and funding measure, and can be shared as links (for example <code>/tracker/#category=public-safety</code>). Values that have not finished our source check are labeled "Verification pending."</em></p>
 
         <p class="brief__meta reveal" data-reveal><em><strong>Update, November 9, 2026:</strong> the Council approved the 2025-26 Annual Report on Oct. 20 (draft minutes), so “Built is not the same as open” now says what was approved instead of what was proposed. Previous wording: Fire Station 32, “The City Manager’s Annual Report on the Oct. 20 Council agenda proposes a partial activation in October 2026 for building security and to run the new systems.” Police training center, “the Annual Report proposes a partial activation in January 2027.” Fire Station 36, “the Annual Report recommends $1.0 million now. Council has not acted on it.” Status labels now use our four standard labels (Delivered, On the City’s schedule, Later than first promised, No current date); previously “Completed late,” “Slipped,” “In design” and “On track.” No dates, budgets or sources in the table changed.</em></p>
 
