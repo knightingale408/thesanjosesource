@@ -63,9 +63,9 @@ function initTracker(root) {
     on_track: "tracker-pill--design",
     watch: "tracker-pill--design",
     delayed: "tracker-pill--late",
-    over_budget: "tracker-pill--late",
+    over_budget: "tracker-pill--budget",
     delayed_and_over_budget: "tracker-pill--late",
-    scope_changed: "tracker-pill--late",
+    scope_changed: "tracker-pill--neutral",
   };
   // Display stepper groups procurement with pre-construction (the data
   // keeps them distinct). Lifecycle != performance status.
@@ -429,7 +429,12 @@ function initTracker(root) {
     const notes = [];
     const bd = p.budget_delta;
     if (bd && bd.delta !== null && isAccepted(p)) {
-      notes.push(`Budget change: ${signedUsd(bd.delta)}` + (bd.percent !== null ? ` (+${bd.percent}%)` : ""));
+      let note = `Budget change: ${signedUsd(bd.delta)}`;
+      if (bd.percent !== null) {
+        const sign = bd.percent > 0 ? "+" : "";
+        note += ` (${sign}${bd.percent}%)`;
+      }
+      notes.push(note);
     }
     const sd = p.schedule_delta;
     if (sd && sd.months !== null && sd.months > 0 && isAccepted(p)) {
@@ -460,9 +465,19 @@ function initTracker(root) {
   }
 
   function stepper(p) {
-    const stage = p.position.status && p.position.status.lifecycle_stage;
+    const statusCode = p.position.status && p.position.status.status_code;
     const wrap = document.createElement("div");
     wrap.className = "t-stepper";
+    // Name paused and cancelled before any stage, including "unknown",
+    // so the card does not announce ordinary progress.
+    if (statusCode === "paused" || statusCode === "cancelled") {
+      const note = document.createElement("p");
+      note.className = "t-stepper__note";
+      note.textContent = statusCode === "paused" ? "Paused." : "Cancelled.";
+      wrap.appendChild(note);
+      return wrap;
+    }
+    const stage = p.position.status && p.position.status.lifecycle_stage;
     if (!(stage in STAGE_STEP)) {
       const note = document.createElement("p");
       note.className = "t-stepper__note";
@@ -470,17 +485,6 @@ function initTracker(root) {
         stage === "unknown"
           ? "Current stage: not stated in the City record."
           : `Current stage: ${stage}.`;
-      wrap.appendChild(note);
-      return wrap;
-    }
-    // Abnormal statuses are named in plain text before any progress
-    // rendering: a paused or cancelled project must not announce
-    // "4 of 5 stages reached".
-    const statusCode = p.position.status && p.position.status.status_code;
-    if (statusCode === "paused" || statusCode === "cancelled") {
-      const note = document.createElement("p");
-      note.className = "t-stepper__note";
-      note.textContent = `${STATUS_LABELS[statusCode] || statusCode}.`;
       wrap.appendChild(note);
       return wrap;
     }
@@ -574,10 +578,15 @@ function initTracker(root) {
     const links = [];
     const concepts = [p.baseline, p.position.budget, p.position.completion, p.position.status];
     for (const c of concepts) {
-      if (!c || !c.source_id || seen.has(c.source_id)) {
+      if (!c || !c.source_id) {
         continue;
       }
-      seen.add(c.source_id);
+      // Same document cited at different pages stays as two citations.
+      const key = `${c.source_id}|${c.source_pages || ""}`;
+      if (seen.has(key)) {
+        continue;
+      }
+      seen.add(key);
       const link = sourceLink(c.source || { source_id: c.source_id }, c.source_pages);
       if (link) {
         links.push(link);

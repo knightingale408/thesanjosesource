@@ -120,6 +120,30 @@ def test_plausibility_warnings_not_errors():
     assert "more than 25%" in text          # 200 -> 300 jump
 
 
+def test_zero_previous_budget_does_not_crash():
+    report = validate_data.Report()
+    updates = [
+        {"update_id": "u1", "project_id": "p1", "reported_at": "2026-01-01",
+         "reported_budget_usd": "0"},
+        {"update_id": "u2", "project_id": "p1", "reported_at": "2026-06-01",
+         "reported_budget_usd": "100"},
+    ]
+    validate_data.check_plausibility(report, [], updates)
+    assert not report.errors
+
+
+def test_optional_source_patterns_allow_empty_string():
+    import re
+    schema = validate_data.load_json(
+        Path(__file__).resolve().parent.parent / "schemas" / "source.schema.json"
+    )
+    for field in ("meeting_date", "page_start", "page_end", "document_sha256"):
+        pattern = schema["properties"][field]["pattern"]
+        assert re.fullmatch(pattern, ""), field
+    assert re.fullmatch(schema["properties"]["meeting_date"]["pattern"], "2026-10-20")
+    assert re.fullmatch(schema["properties"]["document_sha256"]["pattern"], "ab" * 32)
+
+
 def test_repo_data_validates():
     """The real data/ files in this repo must pass cleanly."""
     repo = Path(__file__).resolve().parent.parent

@@ -27,8 +27,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-10-12",
           "document_sha256": "",
-          "source_type": "council_report",
-          "_row": 2
+          "source_type": "council_report"
         },
         "review_status": "pending_review"
       },
@@ -49,8 +48,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 3
+            "source_type": "council_report"
           },
           "source_pages": null,
           "as_of": "2026-09-29",
@@ -72,8 +70,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 3
+            "source_type": "council_report"
           },
           "source_pages": null,
           "as_of": "2026-09-29",
@@ -88,12 +85,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -118,8 +115,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 3
+            "source_type": "council_report"
           },
           "source_pages": null,
           "review_status": "pending_review"
@@ -152,8 +148,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-10-12",
           "document_sha256": "",
-          "source_type": "council_report",
-          "_row": 2
+          "source_type": "council_report"
         },
         "review_status": "pending_review"
       },
@@ -174,8 +169,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -197,8 +191,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -213,12 +206,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -243,8 +236,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 3
+            "source_type": "council_report"
           },
           "source_pages": null,
           "review_status": "pending_review"
@@ -271,8 +263,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "review_status": "pending_review"
@@ -305,8 +296,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-10-12",
           "document_sha256": "",
-          "source_type": "council_report",
-          "_row": 2
+          "source_type": "council_report"
         },
         "review_status": "pending_review"
       },
@@ -327,8 +317,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -350,8 +339,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -366,12 +354,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -396,8 +384,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 3
+            "source_type": "council_report"
           },
           "source_pages": null,
           "review_status": "pending_review"
@@ -424,8 +411,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "review_status": "pending_review"
@@ -458,8 +444,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-10-12",
           "document_sha256": "",
-          "source_type": "budget_document",
-          "_row": 5
+          "source_type": "budget_document"
         },
         "review_status": "pending_review"
       },
@@ -479,8 +464,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -501,8 +485,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "memorandum",
-            "_row": 6
+            "source_type": "memorandum"
           },
           "source_pages": null,
           "as_of": "2026-10-15",
@@ -524,8 +507,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "as_of": "2026-10-20",
@@ -540,12 +522,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -570,8 +552,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "memorandum",
-            "_row": 6
+            "source_type": "memorandum"
           },
           "source_pages": null,
           "review_status": "pending_review"
@@ -598,8 +579,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-10-12",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 7
+            "source_type": "council_report"
           },
           "source_pages": "19, 117, 178",
           "review_status": "pending_review"
@@ -632,8 +612,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-11-11",
           "document_sha256": "",
-          "source_type": "council_report",
-          "_row": 8
+          "source_type": "council_report"
         },
         "review_status": "pending_review"
       },
@@ -656,8 +635,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-11-11",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 8
+            "source_type": "council_report"
           },
           "source_pages": null,
           "as_of": "2026-10-13",
@@ -672,12 +650,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -702,8 +680,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-11-11",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 8
+            "source_type": "council_report"
           },
           "source_pages": null,
           "review_status": "pending_review"
@@ -736,8 +713,7 @@
           "archived_document_url": "",
           "retrieved_at": "2026-11-11",
           "document_sha256": "",
-          "source_type": "council_report",
-          "_row": 9
+          "source_type": "council_report"
         },
         "review_status": "pending_review"
       },
@@ -760,8 +736,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-11-11",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 9
+            "source_type": "council_report"
           },
           "source_pages": null,
           "as_of": "2026-10-13",
@@ -776,12 +751,12 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline or current budget not reported"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "one side is year-only or not reported; delta not computed"
+        "reason": "baseline record is not accepted; delta not published"
       },
       "history": [
         {
@@ -806,8 +781,7 @@
             "archived_document_url": "",
             "retrieved_at": "2026-11-11",
             "document_sha256": "",
-            "source_type": "council_report",
-            "_row": 9
+            "source_type": "council_report"
           },
           "source_pages": null,
           "review_status": "pending_review"

@@ -20,34 +20,14 @@ import calculate_deltas  # noqa: E402
 def main():
     repo = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent)
 
-    # Validate first: no build on invalid data. The pieces are called directly
-    # so this script fails fast with its own output.
-    report = validate_data.Report()
-    projects = validate_data.load_csv(repo / "data" / "projects.csv")
-    updates = validate_data.load_csv(repo / "data" / "project-updates.csv")
-    sources = validate_data.load_csv(repo / "data" / "sources.csv")
-    categories = json.loads((repo / "data" / "categories.json").read_text(encoding="utf-8"))
-
-    for i, row in enumerate(projects, start=2):
-        row["_row"] = i
-    for i, row in enumerate(updates, start=2):
-        row["_row"] = i
-    for i, row in enumerate(sources, start=2):
-        row["_row"] = i
-
-    ps = json.loads((repo / "schemas" / "project.schema.json").read_text())
-    us = json.loads((repo / "schemas" / "update.schema.json").read_text())
-    ss = json.loads((repo / "schemas" / "source.schema.json").read_text())
-    for row in projects:
-        validate_data.check_schema(report, ps, row, f"project '{row.get('project_id', '?')}'")
-    for row in updates:
-        validate_data.check_schema(report, us, row, f"update '{row.get('update_id', '?')}'")
-    for row in sources:
-        validate_data.check_schema(report, ss, row, f"source '{row.get('source_id', '?')}'")
-    validate_data.check_unique_ids(report, projects, "project_id", "project")
-    validate_data.check_unique_ids(report, updates, "update_id", "update")
-    validate_data.check_unique_ids(report, sources, "source_id", "source")
-    validate_data.check_editorial(report, projects, updates, sources)
+    # The same checks as `validate_data.py`, including real calendar dates,
+    # currency, categories and page order. A subset here used to let
+    # 2026-02-30 through the schema pattern.
+    report, loaded = validate_data.validate_repo(repo)
+    projects = loaded["projects"]
+    updates = loaded["updates"]
+    sources = loaded["sources"]
+    categories = loaded["categories"]
 
     if report.errors:
         for e in report.errors:

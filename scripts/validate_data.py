@@ -44,7 +44,14 @@ class Report:
 
 def load_csv(path):
     with open(path, newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    # Schema checks compare a trimmed value, so a trailing space would pass
+    # the enum and then fail a later exact comparison. Trim on load.
+    for row in rows:
+        for key, value in list(row.items()):
+            if isinstance(value, str):
+                row[key] = value.strip()
+    return rows
 
 
 def load_json(path):
@@ -185,10 +192,11 @@ def check_plausibility(report, projects, updates):
                     report.warn(where, f"completion forecast moved earlier: {prev['reported_completion']} -> {u['reported_completion']}")
             if u.get("reported_budget_usd") and prev is not None and prev.get("reported_budget_usd"):
                 try:
-                    change = float(u["reported_budget_usd"]) - float(prev["reported_budget_usd"])
+                    previous = float(prev["reported_budget_usd"])
+                    change = float(u["reported_budget_usd"]) - previous
                     if change < 0:
                         report.warn(where, f"reported budget decreased by {change:,.0f} USD")
-                    elif change / float(prev["reported_budget_usd"]) > 0.25:
+                    elif previous > 0 and change / previous > 0.25:
                         report.warn(where, f"reported budget jumped more than 25% (+{change:,.0f} USD)")
                 except ValueError:
                     pass
@@ -212,12 +220,20 @@ def check_sources(report, sources):
             report.warn(where, "no archived copy yet; evidence depends on the live URL")
 
 
-def main():
+def validate_repo(repo):
+    """Run every structural, editorial and plausibility check.
+
+    Returns (report, loaded). The builder must use this, not a subset of
+    the checks, so a date such as 2026-02-30 cannot be published.
+    """
+    repo = Path(repo)
+    data = repo / "data"
+    schemas = repo / "schemas"
     report = Report()
-    projects = load_csv(DATA / "projects.csv")
-    updates = load_csv(DATA / "project-updates.csv")
-    sources = load_csv(DATA / "sources.csv")
-    categories = load_json(DATA / "categories.json")
+    projects = load_csv(data / "projects.csv")
+    updates = load_csv(data / "project-updates.csv")
+    sources = load_csv(data / "sources.csv")
+    categories = load_json(data / "categories.json")
 
     for i, row in enumerate(projects, start=2):
         row["_row"] = i
@@ -226,9 +242,9 @@ def main():
     for i, row in enumerate(sources, start=2):
         row["_row"] = i
 
-    project_schema = load_json(SCHEMAS / "project.schema.json")
-    update_schema = load_json(SCHEMAS / "update.schema.json")
-    source_schema = load_json(SCHEMAS / "source.schema.json")
+    project_schema = load_json(schemas / "project.schema.json")
+    update_schema = load_json(schemas / "update.schema.json")
+    source_schema = load_json(schemas / "source.schema.json")
 
     for row in projects:
         check_schema(report, project_schema, row, f"project '{row.get('project_id', '?')}'")
@@ -260,7 +276,17 @@ def main():
     check_editorial(report, projects, updates, sources)
     check_plausibility(report, projects, updates)
     check_sources(report, sources)
+    loaded = {
+        "projects": projects,
+        "updates": updates,
+        "sources": sources,
+        "categories": categories,
+    }
+    return report, loaded
 
+
+def main():
+    report, _loaded = validate_repo(REPO)
     print(f"Validated {report.count} records across projects, updates and sources.")
     for w in report.warnings:
         print(f"WARNING: {w}")

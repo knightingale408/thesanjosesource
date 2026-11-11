@@ -1127,3 +1127,10 @@ a:hover {
     margin-left: 0;
   }
 }
+
+/* Budget and scope changes are not schedule delays. */
+.tracker-pill--budget {
+  border-color: rgba(15, 76, 92, 0.35);
+  background: rgba(15, 76, 92, 0.08);
+  color: var(--ink);
+}

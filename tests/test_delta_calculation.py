@@ -118,6 +118,39 @@ def test_current_view_blocked_rows_flagged_not_hidden():
     assert rec["review_status"] != "accepted"
 
 
+def test_padded_pending_status_is_not_accepted():
+    projects = [{"project_id": "p1", "project_name": "P1", "category": "public-safety",
+                 "baseline_budget_usd": "100", "promised_completion": "2024-06",
+                 "review_status": "accepted"}]
+    updates = [{"update_id": "u1", "project_id": "p1", "reported_at": "2026-01-01",
+                "reported_budget_usd": "150", "reported_completion": "2026-01",
+                "review_status": "pending_review "}]
+    view = cd.current_view(projects, updates, [], {})
+    assert view[0]["position"]["budget"]["usd"] == 150.0
+    assert view[0]["position"]["budget"]["review_status"] == "pending_review"
+    assert view[0]["accepted_position"]["budget"] is None
+    assert view[0]["budget_delta"]["delta"] is None
+
+
+def test_unreviewed_baseline_publishes_no_delta():
+    projects = [{"project_id": "p1", "project_name": "P1", "category": "public-safety",
+                 "baseline_budget_usd": "100", "promised_completion": "2024-06",
+                 "baseline_source_id": "s1", "review_status": "pending_review"}]
+    updates = [{"update_id": "u1", "project_id": "p1", "reported_at": "2026-06-01",
+                "reported_budget_usd": "150", "reported_completion": "2026-01",
+                "source_pages": "19, 117", "source_id": "s1",
+                "review_status": "accepted"}]
+    sources = [{"source_id": "s1", "document_title": "Memo"}]
+    view = cd.current_view(projects, updates, sources, {})
+    rec = view[0]
+    assert rec["accepted_position"]["budget"]["usd"] == 150.0
+    assert rec["accepted_position"]["budget"]["source_pages"] == "19, 117"
+    assert rec["baseline"]["source_id"] == "s1"
+    assert rec["baseline"]["source"]["document_title"] == "Memo"
+    assert rec["budget_delta"]["delta"] is None
+    assert rec["schedule_delta"]["months"] is None
+
+
 def test_repo_pilots_report_no_budget_deltas():
     """The three Measure T pilots have no stated budgets: deltas must be null,
     never zero (METHODOLOGY: 'not reported' is not zero)."""

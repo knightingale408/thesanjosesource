@@ -37,7 +37,17 @@ USABLE = {"pending_review", "needs_more_evidence"} | ACCEPTED
 
 def load_csv(path):
     with open(path, newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    for row in rows:
+        for key, value in list(row.items()):
+            if isinstance(value, str):
+                row[key] = value.strip()
+    return rows
+
+
+def review_state(row):
+    """Trimmed review status. The schema checker trims before its enum test."""
+    return (row.get("review_status") or "").strip()
 
 
 def usd(value):
@@ -97,7 +107,7 @@ def merge_position(updates, allowed, sources_by_id=None):
     """
     budget = completion = status = None
     for u in _sorted_updates(updates):
-        if (u.get("review_status") or "") not in allowed:
+        if review_state(u) not in allowed:
             continue
         if (u.get("reported_budget_usd") or "").strip() or (u.get("reported_budget_label") or "").strip():
             budget = {
@@ -107,7 +117,7 @@ def merge_position(updates, allowed, sources_by_id=None):
                 "source": (sources_by_id or {}).get(u.get("source_id")),
                 "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
-                "review_status": u.get("review_status"),
+                "review_status": review_state(u),
             }
         if (u.get("reported_completion") or "").strip() or (u.get("reported_completion_label") or "").strip():
             completion = {
@@ -117,7 +127,7 @@ def merge_position(updates, allowed, sources_by_id=None):
                 "source": (sources_by_id or {}).get(u.get("source_id")),
                 "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
-                "review_status": u.get("review_status"),
+                "review_status": review_state(u),
             }
         # A budget-only amendment may carry a change_reason but report neither
         # a lifecycle stage nor a status code; it must not overwrite the
@@ -131,7 +141,7 @@ def merge_position(updates, allowed, sources_by_id=None):
                 "source": (sources_by_id or {}).get(u.get("source_id")),
                 "source_pages": u.get("source_pages") or None,
                 "as_of": u.get("reported_at"),
-                "review_status": u.get("review_status"),
+                "review_status": review_state(u),
             }
     return {"budget": budget, "completion": completion, "status": status}
 
@@ -152,7 +162,7 @@ def _history(updates, sources_by_id):
             "source_id": u.get("source_id"),
             "source": sources_by_id.get(u.get("source_id")),
             "source_pages": u.get("source_pages") or None,
-            "review_status": u.get("review_status"),
+            "review_status": review_state(u),
         })
     return out
 
@@ -164,7 +174,10 @@ def current_view(projects, updates, sources, categories):
     out of the accepted position and out of the deltas, but remain visible
     in the reported position and the history, flagged for verification.
     """
-    sources_by_id = {s["source_id"]: s for s in sources}
+    sources_by_id = {
+        s["source_id"]: {k: v for k, v in s.items() if not str(k).startswith("_")}
+        for s in sources
+    }
     updates_by_project = {}
     for u in updates:
         updates_by_project.setdefault(u["project_id"], []).append(u)
@@ -180,9 +193,9 @@ def current_view(projects, updates, sources, categories):
         position = merge_position(rows, allowed, sources_by_id)
         accepted_position = merge_position(rows, accepted, sources_by_id)
         history = _history(rows, sources_by_id)
-        worst_review = p.get("review_status")
-        if any((u.get("review_status") or "") not in accepted for u in rows):
-            worst_review = worst_review if (worst_review or "") not in accepted else "pending_review"
+        worst_review = review_state(p)
+        if any(review_state(u) not in accepted for u in rows):
+            worst_review = worst_review if worst_review not in accepted else "pending_review"
 
         record = {
             "project_id": p["project_id"],
@@ -199,7 +212,7 @@ def current_view(projects, updates, sources, categories):
                 "completion_label": p.get("promised_completion_label") or None,
                 "source_id": p.get("baseline_source_id"),
                 "source": sources_by_id.get(p.get("baseline_source_id")),
-                "review_status": p.get("review_status") or None,
+                "review_status": review_state(p) or None,
             },
             "position": position,
             "accepted_position": accepted_position,
@@ -208,13 +221,25 @@ def current_view(projects, updates, sources, categories):
             "history": history,
             "review_status": worst_review,
         }
-        # Deltas come from the accepted position only, so no unreviewed
-        # value can produce a published number (METHODOLOGY.md).
+        # Deltas come from the accepted position only, and only when the
+        # baseline itself is accepted. An accepted update against an
+        # unreviewed baseline must not publish a number.
         acc_budget = accepted_position["budget"] or {}
         acc_completion = accepted_position["completion"] or {}
-        record["budget_delta"] = budget_delta(p.get("baseline_budget_usd"), acc_budget.get("usd") if acc_budget else None)
-        record["schedule_delta"] = schedule_delta_months(
-            p.get("promised_completion"), acc_completion.get("date") if acc_completion else None)
+        if review_state(p) in ACCEPTED:
+            record["budget_delta"] = budget_delta(
+                p.get("baseline_budget_usd"), acc_budget.get("usd") if acc_budget else None)
+            record["schedule_delta"] = schedule_delta_months(
+                p.get("promised_completion"), acc_completion.get("date") if acc_completion else None)
+        else:
+            record["budget_delta"] = {
+                "delta": None, "percent": None,
+                "reason": "baseline record is not accepted; delta not published",
+            }
+            record["schedule_delta"] = {
+                "months": None, "day_precision": False,
+                "reason": "baseline record is not accepted; delta not published",
+            }
         out.append(record)
     return out
 
