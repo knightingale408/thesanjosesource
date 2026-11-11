@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "generated_from": "data/ (canonical CSVs)",
+  "projects": [
+    {
+      "project_id": "measure-t-fs8",
+      "project_name": "Relocated Fire Station 8",
+      "category": "public-safety",
+      "category_label": "Public Safety",
+      "department": "San José Fire Department",
+      "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
+        "completion": "2024",
+        "completion_label": "2024 (mid)"
+      },
+      "latest": null,
+      "budget_delta": null,
+      "schedule_delta": null,
+      "review_status": "pending_review"
+    },
+    {
+      "project_id": "measure-t-fs32",
+      "project_name": "New Fire Station 32",
+      "category": "public-safety",
+      "category_label": "Public Safety",
+      "department": "San José Fire Department",
+      "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
+        "completion": "2024",
+        "completion_label": "2024 (fall)"
+      },
+      "latest": null,
+      "budget_delta": null,
+      "schedule_delta": null,
+      "review_status": "pending_review"
+    },
+    {
+      "project_id": "measure-t-police-training",
+      "project_name": "Police Training and Academy Facility",
+      "category": "public-safety",
+      "category_label": "Public Safety",
+      "department": "San José Police Department",
+      "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
+        "completion": "2023",
+        "completion_label": "2023 (end)"
+      },
+      "latest": null,
+      "budget_delta": null,
+      "schedule_delta": null,
+      "review_status": "pending_review"
+    }
+  ]
+}
