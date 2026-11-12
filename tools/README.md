@@ -15,6 +15,19 @@ python3 tools/check_results.py --date 2026-10-20
 python3 tools/check_results.py --date 2026-10-20 --file 26-1076
 ```
 
+## Link checkers (two, on purpose)
+
+`check_links.py` lives at the repo root, not in this folder. Run it on a brief before a pull request:
+
+```bash
+python3 check_links.py content/brief-2.md
+python3 check_links.py --offline brief/2/index.html
+```
+
+It is the pre-publish check, and the only one that rejects a Legistar link missing its website GUID or pointing at `webapi.legistar.com`. `--offline` skips the network.
+
+Lychee, in `.github/workflows/link-check.yml`, is the scheduled and pull-request check of every HTML page. It fetches links. It does not apply the GUID rule. Use both: Lychee for "does this URL open," `check_links.py` for "is this the Legistar website link."
+
 ## Things to know
 
 - **Legistar's data-feed IDs are not website IDs.** Links built straight from the

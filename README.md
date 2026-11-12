@@ -1,6 +1,6 @@
 > **Purpose:** Nonpartisan weekly brief on San José City Council spending — budgets, fees, promised-vs-actual tracking.
-> **Status:** Active — public, publishing (30 commits).
-> **Stack:** Static HTML/CSS/JS, GitHub Actions, GitHub Pages.
+> **Status:** Active — public at https://thesanjosesource.com
+> **Stack:** Static HTML/CSS/JS, a Python page build, GitHub Actions.
 
 ---
 
@@ -16,7 +16,7 @@ A free, nonpartisan weekly brief on San José City Council money decisions: budg
 
 ## What's in this repo
 
-This repo is the master copy of the website. It is plain static HTML/CSS/JS with no build step.
+This repo is the master copy of the website. Pages are static HTML, CSS and JS. Brief pages are generated from `content/brief-N.md`: run `python3 build.py` and commit the generated `brief/`, homepage, `feed.xml` and `sitemap.xml` in the same change. Rules for that live in `AGENTS.md`.
 
 | Path | What it is |
 |---|---|
@@ -27,9 +27,10 @@ This repo is the master copy of the website. It is plain static HTML/CSS/JS with
 | `styles.css`, `app.js` | Shared styles and small scroll/nav script |
 | `assets/` | Logo, icons, hero and link-preview images |
 | `sitemap.xml`, `robots.txt`, `favicon.ico` | Site plumbing |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is |
+| `content/`, `build.py` | Brief source and the script that builds the brief pages, homepage list, feed and sitemap |
+| `.nojekyll` | Kept so a static host serves the files as they are |
 
-Preview of the current `main` branch: https://knightingale408.github.io/thesanjosesource/
+The live site is https://thesanjosesource.com. This repo is not published through GitHub Pages.
 
 ## How the site gets updated
 
@@ -42,7 +43,7 @@ The domain stays on here.now until it can be transferred (after Dec 12, 2026); a
 
 ## Editorial rules
 
-- **Facts first, opinion labeled.** Each brief has a preview, a recap from the official record, and a clearly marked "My take."
+- **Facts first, opinion labeled.** Each brief has a preview, a recap from the official record, and a clearly marked "J Gonzales's take."
 - **Every factual claim links to a City document.** No guesses about motives, no rumors.
 - **"Promised" means the City's own published targets,** not contractual commitments. Delays and budget differences are calculated only when City documents give exact dates or amounts; otherwise the cell says *not stated*.
 - **Corrections go at the top** of the affected page, and every change to a published page is listed with the original wording.
