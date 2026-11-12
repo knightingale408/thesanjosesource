@@ -1,0 +1,3 @@
+update_id,project_id,reported_at,reported_budget_usd,reported_budget_label,reported_completion,reported_completion_label,lifecycle_stage,status_code,change_reason,source_id,source_pages,review_status
+up-test-fs1-2026-01,test-fs1,2026-01-15,1500000,,"2026-03",March 2026,construction,delayed,Test reason,sj-test-report,3-4,accepted
+up-test-fs2-2026-01,test-fs2,2026-01-15,,,2025-12,December 2025,complete,complete,Done,sj-test-report,5,accepted

@@ -1,0 +1,2 @@
+update_id,project_id,reported_at,reported_budget_usd,reported_budget_label,reported_completion,reported_completion_label,lifecycle_stage,status_code,change_reason,source_id,source_pages,review_status
+up-bad-1,ghost-project,15/01/2026,abc,,2026-03,,ongoing,super-on-track,Reason,sj-test-report,,accepted
