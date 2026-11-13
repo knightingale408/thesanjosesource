@@ -34,16 +34,14 @@ def main():
             print(f"ERROR: {e}", file=sys.stderr)
         sys.exit("Data validation failed; not building public-data/projects.json")
 
-    view = calculate_deltas.current_view(
-        projects, updates, sources, categories,
-        review_blocked={"pending_review", "needs_more_evidence", "rejected"})
+    view = calculate_deltas.current_view(projects, updates, sources, categories)
 
     out = repo / "public-data" / "projects.json"
     out.parent.mkdir(exist_ok=True)
     payload = {"schema_version": 1, "generated_from": "data/ (canonical CSVs)", "projects": view}
     out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {out.relative_to(repo)} ({len(view)} projects, "
-          f"{sum(1 for p in view if p['latest'])} with an accepted latest update).")
+          f"{sum(1 for p in view if p['accepted_position']['budget'] or p['accepted_position']['completion'] or p['accepted_position']['status'])} with an accepted position).")
     for w in report.warnings:
         print(f"WARNING: {w}")
     return 0
