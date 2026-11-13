@@ -1,3 +1,3 @@
-project_id,project_name,alternate_names,category,department,districts,measure_or_fund,baseline_budget_usd,baseline_budget_label,promised_completion,promised_completion_label,baseline_source_id,notes,review_status
-test-fs1,Test Fire Station 1,FS 1,public-safety,Fire Department,,Test Fund,1200000,Adopted at $1.2M,2024-06,June 2024,sj-test-report,fixture,accepted
-test-fs2,Test Fire Station 2,FS 2,public-safety,Fire Department,,Test Fund,,,2024,2024 (fall),sj-test-report,fixture,accepted
+project_id,project_name,alternate_names,category,department,districts,measure_or_fund,fund,baseline_budget_usd,baseline_budget_label,promised_completion,promised_completion_label,baseline_source_id,notes,review_status
+test-fs1,Test Fire Station 1,FS 1,public-safety,Fire Department,,Test Fund,measure-t,1200000,Adopted at $1.2M,2024-06,June 2024,sj-test-report,fixture,accepted
+test-fs2,Test Fire Station 2,FS 2,public-safety,Fire Department,,Test Fund,,,,2024,2024 (fall),sj-test-report,fixture,accepted

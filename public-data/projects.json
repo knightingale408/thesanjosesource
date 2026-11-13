@@ -9,6 +9,7 @@
       "category_label": "Public Safety",
       "department": "San José Fire Department",
       "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "fund": "measure-t",
       "baseline": {
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
@@ -30,9 +31,96 @@
         },
         "review_status": "pending_review"
       },
-      "latest": null,
-      "budget_delta": null,
-      "schedule_delta": null,
+      "position": {
+        "budget": null,
+        "completion": {
+          "date": "2026-07-21",
+          "label": "Temporary Certificate of Occupancy July 21 2026; crew began operations July 22 2026",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "as_of": "2026-09-29",
+          "review_status": "pending_review"
+        },
+        "status": {
+          "lifecycle_stage": "complete",
+          "status_code": "complete",
+          "change_reason": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "as_of": "2026-09-29",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-09-29-fs8",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-07-21",
+          "completion_label": "Temporary Certificate of Occupancy July 21 2026; crew began operations July 22 2026",
+          "lifecycle_stage": "complete",
+          "status_code": "complete",
+          "change_reason": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        }
+      ],
       "review_status": "pending_review"
     },
     {
@@ -42,6 +130,7 @@
       "category_label": "Public Safety",
       "department": "San José Fire Department",
       "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "fund": "measure-t",
       "baseline": {
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
@@ -63,9 +152,123 @@
         },
         "review_status": "pending_review"
       },
-      "latest": null,
-      "budget_delta": null,
-      "schedule_delta": null,
+      "position": {
+        "budget": null,
+        "completion": {
+          "date": "2026-10",
+          "label": "Substantial completion reached; temporary occupancy certificate expected October 2026; partial activation funded beginning Oct. 1, 2026 (Community Paramedicine pilot, security and systems testing); full activation stays 2028-29",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "The 2026-27 Adopted Budget deferred activation two years; the Oct. 20 Annual Report funds partial activation earlier.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-09-29-fs32",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-09",
+          "completion_label": "Beneficial use expected September 2026; operating activation deferred to 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Construction delay tied to generator procurement (vendor supply chain); operating activation deferred two years in the 2026-27 Adopted Budget as a balancing strategy.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        },
+        {
+          "update_id": "up-2026-10-20-fs32",
+          "reported_at": "2026-10-20",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-10",
+          "completion_label": "Substantial completion reached; temporary occupancy certificate expected October 2026; partial activation funded beginning Oct. 1, 2026 (Community Paramedicine pilot, security and systems testing); full activation stays 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "The 2026-27 Adopted Budget deferred activation two years; the Oct. 20 Annual Report funds partial activation earlier.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "review_status": "pending_review"
+        }
+      ],
       "review_status": "pending_review"
     },
     {
@@ -75,6 +278,7 @@
       "category_label": "Public Safety",
       "department": "San José Police Department",
       "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "fund": "measure-t",
       "baseline": {
         "budget_usd": null,
         "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
@@ -96,9 +300,493 @@
         },
         "review_status": "pending_review"
       },
-      "latest": null,
-      "budget_delta": null,
-      "schedule_delta": null,
+      "position": {
+        "budget": null,
+        "completion": {
+          "date": "2026-12",
+          "label": "Beneficial use anticipated December 2026; partial activation funded beginning Jan. 1, 2027 (Police Training Unit moves in); full activation stays 2028-29",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Operating activation was deferred two years in the 2026-27 Adopted Budget; the Oct. 20 Annual Report funds partial activation earlier.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-09-29-police-training",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-12",
+          "completion_label": "Beneficial use anticipated December 2026; operating activation deferred to 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Unforeseen conditions during construction impacted the schedule; operating activation deferred two years in the 2026-27 Adopted Budget.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        },
+        {
+          "update_id": "up-2026-10-20-police-training",
+          "reported_at": "2026-10-20",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-12",
+          "completion_label": "Beneficial use anticipated December 2026; partial activation funded beginning Jan. 1, 2027 (Police Training Unit moves in); full activation stays 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Operating activation was deferred two years in the 2026-27 Adopted Budget; the Oct. 20 Annual Report funds partial activation earlier.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "review_status": "pending_review"
+        }
+      ],
+      "review_status": "pending_review"
+    },
+    {
+      "project_id": "measure-t-fs36",
+      "project_name": "New Fire Station 36",
+      "category": "public-safety",
+      "category_label": "Public Safety",
+      "department": "San José Fire Department",
+      "measure_or_fund": "Measure T (November 2018 GO bond)",
+      "fund": "measure-t",
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": "Part of the Measure T public-safety allocation ($227.1M of $650M bond)",
+        "completion": "2024",
+        "completion_label": "FY 2023-24 (budget-document target)",
+        "source_id": "sj-budget-in-brief",
+        "source": {
+          "source_id": "sj-budget-in-brief",
+          "document_title": "City of San José Budget in Brief (p. 11)",
+          "meeting_date": "",
+          "agenda_item": "",
+          "page_start": "11",
+          "page_end": "",
+          "source_document_url": "https://www.sanjoseca.gov/home/showdocument?id=48832",
+          "archived_document_url": "",
+          "retrieved_at": "2026-10-12",
+          "document_sha256": "",
+          "source_type": "budget_document"
+        },
+        "review_status": "pending_review"
+      },
+      "position": {
+        "budget": {
+          "usd": 16500000.0,
+          "label": "$16.5 million (raised from $15.5 million on Oct. 20, 2026)",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        },
+        "completion": {
+          "date": null,
+          "label": "Early 2029 (construction completion, Public Works); winter 2028 (substantial completion, Fire Dept.)",
+          "source_id": "sj-2026-10-15-fire-dept-memo",
+          "source": {
+            "source_id": "sj-2026-10-15-fire-dept-memo",
+            "document_title": "Fire Department memo (Oct. 15, 2026)",
+            "meeting_date": "2026-10-15",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://legistar.granicus.com/sanjose/attachments/676d8b73-4ad8-4a8d-9c71-4d6e3e8938d7.pdf",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "memorandum"
+          },
+          "source_pages": null,
+          "as_of": "2026-10-15",
+          "review_status": "pending_review"
+        },
+        "status": {
+          "lifecycle_stage": "design",
+          "status_code": "delayed",
+          "change_reason": "Council approved $1.0 million of an estimated $4.5 million in added site work; staff expect to bring the remaining $3.5 million in the next capital budget or with the construction contract.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "as_of": "2026-10-20",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-10-15-fs36-schedule",
+          "reported_at": "2026-10-15",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": null,
+          "completion_label": "Early 2029 (construction completion, Public Works); winter 2028 (substantial completion, Fire Dept.)",
+          "lifecycle_stage": "design",
+          "status_code": "delayed",
+          "change_reason": "Staff estimates for completion moved from the FY 2023-24 budget-document target.",
+          "source_id": "sj-2026-10-15-fire-dept-memo",
+          "source": {
+            "source_id": "sj-2026-10-15-fire-dept-memo",
+            "document_title": "Fire Department memo (Oct. 15, 2026)",
+            "meeting_date": "2026-10-15",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://legistar.granicus.com/sanjose/attachments/676d8b73-4ad8-4a8d-9c71-4d6e3e8938d7.pdf",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "memorandum"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        },
+        {
+          "update_id": "up-2026-10-20-fs36-budget",
+          "reported_at": "2026-10-20",
+          "budget_usd": 16500000.0,
+          "budget_label": "$16.5 million (raised from $15.5 million on Oct. 20, 2026)",
+          "completion": null,
+          "completion_label": null,
+          "lifecycle_stage": "design",
+          "status_code": "delayed",
+          "change_reason": "Council approved $1.0 million of an estimated $4.5 million in added site work; staff expect to bring the remaining $3.5 million in the next capital budget or with the construction contract.",
+          "source_id": "sj-26-1076",
+          "source": {
+            "source_id": "sj-26-1076",
+            "document_title": "2025-26 Annual Report (Legistar file 26-1076)",
+            "meeting_date": "2026-10-20",
+            "agenda_item": "",
+            "page_start": "19",
+            "page_end": "178",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "19, 117, 178",
+          "review_status": "pending_review"
+        }
+      ],
+      "review_status": "pending_review"
+    },
+    {
+      "project_id": "coyote-creek-phase-2",
+      "project_name": "Coyote Creek Flood Protection Project (Phase 2)",
+      "category": "capital-projects",
+      "category_label": "Capital Projects",
+      "department": null,
+      "measure_or_fund": null,
+      "fund": null,
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": null,
+        "completion": "2028-12",
+        "completion_label": null,
+        "source_id": "sj-26-1099",
+        "source": {
+          "source_id": "sj-26-1099",
+          "document_title": "Coyote Creek Flood Protection Project Phase 2 update (Legistar file 26-1099)",
+          "meeting_date": "2026-10-13",
+          "agenda_item": "",
+          "page_start": "",
+          "page_end": "",
+          "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282817&GUID=A5263E6F-E3A0-47BF-B74E-DCAAFB0BDB2B",
+          "archived_document_url": "",
+          "retrieved_at": "2026-11-11",
+          "document_sha256": "",
+          "source_type": "council_report"
+        },
+        "review_status": "pending_review"
+      },
+      "position": {
+        "budget": null,
+        "completion": null,
+        "status": {
+          "lifecycle_stage": "unknown",
+          "status_code": "on_track",
+          "change_reason": null,
+          "source_id": "sj-26-1099",
+          "source": {
+            "source_id": "sj-26-1099",
+            "document_title": "Coyote Creek Flood Protection Project Phase 2 update (Legistar file 26-1099)",
+            "meeting_date": "2026-10-13",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282817&GUID=A5263E6F-E3A0-47BF-B74E-DCAAFB0BDB2B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-11-11",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "as_of": "2026-10-13",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-10-13-coyote",
+          "reported_at": "2026-10-13",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": null,
+          "completion_label": null,
+          "lifecycle_stage": "unknown",
+          "status_code": "on_track",
+          "change_reason": null,
+          "source_id": "sj-26-1099",
+          "source": {
+            "source_id": "sj-26-1099",
+            "document_title": "Coyote Creek Flood Protection Project Phase 2 update (Legistar file 26-1099)",
+            "meeting_date": "2026-10-13",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282817&GUID=A5263E6F-E3A0-47BF-B74E-DCAAFB0BDB2B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-11-11",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        }
+      ],
+      "review_status": "pending_review"
+    },
+    {
+      "project_id": "pure-water-silicon-valley",
+      "project_name": "Pure Water Silicon Valley (full-scale facility)",
+      "category": "capital-projects",
+      "category_label": "Capital Projects",
+      "department": null,
+      "measure_or_fund": null,
+      "fund": null,
+      "baseline": {
+        "budget_usd": null,
+        "budget_label": "Grant total of $3,295,950 cited as both plan and result",
+        "completion": "2035",
+        "completion_label": null,
+        "source_id": "sj-26-1100",
+        "source": {
+          "source_id": "sj-26-1100",
+          "document_title": "Pure Water Silicon Valley Potable Reuse Project update (Legistar file 26-1100)",
+          "meeting_date": "2026-10-13",
+          "agenda_item": "",
+          "page_start": "",
+          "page_end": "",
+          "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282818&GUID=39E02FAF-DA51-4987-8469-DF1A106DC4DB",
+          "archived_document_url": "",
+          "retrieved_at": "2026-11-11",
+          "document_sha256": "",
+          "source_type": "council_report"
+        },
+        "review_status": "pending_review"
+      },
+      "position": {
+        "budget": null,
+        "completion": null,
+        "status": {
+          "lifecycle_stage": "unknown",
+          "status_code": "on_track",
+          "change_reason": null,
+          "source_id": "sj-26-1100",
+          "source": {
+            "source_id": "sj-26-1100",
+            "document_title": "Pure Water Silicon Valley Potable Reuse Project update (Legistar file 26-1100)",
+            "meeting_date": "2026-10-13",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282818&GUID=39E02FAF-DA51-4987-8469-DF1A106DC4DB",
+            "archived_document_url": "",
+            "retrieved_at": "2026-11-11",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "as_of": "2026-10-13",
+          "review_status": "pending_review"
+        }
+      },
+      "accepted_position": {
+        "budget": null,
+        "completion": null,
+        "status": null
+      },
+      "budget_delta": {
+        "delta": null,
+        "percent": null,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "schedule_delta": {
+        "months": null,
+        "day_precision": false,
+        "reason": "baseline record is not accepted; delta not published"
+      },
+      "history": [
+        {
+          "update_id": "up-2026-10-13-pure-water",
+          "reported_at": "2026-10-13",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": null,
+          "completion_label": null,
+          "lifecycle_stage": "unknown",
+          "status_code": "on_track",
+          "change_reason": null,
+          "source_id": "sj-26-1100",
+          "source": {
+            "source_id": "sj-26-1100",
+            "document_title": "Pure Water Silicon Valley Potable Reuse Project update (Legistar file 26-1100)",
+            "meeting_date": "2026-10-13",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8282818&GUID=39E02FAF-DA51-4987-8469-DF1A106DC4DB",
+            "archived_document_url": "",
+            "retrieved_at": "2026-11-11",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": null,
+          "review_status": "pending_review"
+        }
+      ],
       "review_status": "pending_review"
     }
   ]
