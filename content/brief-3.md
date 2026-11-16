@@ -1,21 +1,24 @@
 ---
-title: Staff cite data center boom as San José wastewater bid comes in 15% over estimate
+title: San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge
 description: On Nov. 17 the San José City Council considers an $11,248,000 heating and cooling contract and a Black & Veatch adviser agreement of up to $16,885,000 at the Regional Wastewater Facility, and a proposal from the Mayor and four councilmembers to pause data center approvals.
 date: 2026-11-15
+date_modified: 2026-11-16
 series: Weekly brief
 homepage_blurb: Two wastewater plant contracts, one bid 15% over the City's estimate, and a proposed pause on data center approvals.
 coverage_label: Brief #3 · Council, Nov. 17 · Nov 15, 2026
 eyebrow: Brief #3 · Council, Nov. 17 · Published November 15, 2026
-dek: City staff say limited competition and a Bay Area building surge, including data centers, left only two contractors bidding on an $11,248,000 contract.
+dek: Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher.
 ---
 
 By J Gonzales · Nov. 15, 2026
+
+**Correction, November 16, 2026:** we changed the headline, the subtitle and two sentences to match the wording of the City's staff memos. The heating memo says limited competition and a local construction surge, including data center development, "may have" contributed to higher bids; it does not say the surge left only two bidders. The adviser memo says that contract has no "additional" impact on the General Fund. The original wording is under Corrections and updates at the end of this page.
 
 ## What matters this week
 
 - **Deciding:** Whether to hire Blocka Construction to replace heating, ventilation and air conditioning in eight Regional Wastewater Facility buildings, and Black & Veatch to advise the City on a pump-station overhaul through 2036.
 - **Cost:** [$11,248,000 plus a $1,687,200 contingency](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307264&GUID=AA6B974E-292A-44B8-80B8-210432F2460B) for the heating contract and [up to $16,885,000](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307265&GUID=10E9141B-21D6-4432-99CA-4FAC4A1EF046) for Black & Veatch, both from the plant's capital fund. With design and management, the heating project's full budget is $18,824,284.
-- **For residents:** New systems for equipment the City says is 30 to 60 years old, with construction from January 2027 to about October 2028. Pump-station construction is not expected to start until late 2031. The plant treats wastewater from eight South Bay cities and four special districts ([adviser memo](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf), p. 2), and staff say the adviser contract has no impact on the City's General Fund (p. 8).
+- **For residents:** New systems for equipment the City says is 30 to 60 years old, with construction from January 2027 to about October 2028. Pump-station construction is not expected to start until late 2031. The plant treats wastewater from eight South Bay cities and four special districts ([adviser memo](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf), p. 2), and staff say the adviser contract has no additional impact on the City's General Fund (p. 8).
 
 ## Only two contractors bid, and staff point to data center construction
 
@@ -42,7 +45,7 @@ What the pump-station work will finally cost is not known; staff say the estimat
 
 ### The Mayor and four councilmembers propose pausing data center approvals
 
-Mayor Matt Mahan and Councilmembers David Cohen (District 4), Domingo Candelas (District 8), Peter Ortiz (District 5) and Pamela Campos (District 2) ask the Council to [pause land use approvals of data centers and large energy use projects](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E) until it adopts uniform standards, and to have staff bring an urgency ordinance on Dec. 8, 2026 (added to the agenda late). Their [memo](https://legistar.granicus.com/sanjose/attachments/606a2feb-7963-48e4-af7d-ded74f42e041.pdf) says the pause would apply to approvals "by administrative official, commission, or City Council," so no project gets approved before the standards come to a vote (p. 2). It is the second item on Tuesday's agenda that touches data centers: staff cite data center construction as one reason the heating bid came in high. No cost estimate has been posted. Adding the item to Tuesday's agenda takes a two-thirds vote of members present (agenda p. 5).
+Mayor Matt Mahan and Councilmembers David Cohen (District 4), Domingo Candelas (District 8), Peter Ortiz (District 5) and Pamela Campos (District 2) ask the Council to [pause land use approvals of data centers and large energy use projects](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E) until it adopts uniform standards, and to have staff bring an urgency ordinance on Dec. 8, 2026 (added to the agenda late). Their [memo](https://legistar.granicus.com/sanjose/attachments/606a2feb-7963-48e4-af7d-ded74f42e041.pdf) says the pause would apply to approvals "by administrative official, commission, or City Council," so no project gets approved before the standards come to a vote (p. 2). It is the second item on Tuesday's agenda that touches data centers: staff say construction activity, including data center development, may have contributed to higher bids on the heating contract. No cost estimate has been posted. Adding the item to Tuesday's agenda takes a two-thirds vote of members present (agenda p. 5).
 
 ### A $180,000 settlement of a police use-of-force lawsuit
 
@@ -80,3 +83,15 @@ Replacing wastewater equipment that is 30 to 60 years old is necessary, and the 
 - [Council meeting page, Nov. 10, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8123&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
+
+## Corrections and updates
+
+We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 16, 2026: correction
+
+- **Headline.** Was: "Staff cite data center boom as San José wastewater bid comes in 15% over estimate." Now: "San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge." The memo says data center development "may have" contributed to higher bids ([heating memo](https://legistar.granicus.com/sanjose/attachments/5d0c4f99-3de4-4886-b417-aef93334c8f9.pdf), p. 3).
+- **Subtitle.** Was: "City staff say limited competition and a Bay Area building surge, including data centers, left only two contractors bidding on an $11,248,000 contract." Now: "Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher." The memo says one of three pre-qualified contractors declined to bid (p. 3).
+- **What matters this week.** Was: "staff say the adviser contract has no impact on the City's General Fund (p. 8)." Now: "staff say the adviser contract has no additional impact on the City's General Fund (p. 8)." That is the [adviser memo's](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf) wording (p. 8).
+- **Data center item.** Was: "staff cite data center construction as one reason the heating bid came in high." Now: "staff say construction activity, including data center development, may have contributed to higher bids on the heating contract."
+
