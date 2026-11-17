@@ -664,7 +664,16 @@ def discover_handwritten_page_urls() -> list[str]:
     return ordered
 
 
-def write_sitemap(brief_urls: list[str]) -> None:
+def brief_lastmods(briefs: Iterable[Brief]) -> dict[str, str]:
+    """Sitemap lastmod per brief URL: date_modified if set, else date."""
+    return {
+        b.canonical_url: (b.date_modified or b.date).strftime("%Y-%m-%d")
+        for b in briefs
+    }
+
+
+def write_sitemap(brief_urls: list[str], lastmods: dict[str, str] | None = None) -> None:
+    lastmods = lastmods or {}
     all_urls: list[str] = []
     seen: set[str] = set()
     for loc in discover_handwritten_page_urls() + list(brief_urls):
@@ -676,6 +685,8 @@ def write_sitemap(brief_urls: list[str]) -> None:
     for loc in all_urls:
         url_el = ET.SubElement(urlset, "url")
         ET.SubElement(url_el, "loc").text = loc
+        if loc in lastmods:
+            ET.SubElement(url_el, "lastmod").text = lastmods[loc]
     tree = ET.ElementTree(urlset)
     ET.indent(tree, space="  ")
     out = ROOT / "sitemap.xml"
@@ -758,7 +769,7 @@ def main() -> int:
     write_brief_pages(briefs)
     update_index(briefs)
     write_feed(briefs)
-    write_sitemap(discover_brief_urls_on_disk())
+    write_sitemap(discover_brief_urls_on_disk(), brief_lastmods(briefs))
     print(f"Built {len(briefs)} brief(s).")
     return 0
 
