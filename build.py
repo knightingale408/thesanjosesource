@@ -580,8 +580,23 @@ def render_coverage_block(sorted_briefs: list[Brief]) -> str:
 
 
 def render_hero_latest(latest: Brief) -> str:
+    """The latest-brief card in the homepage's first screen."""
     url = f"/brief/{latest.number}/"
-    return f'\n          <a class="btn btn--gold" href="{url}">Latest brief</a>\n          '
+    return textwrap.indent(
+        textwrap.dedent(
+            f"""
+            <article class="hero__latest reveal" data-reveal aria-labelledby="hero-latest-title">
+              <p class="hero__latest-label">Latest · {html.escape(latest.default_coverage_label())}</p>
+              <h2 id="hero-latest-title" class="hero__latest-title">
+                <a href="{url}">{html.escape(latest.title)}</a>
+              </h2>
+              <p class="hero__latest-blurb">{html.escape(latest.default_homepage_blurb())}</p>
+              <a class="btn btn--gold" href="{url}">Read Brief #{latest.number}</a>
+            </article>
+            """
+        ).strip("\n"),
+        "        ",
+    ).join(["\n", "\n        "])
 
 
 def update_index(briefs: list[Brief]) -> None:

@@ -66,14 +66,26 @@
 
     <header class="hero" id="top">
       <div class="hero__media" aria-hidden="true">
-        <img
-          class="hero__img"
-          src="./assets/hero.jpg"
-          alt="San José City Hall"
-          width="1800"
-          height="2400"
-          fetchpriority="high"
-        />
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            type="image/webp"
+            srcset="./assets/hero-tall-800.webp"
+          />
+          <source
+            type="image/webp"
+            srcset="./assets/hero-wide-960.webp 960w, ./assets/hero-wide-1600.webp 1600w"
+            sizes="100vw"
+          />
+          <img
+            class="hero__img"
+            src="./assets/hero.jpg"
+            alt=""
+            width="1800"
+            height="2400"
+            fetchpriority="high"
+          />
+        </picture>
         <div class="hero__veil"></div>
       </div>
 
@@ -87,21 +99,29 @@
         </div>
       </nav>
 
-      <div class="hero__copy">
-        <p class="hero__brand reveal" data-reveal>The San Jose Source</p>
-        <h1 class="hero__headline reveal" data-reveal>
-          San José decisions, public money, and what happens next.
-        </h1>
-        <p class="hero__lede reveal" data-reveal>
-          Free, plain-English reporting by J Gonzales on San José City Council
-          money decisions, with every claim linked to the official record.
-        </p>
-        <div class="hero__cta reveal" data-reveal>
-          <!-- build:hero-latest-start -->
-          <a class="btn btn--gold" href="/brief/3/">Latest brief</a>
-          <!-- build:hero-latest-end -->
-          <a class="btn btn--ghost" href="#subscribe">Subscribe free</a>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__headline reveal" data-reveal>
+            San José decisions, public money, and what happens next.
+          </h1>
+          <p class="hero__lede reveal" data-reveal>
+            Free, plain-English reporting by J Gonzales on San José City Council
+            money decisions, with every claim linked to the official record.
+          </p>
+          <div class="hero__cta reveal" data-reveal>
+            <a class="btn btn--ghost" href="#subscribe">Subscribe free</a>
+          </div>
         </div>
+        <!-- build:hero-latest-start -->
+        <article class="hero__latest reveal" data-reveal aria-labelledby="hero-latest-title">
+          <p class="hero__latest-label">Latest · Brief #3 · Council, Nov. 17 · Nov 15, 2026</p>
+          <h2 id="hero-latest-title" class="hero__latest-title">
+            <a href="/brief/3/">San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge</a>
+          </h2>
+          <p class="hero__latest-blurb">Two wastewater plant contracts, one bid 15% over the City&#x27;s estimate, and a proposed pause on data center approvals.</p>
+          <a class="btn btn--gold" href="/brief/3/">Read Brief #3</a>
+        </article>
+        <!-- build:hero-latest-end -->
       </div>
     </header>
 
