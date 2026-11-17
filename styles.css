@@ -936,11 +936,47 @@ a:hover {
   }
 }
 
-/* Phone: keep brand and nav labels on one line each */
+/* Phone: brand on one row, the four links spread across one row below it.
+   Each link is a full-height tap target (44px+). */
 @media (max-width: 520px) {
-  .nav { flex-wrap: wrap; row-gap: 0.6rem; }
-  .nav__brand, .nav__link { white-space: nowrap; }
-  .nav__links { flex-wrap: wrap; gap: 0.5rem 1rem; }
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.35rem 1rem 0;
+  }
+  .nav__brand {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    white-space: nowrap;
+  }
+  .nav__links {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .nav__link {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+  .hero__inner {
+    padding-top: 1rem;
+  }
+  .hero__headline {
+    font-size: clamp(1.6rem, 8vw, 1.9rem);
+  }
+  .hero__latest-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
 }
 
 /* —— Subscribe button (replaces the email form, Oct 15, 2026) —— */
@@ -1124,6 +1160,7 @@ a:hover {
 
 .t-history summary {
   cursor: pointer;
+  padding: 0.65rem 0;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--bay-deep);
