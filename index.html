@@ -41,6 +41,7 @@
     <meta name="twitter:description" content="San José decisions, public money, and what happens next. Free, plain-English reporting by J Gonzales, with every claim linked to the official record." />
     <meta name="twitter:image" content="https://thesanjosesource.com/assets/og.jpg" />
     <meta name="twitter:image:alt" content="The San Jose Source: City money, before the vote." />
+    <meta name="theme-color" content="#0f4c5c" />
     <script type="application/ld+json">
 {
       "@context": "https://schema.org",
@@ -219,24 +220,31 @@
             Recent briefs
           </h2>
           <!-- build:coverage-start -->
-          <div class="section__lede reveal" data-reveal>
-            <p>
-              <a href="/brief/3/"><strong>San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge</strong></a>
-            </p>
-            <p class="coverage__label">Brief #3 · Council, Nov. 17 · Nov 15, 2026</p>
-            <p>Two wastewater plant contracts, one bid 15% over the City&#x27;s estimate, and a proposed pause on data center approvals.</p>
+          <div class="brief-cards brief-cards--latest">
+            <article class="brief-card brief-card--featured reveal" data-reveal aria-labelledby="brief-card-3-title">
+              <p class="brief-card__label">Brief #3 · Council, Nov. 17 · Nov 15, 2026</p>
+              <h3 id="brief-card-3-title" class="brief-card__title"><a href="/brief/3/">San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge</a></h3>
+              <p class="brief-card__blurb">Two wastewater plant contracts, one bid 15% over the City&#x27;s estimate, and a proposed pause on data center approvals.</p>
+              <a class="brief-card__more" href="/brief/3/">Read Brief #3</a>
+            </article>
           </div>
-          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier briefs</h3>
-          <ul class="section__lede reveal" data-reveal>
+          <h3 class="brief-cards__earlier reveal" data-reveal>Earlier briefs</h3>
+          <ul class="brief-cards brief-cards--archive">
             <li>
-              <a href="/brief/2/"><strong>San José’s fire stations and police training center: target dates, budgets and opening plans</strong></a><br />
-              <span class="coverage__label">Brief #2 · Promised vs. Actual · Oct 15, 2026</span><br />
-              What the City first planned for three Measure T fire stations and the police training center, and where each stands today.
+              <a class="brief-card__hit" href="/brief/2/" aria-label="Read Brief #2: San José’s fire stations and police training center: target dates, budgets and opening plans"><article class="brief-card reveal" data-reveal>
+              <p class="brief-card__label">Brief #2 · Promised vs. Actual · Oct 15, 2026</p>
+              <h3 id="brief-card-2-title" class="brief-card__title">San José’s fire stations and police training center: target dates, budgets and opening plans</h3>
+              <p class="brief-card__blurb">What the City first planned for three Measure T fire stations and the police training center, and where each stands today.</p>
+              <span class="brief-card__more" aria-hidden="true">Read Brief #2</span>
+            </article></a>
             </li>
             <li>
-              <a href="/brief/1/"><strong>Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget</strong></a><br />
-              <span class="coverage__label">Brief #1 · Council, Sept. 15–Oct. 6 · Oct 12, 2026 (corrected Oct 14)</span><br />
-              What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.
+              <a class="brief-card__hit" href="/brief/1/" aria-label="Read Brief #1: Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget"><article class="brief-card reveal" data-reveal>
+              <p class="brief-card__label">Brief #1 · Council, Sept. 15–Oct. 6 · Oct 12, 2026 (corrected Oct 14)</p>
+              <h3 id="brief-card-1-title" class="brief-card__title">Council approves up to $6.9M fee waiver and $5.7M housing loan; police recruiting overtime runs $631,986 over budget</h3>
+              <p class="brief-card__blurb">What the Council decided from Sept. 15 to Oct. 6, and why the Police Department’s recruiting overtime ran over budget.</p>
+              <span class="brief-card__more" aria-hidden="true">Read Brief #1</span>
+            </article></a>
             </li>
           </ul>
           <!-- build:coverage-end -->
@@ -245,23 +253,28 @@
 
       <section class="section section--tracker" aria-labelledby="tracker-title">
         <div class="wrap">
-          <h2 id="tracker-title" class="section__title reveal" data-reveal>
-            Promised vs. Actual
-          </h2>
-          <p class="section__lede reveal" data-reveal>
-            What the City said a project would cost and when it would finish,
-            compared with what actually happened, using only dates and dollars
-            the record states.
-          </p>
-          <p class="section__lede reveal" data-reveal>
-            Example: a June 2021 City status report expected Fire Station 8 to
-            be finished in mid-2024. Its crew began operating there on July 22, 2026.
-          </p>
-          <p class="brief-link reveal" data-reveal>
-            <a href="./tracker/">See the tracker</a>
-            ·
-            <a href="/brief/2/">Read Brief #2</a>
-          </p>
+          <div class="tracker-teaser reveal" data-reveal>
+            <div class="tracker-teaser__copy">
+              <p class="eyebrow">Record-linked tracker</p>
+              <h2 id="tracker-title" class="section__title">
+                Promised vs. Actual
+              </h2>
+              <p class="section__lede">
+                What the City said a project would cost and when it would finish,
+                compared with what actually happened, using only dates and dollars
+                the record states.
+              </p>
+              <p class="tracker-teaser__example">
+                <span class="tracker-teaser__example-label">Example</span>
+                A June 2021 City status report expected Fire Station 8 to be
+                finished in mid-2024. Its crew began operating there on July 22, 2026.
+              </p>
+              <p class="brief-link">
+                <a class="btn btn--outline" href="./tracker/">See the tracker</a>
+                <a class="btn btn--ghost-ink" href="/brief/2/">Read Brief #2</a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

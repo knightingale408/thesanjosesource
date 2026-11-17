@@ -243,6 +243,23 @@ def parse_table(lines: list[str]) -> tuple[str, int]:
     return "\n".join(out), i
 
 
+def brief_section_modifier(section_title: str | None, inner: str) -> str:
+    """Extra class for correction callouts, take, sources, and corrections log."""
+    title = (section_title or "").strip().lower()
+    if title and "take" in title:
+        return " brief-block--take"
+    if title == "sources":
+        return " brief-block--sources"
+    if title.startswith("corrections"):
+        return " brief-block--corrections-log"
+    if not section_title:
+        plain = re.sub(r"<[^>]+>", " ", inner)
+        plain = re.sub(r"\s+", " ", plain).strip()
+        if re.match(r"correction\b", plain, re.IGNORECASE):
+            return " brief-block--correction"
+    return ""
+
+
 def markdown_body_to_html(md: str) -> str:
     lines = md.splitlines()
     i = 0
@@ -276,8 +293,15 @@ def markdown_body_to_html(md: str) -> str:
                 f'<h2 id="{section_id}" class="brief-block__title">'
                 f"{html.escape(section_title)}</h2>\n"
             )
+        modifier = brief_section_modifier(section_title, inner)
+        role = (
+            ' role="note"'
+            if modifier.strip() == "brief-block--correction"
+            else ""
+        )
         chunks.append(
-            f'<section class="brief-block reveal" data-reveal{aria}>\n{title_html}{inner}\n</section>'
+            f'<section class="brief-block{modifier} reveal" data-reveal{aria}{role}>\n'
+            f"{title_html}{inner}\n</section>"
         )
         current_section = None
         section_title = None
@@ -467,6 +491,7 @@ def render_brief_page(brief: Brief) -> str:
     <meta name="twitter:description" content="{desc_og}" />
     <meta name="twitter:image" content="{SITE_BASE}/assets/og.jpg" />
     <meta name="twitter:image:alt" content="The San Jose Source: City money, before the vote." />
+    <meta name="theme-color" content="#0f4c5c" />
     <script type="application/ld+json">
 {json_ld(brief)}
     </script>
@@ -538,42 +563,63 @@ def replace_between(text: str, start: str, end: str, replacement: str) -> str:
     return before + start + replacement + end + after
 
 
+def render_brief_card(brief: Brief, *, featured: bool = False) -> str:
+    """One scannable homepage card linking to a brief."""
+    url = f"/brief/{brief.number}/"
+    title_id = f"brief-card-{brief.number}-title"
+    classes = "brief-card brief-card--featured" if featured else "brief-card"
+    more = (
+        f'<a class="brief-card__more" href="{url}">Read Brief #{brief.number}</a>'
+        if featured
+        else f'<span class="brief-card__more" aria-hidden="true">Read Brief #{brief.number}</span>'
+    )
+    # Featured cards keep an explicit CTA; archive cards make the whole article the hit target.
+    title_link = (
+        f'<a href="{url}">{html.escape(brief.title)}</a>'
+        if featured
+        else html.escape(brief.title)
+    )
+    if featured:
+        wrapper_open = (
+            f'<article class="{classes} reveal" data-reveal aria-labelledby="{title_id}">'
+        )
+        wrapper_close = "</article>"
+    else:
+        aria_label = html.escape(
+            f"Read Brief #{brief.number}: {brief.title}", quote=True
+        )
+        wrapper_open = (
+            f'<a class="brief-card__hit" href="{url}" aria-label="{aria_label}">'
+            f'<article class="{classes} reveal" data-reveal>'
+        )
+        wrapper_close = "</article></a>"
+    return f"""{wrapper_open}
+              <p class="brief-card__label">{html.escape(brief.default_coverage_label())}</p>
+              <h3 id="{title_id}" class="brief-card__title">{title_link}</h3>
+              <p class="brief-card__blurb">{html.escape(brief.default_homepage_blurb())}</p>
+              {more}
+            {wrapper_close}"""
+
+
 def render_coverage_block(sorted_briefs: list[Brief]) -> str:
     latest, *archive = sorted_briefs
-    latest_url = f"/brief/{latest.number}/"
-    featured = textwrap.dedent(
-        f"""
-          <div class="section__lede reveal" data-reveal>
-            <p>
-              <a href="{latest_url}"><strong>{html.escape(latest.title)}</strong></a>
-            </p>
-            <p class="coverage__label">{html.escape(latest.default_coverage_label())}</p>
-            <p>{html.escape(latest.default_homepage_blurb())}</p>
-          </div>
-        """
-    ).rstrip()
+    featured = render_brief_card(latest, featured=True)
     if not archive:
         archive_html = ""
     else:
-        items = []
-        for brief in archive:
-            url = f"/brief/{brief.number}/"
-            items.append(
-                f"""            <li>
-              <a href="{url}"><strong>{html.escape(brief.title)}</strong></a><br />
-              <span class="coverage__label">{html.escape(brief.default_coverage_label())}</span><br />
-              {html.escape(brief.default_homepage_blurb())}
-            </li>"""
-            )
+        items = "\n".join(
+            f"            <li>\n              {render_brief_card(brief)}\n            </li>"
+            for brief in archive
+        )
         archive_html = (
-            '\n          <h3 class="section__title reveal" data-reveal style="font-size: 1.25rem; margin-top: 2rem;">Earlier briefs</h3>\n'
-            '          <ul class="section__lede reveal" data-reveal>\n'
-            + "\n".join(items)
+            '\n          <h3 class="brief-cards__earlier reveal" data-reveal>Earlier briefs</h3>\n'
+            '          <ul class="brief-cards brief-cards--archive">\n'
+            + items
             + "\n          </ul>"
         )
     return (
         "\n          "
-        + featured.strip().replace("\n", "\n          ")
+        + f'<div class="brief-cards brief-cards--latest">\n            {featured}\n          </div>'
         + archive_html
         + "\n          "
     )
