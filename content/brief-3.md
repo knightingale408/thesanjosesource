@@ -2,7 +2,7 @@
 title: San José wastewater bid comes in 15% over estimate; staff cite limited competition and a construction surge
 description: On Nov. 17 the San José City Council considers an $11,248,000 heating and cooling contract and a Black & Veatch adviser agreement of up to $16,885,000 at the Regional Wastewater Facility, and a proposal from the Mayor and four councilmembers to pause data center approvals.
 date: 2026-11-15
-date_modified: 2026-11-16
+date_modified: 2026-11-17
 series: Weekly brief
 homepage_blurb: Two wastewater plant contracts, one bid 15% over the City's estimate, and a proposed pause on data center approvals.
 coverage_label: Brief #3 · Council, Nov. 17 · Nov 15, 2026
@@ -10,6 +10,8 @@ eyebrow: Brief #3 · Council, Nov. 17 · Published November 15, 2026
 dek: Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher.
 meta_line: By J Gonzales · Nov. 15, 2026
 ---
+
+**Correction and update, November 17, 2026:** we corrected how many more times the Council would vote before pump-station construction starts, and we corrected the late 2028 schedule line. We also updated the status of the Oct. 27 minutes. The original wording is under Corrections and updates at the end of this page.
 
 **Correction, November 16, 2026:** we changed the headline, the subtitle and two sentences to match the wording of the City's staff memos. The heating memo says limited competition and a local construction surge, including data center development, "may have" contributed to higher bids; it does not say the surge left only two bidders. The adviser memo says that contract has no "additional" impact on the General Fund. The original wording is under Corrections and updates at the end of this page.
 
@@ -33,9 +35,10 @@ The second item would hire Black & Veatch as the City's "owner's advisor" on the
 
 The plant's Treatment Plant Advisory Committee recommended both items 8-0, with one member absent, on Nov. 12 ([heating letter](https://legistar.granicus.com/sanjose/attachments/8d34909f-620b-44ed-942f-67596ded3434.pdf), [adviser letter](https://legistar.granicus.com/sanjose/attachments/4115608d-8635-4ad6-a18f-48a85a742260.pdf)).
 
-What the pump-station work will finally cost is not known; staff say the estimate "will be further refined" (p. 3). This vote would hire the adviser only. The Council would vote twice more before construction starts (p. 7). The schedule:
+What the pump-station work will finally cost is not known; staff say the estimate "will be further refined" (p. 3). This vote would hire the adviser only. The Council would vote three more times before construction starts (p. 7). The schedule:
 
-- **Late 2028:** a design-build contract
+- **Second half of 2028:** environmental review (CEQA) findings
+- **Late 2028:** the design-builder's contract for preliminary services
 - **Spring 2031:** a guaranteed maximum price
 - **Late 2031:** construction expected to start
 - **Dec. 31, 2036:** the adviser agreement ends
@@ -56,7 +59,7 @@ The Council will consider [settling Lopez et al. v. City of San José for $180,0
 
 One result is on the record: the [change to Apple's development agreement](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8301116&GUID=DCEF5BD1-1E76-465D-9C5C-CD3D54005480&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) was passed for publication Nov. 10 and is up for [final adoption Nov. 17](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8315001&GUID=73E969DD-B0DA-4BBE-A050-7A4987235C6E) as Ordinance No. 31369 ([agenda p. 6](https://legistar.granicus.com/sanjose/meetings/2026/11/8124_A_City_Council_26-11-17_Agenda.pdf)).
 
-Earlier results below are from draft minutes, not yet formally approved.
+The Oct. 20 results below are from draft minutes, not yet formally approved. The Council approved the Oct. 27 minutes on Nov. 10, 11-0.
 
 - Oct. 20: The Council [accepted the City's 2025-26 year-end budget report](https://sanjose.legistar.com/View.ashx?M=M&ID=1423865&GUID=E046C3EF-7D81-4358-BA57-E63014B8067C&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) and adopted its budget changes, 10-0 with one absent. They include $700,000 more for the [Biblioteca Latinoamericana](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8279243&GUID=8D152870-7B18-47A8-8C9D-515B8A1D97CC&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) renovation.
 - Oct. 27: The Council [approved three-year contracts](https://sanjose.legistar.com/View.ashx?M=M&ID=1423866&GUID=7EE9304B-893C-478B-A0BB-385B8400C0C1&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) with the Municipal Employees' Federation and two IFPTE Local 21 units, 11-0; a third unit did not ratify. The two IFPTE deals cost about [$4.8 million a year, $1.3 million from the General Fund](https://legistar.granicus.com/sanjose/attachments/34c85e75-188b-435a-861f-fe274806568c.pdf).
@@ -86,6 +89,12 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 17, 2026: correction and update
+
+- **Pump-station votes.** Was: "The Council would vote twice more before construction starts (p. 7)." Now: "The Council would vote three more times before construction starts (p. 7)." The adviser memo lists three more Council approvals: environmental findings in the second half of 2028, the design-builder's contract for preliminary services in late 2028, and contract changes with a guaranteed maximum price in spring 2031 ([adviser memo](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf), p. 7).
+- **Schedule.** Was: "Late 2028: a design-build contract." Now: "Late 2028: the design-builder's contract for preliminary services." We also added the environmental findings in the second half of 2028. The memo calls the late 2028 item "the design-builder's contract for preliminary services" (p. 7).
+- **Minutes (update).** Was: "Earlier results below are from draft minutes, not yet formally approved." Now: "The Oct. 20 results below are from draft minutes, not yet formally approved. The Council approved the Oct. 27 minutes on Nov. 10, 11-0." That approval appears in the Nov. 10 draft minutes, which the City posted Nov. 16, after this brief was published ([Nov. 10 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8123&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), p. 2).
 
 ### November 16, 2026: correction
 
