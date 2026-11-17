@@ -8,9 +8,8 @@ homepage_blurb: Two wastewater plant contracts, one bid 15% over the City's esti
 coverage_label: Brief #3 · Council, Nov. 17 · Nov 15, 2026
 eyebrow: Brief #3 · Council, Nov. 17 · Published November 15, 2026
 dek: Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher.
+meta_line: By J Gonzales · Nov. 15, 2026
 ---
-
-By J Gonzales · Nov. 15, 2026
 
 **Correction, November 16, 2026:** we changed the headline, the subtitle and two sentences to match the wording of the City's staff memos. The heating memo says limited competition and a local construction surge, including data center development, "may have" contributed to higher bids; it does not say the surge left only two bidders. The adviser memo says that contract has no "additional" impact on the General Fund. The original wording is under Corrections and updates at the end of this page.
 
