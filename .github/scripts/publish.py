@@ -13,7 +13,7 @@ API = "https://here.now/api/v1"
 CLIENT = "github-actions/thesanjosesource"
 # Repo-only files that are never part of the website.
 EXCLUDE_EXACT = {"README.md", "AGENTS.md", "build.py", "check_links.py", ".nojekyll", ".gitattributes", ".gitignore", "CNAME",
-                 "METHODOLOGY.md", "DATA_DICTIONARY.md", "CONTRIBUTING.md", "CORRECTIONS.md"}
+                 "METHODOLOGY.md", "DATA_DICTIONARY.md", "CONTRIBUTING.md", "CORRECTIONS.md", ".cursorrules"}
 EXCLUDE_PREFIX = (".github/", "content/", "tools/", "research/", "data/", "schemas/", "scripts/", "tests/")
 
 TYPES = {
