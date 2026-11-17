@@ -580,8 +580,23 @@ def render_coverage_block(sorted_briefs: list[Brief]) -> str:
 
 
 def render_hero_latest(latest: Brief) -> str:
+    """The latest-brief card in the homepage's first screen."""
     url = f"/brief/{latest.number}/"
-    return f'\n          <a class="btn btn--gold" href="{url}">Latest brief</a>\n          '
+    return textwrap.indent(
+        textwrap.dedent(
+            f"""
+            <article class="hero__latest reveal" data-reveal aria-labelledby="hero-latest-title">
+              <p class="hero__latest-label">Latest · {html.escape(latest.default_coverage_label())}</p>
+              <h2 id="hero-latest-title" class="hero__latest-title">
+                <a href="{url}">{html.escape(latest.title)}</a>
+              </h2>
+              <p class="hero__latest-blurb">{html.escape(latest.default_homepage_blurb())}</p>
+              <a class="btn btn--gold" href="{url}">Read Brief #{latest.number}</a>
+            </article>
+            """
+        ).strip("\n"),
+        "        ",
+    ).join(["\n", "\n        "])
 
 
 def update_index(briefs: list[Brief]) -> None:
@@ -664,7 +679,16 @@ def discover_handwritten_page_urls() -> list[str]:
     return ordered
 
 
-def write_sitemap(brief_urls: list[str]) -> None:
+def brief_lastmods(briefs: Iterable[Brief]) -> dict[str, str]:
+    """Sitemap lastmod per brief URL: date_modified if set, else date."""
+    return {
+        b.canonical_url: (b.date_modified or b.date).strftime("%Y-%m-%d")
+        for b in briefs
+    }
+
+
+def write_sitemap(brief_urls: list[str], lastmods: dict[str, str] | None = None) -> None:
+    lastmods = lastmods or {}
     all_urls: list[str] = []
     seen: set[str] = set()
     for loc in discover_handwritten_page_urls() + list(brief_urls):
@@ -676,6 +700,8 @@ def write_sitemap(brief_urls: list[str]) -> None:
     for loc in all_urls:
         url_el = ET.SubElement(urlset, "url")
         ET.SubElement(url_el, "loc").text = loc
+        if loc in lastmods:
+            ET.SubElement(url_el, "lastmod").text = lastmods[loc]
     tree = ET.ElementTree(urlset)
     ET.indent(tree, space="  ")
     out = ROOT / "sitemap.xml"
@@ -758,7 +784,7 @@ def main() -> int:
     write_brief_pages(briefs)
     update_index(briefs)
     write_feed(briefs)
-    write_sitemap(discover_brief_urls_on_disk())
+    write_sitemap(discover_brief_urls_on_disk(), brief_lastmods(briefs))
     print(f"Built {len(briefs)} brief(s).")
     return 0
 

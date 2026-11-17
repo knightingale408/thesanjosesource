@@ -34,8 +34,13 @@ The live site is https://thesanjosesource.com. This repo is not published throug
 
 ## The data layer (repo-only, not published)
 
-The tracker's evidence backbone. Kept out of the published site; the tracker
-frontend will consume `public-data/projects.json`.
+The tracker's evidence backbone. `data/`, `schemas/`, `scripts/` and `tests/`
+stay out of the published site.
+
+Two data files **are** public, on purpose: the tracker page loads
+`public-data/projects.json` (built from `data/`, accepted records only) and
+links readers to `promised-vs-actual.csv` as its underlying data file. Anything
+committed to either file goes live with the next publish.
 
 | Path | What it is |
 |---|---|

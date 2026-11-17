@@ -8,9 +8,8 @@ homepage_blurb: Two wastewater plant contracts, one bid 15% over the City's esti
 coverage_label: Brief #3 · Council, Nov. 17 · Nov 15, 2026
 eyebrow: Brief #3 · Council, Nov. 17 · Published November 15, 2026
 dek: Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher.
+meta_line: By J Gonzales · Nov. 15, 2026
 ---
-
-By J Gonzales · Nov. 15, 2026
 
 **Correction and update, November 17, 2026:** we corrected how many more times the Council would vote before pump-station construction starts, and we corrected the late 2028 schedule line. We also updated the status of the Oct. 27 minutes. The original wording is under Corrections and updates at the end of this page.
 
