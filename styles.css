@@ -565,10 +565,15 @@ a:hover {
   text-wrap: balance;
 }
 
+/* Titles over 60 characters (set in build.py). Syne is very wide, so a long
+   headline set in it fills half a phone screen; Figtree bold keeps it to a
+   few lines. */
 .brief__title--long {
-  font-size: clamp(1.7rem, 4.2vw, 2.45rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
 }
 
 .brief__dek {
