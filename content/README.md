@@ -10,17 +10,21 @@ Add one markdown file per brief:
 |------|---------|
 | File name | `brief-3.md`, `brief-4.md`, … |
 | Location | This folder: `content/` |
-| Number | Match the brief number you want on the site (`/brief/3/`, etc.) |
+| Number | Internal only: sets the address (`/brief/4/`, etc.) and never appears in labels |
 
 Each file has **YAML front matter** at the top (between `---` lines), then the **body** (markdown or HTML).
 
-### Naming and numbering (adopted Nov. 7, 2026)
+### Naming and labels (adopted Nov. 18, 2026; replaces the Nov. 7 numbering labels)
 
-- **The public word is "Brief."** Every page leads with its headline. The small label above it reads `Brief #N · what it covers · Published date` (set `eyebrow` and `coverage_label`; the build fills in a default if you leave them out).
-- **Numbers follow publish order.** A number is assigned only when a brief goes live. Drafts never hold a number, and published briefs are never renumbered. The next brief to publish is **#3**.
-- **File number = brief number = address.** `content/brief-3.md` is Brief #3 at `/brief/3/`.
-- **Off-schedule posts are "Updates," not briefs.** A mid-week follow-up or single-topic extra gets the label `Update · date` and no number.
-- **Substack matches the site.** Substack title: `Brief #N — headline` (the format already in use). X posts lead with the headline and link to the website page.
+- **Labels say what a piece covers, not its number.** The small label above each headline is `[timing] · [topics] · Published date`. Every label must be specific to that piece; never use a generic label such as "Council Preview" on its own.
+  - Before a meeting: `Before the Nov. 17 vote · Wastewater contracts, data center pause`
+  - After a meeting: `Decided Sept. 15–Oct. 6 · Fee waiver, housing loan, police overtime`
+  - Tracker reports: `Promised vs. Actual · Fire stations and police training center`
+  - Off-schedule extras: `Update · Nov. 20 · [topic]`
+  - Topics: two or three, plain words, most important first, under about 50 characters.
+- **Buttons and links read "Read the brief"** or name the topic. Readers never see brief numbers.
+- **Numbers stay internal.** Numbers follow publish order and are assigned only when a piece goes live. Drafts never hold one, published pieces are never renumbered, and file number = address: `content/brief-4.md` is `/brief/4/`. Never change an existing `/brief/N/` address.
+- **Substack subject:** `[Label without date]: headline`, for example `Before the Nov. 17 vote: San José wastewater bid comes in 15% over estimate`. X posts lead with the headline and link to the website page.
 - **Label changes are logged** on the Corrections page with the original wording.
 
 ### Required front matter
@@ -48,7 +52,7 @@ description: Plain-English summary for Google, Substack previews, and social lin
 date: 2026-10-22
 series: Weekly brief
 homepage_blurb: One sentence for the homepage listing.
-coverage_label: Brief #3 · Council, [meeting date] · [publish date]
+coverage_label: Before the [meeting date] vote · [two or three topics] · [publish date]
 dek: Optional subtitle under the headline.
 ---
 

@@ -23,12 +23,12 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 - `python3 build.py` rewrites `feed.xml` only when a brief item changed. The committed `lastBuildDate` stays put on a rebuild of the same briefs, so a clean `git diff` after `build.py` means the generated pages match the commit.
 - `.github/workflows/build-check.yml` runs that check on every pull request. A `content/` change that does not commit the regenerated `brief/`, `index.html`, `feed.xml` and `sitemap.xml` fails CI.
 
-## Naming and numbering (adopted Nov 7, 2026)
+## Naming and labels (adopted Nov 18, 2026)
 
-- Public word: **Brief**. Label above the headline: `Brief #N · what it covers · Published date`.
-- Numbers follow publish order. Drafts never hold a number. Never renumber a published brief.
-- File number = brief number = address: `content/brief-3.md` is Brief #3 at `/brief/3/`. Never change an existing `/brief/N/` address.
-- Off-schedule posts are labeled `Update · date` with no number.
+- Label above the headline: `[timing] · [topics] · Published date`, specific to that piece, e.g. `Before the Nov. 17 vote · Wastewater contracts, data center pause`. Never a generic label like "Council Preview" alone. Full rules in `content/README.md`.
+- No brief numbers in anything readers see (labels, buttons, link text, Substack subjects).
+- Numbers are internal: they follow publish order, set the file and address (`content/brief-4.md` → `/brief/4/`), and are never reassigned. Never change an existing `/brief/N/` address.
+- Off-schedule posts: `Update · date · topic`.
 
 ## Facts and sources
 
