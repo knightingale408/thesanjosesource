@@ -81,7 +81,7 @@ class Brief:
     def default_eyebrow(self) -> str:
         if self.eyebrow:
             return self.eyebrow
-        return f"Brief #{self.number} · {self.series} · Published {self.formatted_date_long()}"
+        return self.series
 
     def default_homepage_blurb(self) -> str:
         if self.homepage_blurb:
@@ -91,7 +91,7 @@ class Brief:
     def default_coverage_label(self) -> str:
         if self.coverage_label:
             return self.coverage_label
-        return f"Brief #{self.number} · {self.series} · {self.formatted_date_short()}"
+        return f"{self.series} · {self.formatted_date_short()}"
 
 
 def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
@@ -447,7 +447,7 @@ def render_brief_page(brief: Brief) -> str:
     if brief.dek:
         dek_html = f'\n        <p class="brief__dek reveal" data-reveal>{inline_markdown(brief.dek)}</p>'
     body_html = render_article_body(brief)
-    byline = brief.meta_line if brief.meta_line else f"By {brief.author}"
+    byline = brief.meta_line if brief.meta_line else f"By {brief.author} · {brief.date.strftime('%b. %d, %Y').replace(' 0', ' ')}"
     return f"""<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -569,9 +569,9 @@ def render_brief_card(brief: Brief, *, featured: bool = False) -> str:
     title_id = f"brief-card-{brief.number}-title"
     classes = "brief-card brief-card--featured" if featured else "brief-card"
     more = (
-        f'<a class="brief-card__more" href="{url}">Read Brief #{brief.number}</a>'
+        f'<a class="brief-card__more" href="{url}">Read the brief</a>'
         if featured
-        else f'<span class="brief-card__more" aria-hidden="true">Read Brief #{brief.number}</span>'
+        else f'<span class="brief-card__more" aria-hidden="true">Read the brief</span>'
     )
     # Featured cards keep an explicit CTA; archive cards make the whole article the hit target.
     title_link = (
@@ -586,7 +586,7 @@ def render_brief_card(brief: Brief, *, featured: bool = False) -> str:
         wrapper_close = "</article>"
     else:
         aria_label = html.escape(
-            f"Read Brief #{brief.number}: {brief.title}", quote=True
+            f"Read: {brief.title}", quote=True
         )
         wrapper_open = (
             f'<a class="brief-card__hit" href="{url}" aria-label="{aria_label}">'
@@ -637,7 +637,7 @@ def render_hero_latest(latest: Brief) -> str:
                 <a href="{url}">{html.escape(latest.title)}</a>
               </h2>
               <p class="hero__latest-blurb">{html.escape(latest.default_homepage_blurb())}</p>
-              <a class="btn btn--gold" href="{url}">Read Brief #{latest.number}</a>
+              <a class="btn btn--gold" href="{url}">Read the brief</a>
             </article>
             """
         ).strip("\n"),
