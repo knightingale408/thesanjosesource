@@ -257,6 +257,8 @@ def brief_section_modifier(section_title: str | None, inner: str) -> str:
         plain = re.sub(r"\s+", " ", plain).strip()
         if re.match(r"correction\b", plain, re.IGNORECASE):
             return " brief-block--correction"
+        if re.match(r"how to weigh in\b", plain, re.IGNORECASE):
+            return " brief-block--weigh-in"
     return ""
 
 

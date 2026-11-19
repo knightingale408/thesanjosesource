@@ -897,7 +897,22 @@ a:hover {
   color: var(--ink);
 }
 
-/* Top-of-brief correction callouts (untitled lead paragraphs) */
+/* Top-of-brief callouts (untitled lead paragraphs): corrections and How to weigh in */
+.brief-block--weigh-in {
+  border-top: none;
+  border-left: 4px solid var(--ink);
+  background: rgba(20, 20, 20, 0.05);
+  padding: 1rem 1.1rem 1.05rem;
+  margin: 0 0 1.75rem;
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+}
+
+.brief-block--weigh-in p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+
 .brief-block--correction {
   border-top: none;
   border-left: 4px solid var(--gold);
