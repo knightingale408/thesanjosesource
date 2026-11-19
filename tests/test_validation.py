@@ -144,6 +144,20 @@ def test_optional_source_patterns_allow_empty_string():
     assert re.fullmatch(schema["properties"]["document_sha256"]["pattern"], "ab" * 32)
 
 
+def test_retrieved_before_meeting_is_flagged():
+    report = validate_data.Report()
+    sources = [{
+        "source_id": "sj-early",
+        "retrieved_at": "2026-10-12",
+        "meeting_date": "2026-10-15",
+        "document_sha256": "",
+        "archived_document_url": "",
+    }]
+    validate_data.check_sources(report, sources)
+    assert any("earlier than meeting_date" in warning for warning in report.warnings)
+    assert not report.errors
+
+
 def test_repo_data_validates():
     """The real data/ files in this repo must pass cleanly."""
     repo = Path(__file__).resolve().parent.parent

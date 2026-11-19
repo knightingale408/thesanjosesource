@@ -218,6 +218,19 @@ def check_sources(report, sources):
             report.warn(where, "no document_sha256 yet; changes to the source file are not detectable")
         if not (s.get("archived_document_url") or "").strip():
             report.warn(where, "no archived copy yet; evidence depends on the live URL")
+        # A file cannot be retrieved before the meeting it is filed for.
+        # Year- or month-precision dates are not compared.
+        retrieved = (s.get("retrieved_at") or "").strip()
+        meeting = (s.get("meeting_date") or "").strip()
+        if (
+            re.fullmatch(r"\d{4}-\d{2}-\d{2}", retrieved)
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", meeting)
+            and retrieved < meeting
+        ):
+            report.warn(
+                where,
+                f"retrieved_at {retrieved} is earlier than meeting_date {meeting}",
+            )
 
 
 def validate_repo(repo):

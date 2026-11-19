@@ -34,7 +34,9 @@ def main():
             print(f"ERROR: {e}", file=sys.stderr)
         sys.exit("Data validation failed; not building public-data/projects.json")
 
-    view = calculate_deltas.current_view(projects, updates, sources, categories)
+    view = calculate_deltas.public_view(
+        calculate_deltas.current_view(projects, updates, sources, categories)
+    )
 
     out = repo / "public-data" / "projects.json"
     out.parent.mkdir(exist_ok=True)
