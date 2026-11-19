@@ -15,3 +15,17 @@ Not published (`research/` is excluded from the site).
 5. **Tracker line** is true only after the PR #56 publish is approved and live.
 6. **J Gonzales's take** is a placeholder draft for Jay.
 7. Word count: about 930 words in the article body, not counting sources.
+
+## Reviewer pass, Nov. 19
+
+An outside review confirmed the staff report figures, the Dec. 1 agenda amounts and pages, the Nov. 17 status, and the battery details. Changes made in response:
+- The $3.5–7M revenue figure is now quoted as written ("data centers are expected to generate…", p. 5), with a note that staff don't say whether it is per project or combined.
+- Item 7.1 now reads "an agreement with the County, up to $5,430,576"; the agenda doesn't say which way the money flows.
+- Item 6.1 from Nov. 17 is now called the wastewater plant HVAC contract.
+- The pause covers "data centers or large energy use projects."
+- The urgency-ordinance sentence was clarified.
+- Battery exclusions now say rechargeables and "larger lithium-ion batteries"; coin cells are accepted.
+- The staff report is dated Nov. 6 and was heard Nov. 18.
+- A line says the Planning Commission's Nov. 18 recommendation isn't posted yet.
+- The headline was shortened to 10 words, and the no-meeting line was removed from the dek.
+- "2020" Commercial Linkage Fee nexus analysis: confirmed in the p. 10 text ("The City's 2020 Commercial Linkage Fee nexus analysis did not address data centers.").
