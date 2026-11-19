@@ -151,6 +151,79 @@ def test_unreviewed_baseline_publishes_no_delta():
     assert rec["schedule_delta"]["months"] is None
 
 
+def test_public_view_keeps_accepted_values_and_drops_the_rest():
+    projects = [{"project_id": "p1", "project_name": "P1", "category": "public-safety",
+                 "baseline_budget_usd": "100", "baseline_budget_label": "$100",
+                 "promised_completion": "2024-06", "promised_completion_label": "June 2024",
+                 "review_status": "accepted"}]
+    updates = [
+        {"update_id": "u-ok", "project_id": "p1", "reported_at": "2026-06-01",
+         "reported_budget_usd": "120", "reported_completion": "2025-12",
+         "reported_completion_label": "December 2025",
+         "lifecycle_stage": "construction", "status_code": "delayed",
+         "review_status": "accepted"},
+        {"update_id": "u-pending", "project_id": "p1", "reported_at": "2026-09-01",
+         "reported_budget_usd": "200", "reported_budget_label": "$200 pending",
+         "reported_completion": "2027-01", "reported_completion_label": "January 2027",
+         "lifecycle_stage": "construction", "status_code": "delayed",
+         "review_status": "pending_review"},
+    ]
+    view = cd.current_view(projects, updates, [{"source_id": "s1"}], {})
+    # The working view still has the pending row for review.
+    assert view[0]["position"]["budget"]["usd"] == 200.0
+    public = cd.public_view(view)[0]
+    assert public["publication"] == "source_checked"
+    assert public["baseline"]["completion_label"] == "June 2024"
+    assert public["position"]["budget"]["usd"] == 120.0
+    assert public["position"]["completion"]["date"] == "2025-12"
+    assert [entry["update_id"] for entry in public["history"]] == ["u-ok"]
+    blob = __import__("json").dumps(public)
+    assert "2027-01" not in blob
+    assert "$200 pending" not in blob
+
+
+def test_public_view_withholds_every_unaccepted_repo_value():
+    """Jay's rule: a date or figure that has not been accepted stays off the public tracker."""
+    repo = Path(__file__).resolve().parent.parent
+    projects = cd.load_csv(repo / "data" / "projects.csv")
+    updates = cd.load_csv(repo / "data" / "project-updates.csv")
+    sources = cd.load_csv(repo / "data" / "sources.csv")
+    categories = __import__("json").loads((repo / "data" / "categories.json").read_text())
+    public = cd.public_view(cd.current_view(projects, updates, sources, categories))
+    assert len(public) == 6
+    leaked = []
+    for record in public:
+        if record["publication"] != "awaiting_source_check":
+            leaked.append(record["project_id"] + " publication")
+        baseline = record["baseline"]
+        for key in ("budget_usd", "budget_label", "completion", "completion_label"):
+            if baseline.get(key) not in (None, ""):
+                leaked.append(f"{record['project_id']} baseline {key}={baseline.get(key)!r}")
+        for key in ("budget", "completion", "status"):
+            if record["position"].get(key):
+                leaked.append(f"{record['project_id']} position {key}")
+        if record["history"]:
+            leaked.append(f"{record['project_id']} history")
+        if record["budget_delta"]["delta"] is not None or record["schedule_delta"]["months"] is not None:
+            leaked.append(f"{record['project_id']} delta")
+    assert leaked == []
+
+
+def test_committed_public_json_matches_the_withholding_rule():
+    repo = Path(__file__).resolve().parent.parent
+    payload = __import__("json").loads((repo / "public-data" / "projects.json").read_text())
+    assert len(payload["projects"]) == 6
+    for record in payload["projects"]:
+        assert record["publication"] == "awaiting_source_check"
+        assert record["baseline"]["completion"] is None
+        assert record["baseline"]["completion_label"] is None
+        assert record["baseline"]["budget_label"] is None
+        assert record["position"]["budget"] is None
+        assert record["position"]["completion"] is None
+        assert record["position"]["status"] is None
+        assert record["history"] == []
+
+
 def test_repo_pilots_report_no_budget_deltas():
     """The three Measure T pilots have no stated budgets: deltas must be null,
     never zero (METHODOLOGY: 'not reported' is not zero)."""

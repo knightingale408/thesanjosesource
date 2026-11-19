@@ -14,11 +14,16 @@ day-level precision is invented for approximate dates.
 
 The view has two merged positions per project:
 - position: the latest reported value per concept, from any row that is
-  not rejected. Each value keeps its own source and review status, so a
-  card can show reported values while flagging verification as pending.
+  not rejected. Each value keeps its own source and review status. This
+  is the working view for review. It is not what the site publishes.
 - accepted_position: merged from accepted / accepted_with_edits rows
   only. Calculated deltas come from this, so no unreviewed value can
   produce a published number.
+
+public_view() is the file the site publishes. A date, budget, status or
+history entry stays out until its record is accepted or
+accepted_with_edits. A project with nothing accepted is marked
+publication "awaiting_source_check".
 
 Usage: python3 scripts/calculate_deltas.py [repo_root]
        (as a module: from calculate_deltas import budget_delta, schedule_delta_months, current_view)
@@ -242,6 +247,54 @@ def current_view(projects, updates, sources, categories):
             }
         out.append(record)
     return out
+
+
+def _blank_unaccepted_baseline(baseline):
+    """Drop promised dates and budget text until the baseline is accepted."""
+    out = dict(baseline)
+    if review_state(baseline) not in ACCEPTED:
+        out["budget_usd"] = None
+        out["budget_label"] = None
+        out["completion"] = None
+        out["completion_label"] = None
+    return out
+
+
+def _has_public_value(record):
+    baseline = record["baseline"]
+    if any(baseline.get(key) for key in ("budget_usd", "budget_label", "completion", "completion_label")):
+        return True
+    position = record["position"]
+    if any(position.get(key) for key in ("budget", "completion", "status")):
+        return True
+    return bool(record["history"])
+
+
+def public_view(records):
+    """Copy a current_view for publication.
+
+    Unaccepted dates, budgets, statuses and history entries are removed.
+    The working view is unchanged. A card with nothing left to show is
+    publication "awaiting_source_check".
+    """
+    published = []
+    for record in records:
+        public = {
+            key: value
+            for key, value in record.items()
+            if key not in ("baseline", "position", "history")
+        }
+        public["baseline"] = _blank_unaccepted_baseline(record["baseline"])
+        public["position"] = record["accepted_position"]
+        public["history"] = [
+            entry for entry in record["history"]
+            if review_state(entry) in ACCEPTED
+        ]
+        public["publication"] = (
+            "source_checked" if _has_public_value(public) else "awaiting_source_check"
+        )
+        published.append(public)
+    return published
 
 
 def main():

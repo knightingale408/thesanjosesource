@@ -67,6 +67,15 @@ carries `review_status`. Only `accepted` or `accepted_with_edits` records
 reach the production build. A reviewer can also `reject` or send the record
 back as `needs_more_evidence`.
 
+The public tracker follows that rule on the card, not only in the delta.
+A date, budget, status or history entry stays off the card until its own
+record is `accepted` or `accepted_with_edits`. Until then the card says
+"Awaiting source check." It does not show the unaccepted value with a
+pending label, and it does not call the value "not stated." "Not stated"
+is only for a number the City's accepted record does not give. Accepting
+a record is a separate decision from drafting it. Nothing in `data/` is
+treated as accepted until that decision is recorded in `review_status`.
+
 ## What is never inferred
 
 - A missing or empty field never means zero, "no cost," or "never

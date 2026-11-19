@@ -315,32 +315,46 @@ function initTracker(root) {
     headText.appendChild(meta);
     head.appendChild(headText);
 
-    const statusConcept = p.position.status;
-    const statusCode = statusConcept && statusConcept.status_code;
-    const pill = document.createElement("span");
-    pill.className = "tracker-pill " + (STATUS_PILL[statusCode] || "tracker-pill--neutral");
-    pill.textContent = STATUS_LABELS[statusCode] || "No current date";
-    head.appendChild(pill);
-    card.appendChild(head);
-
-    // Verification flag: reported values are visible while review is
-    // pending, but the reader is told. Nothing is silently published.
-    const accepted = isAccepted(p);
-    if (!accepted) {
-      const flag = document.createElement("p");
-      flag.className = "t-card__flag";
-      flag.textContent =
-        "Verification pending: these values are from City records and have not yet completed our source check.";
-      card.appendChild(flag);
+    // Unaccepted dates and figures stay off the card. The public JSON
+    // already drops them; this is the second gate if a value is still present.
+    if (p.publication === "awaiting_source_check") {
+      card.appendChild(head);
+      card.appendChild(awaitingFlag());
+      return card;
     }
 
-    // Promised vs. latest reported.
+    const statusConcept = acceptedConcept(p.position.status);
+    const statusCode = statusConcept && statusConcept.status_code;
+    if (statusCode) {
+      const pill = document.createElement("span");
+      pill.className = "tracker-pill " + (STATUS_PILL[statusCode] || "tracker-pill--neutral");
+      pill.textContent = STATUS_LABELS[statusCode] || "No current date";
+      head.appendChild(pill);
+    }
+    card.appendChild(head);
+
+    // Promised vs. latest reported. Only accepted concepts are filled in.
     const grid = document.createElement("div");
     grid.className = "t-card__grid";
-
-    grid.appendChild(factBlock("What the City promised", scheduleText(p.baseline.completion_label, p.baseline.completion), budgetText(p.baseline.budget_label, p.baseline.budget_usd)));
-    const latest = factBlock("Latest reported", scheduleText(p.position.completion && p.position.completion.label, p.position.completion && p.position.completion.date), budgetText(p.position.budget && p.position.budget.label, p.position.budget && p.position.budget.usd));
-    const deltaNote = deltaLine(p);
+    const baselineOk = p.baseline && ACCEPTED_STATUSES.has(p.baseline.review_status);
+    const promised = baselineOk
+      ? factBlock(
+          "What the City promised",
+          scheduleText(p.baseline.completion_label, p.baseline.completion),
+          budgetText(p.baseline.budget_label, p.baseline.budget_usd)
+        )
+      : awaitingFact("What the City promised");
+    grid.appendChild(promised);
+    const completion = acceptedConcept(p.position.completion);
+    const budget = acceptedConcept(p.position.budget);
+    const latest = (completion || budget)
+      ? factBlock(
+          "Latest reported",
+          scheduleText(completion && completion.label, completion && completion.date),
+          budgetText(budget && budget.label, budget && budget.usd)
+        )
+      : awaitingFact("Latest reported");
+    const deltaNote = (completion || budget) ? deltaLine(p) : "";
     if (deltaNote) {
       const delta = document.createElement("p");
       delta.className = "t-fact__delta";
@@ -350,8 +364,10 @@ function initTracker(root) {
     grid.appendChild(latest);
     card.appendChild(grid);
 
-    // Lifecycle stepper (or a plain label for abnormal states).
-    card.appendChild(stepper(p));
+    // Lifecycle stepper only when the status itself is accepted.
+    if (statusConcept) {
+      card.appendChild(stepper(p));
+    }
 
     // Change history.
     if (p.history && p.history.length) {
@@ -376,6 +392,34 @@ function initTracker(root) {
   }
 
   const ACCEPTED_STATUSES = new Set(["accepted", "accepted_with_edits"]);
+
+  function acceptedConcept(concept) {
+    if (!concept || !ACCEPTED_STATUSES.has(concept.review_status)) {
+      return null;
+    }
+    return concept;
+  }
+
+  function awaitingFlag() {
+    const flag = document.createElement("p");
+    flag.className = "t-card__flag";
+    flag.textContent = "Awaiting source check.";
+    return flag;
+  }
+
+  function awaitingFact(title) {
+    const block = document.createElement("div");
+    block.className = "t-fact";
+    const h = document.createElement("h4");
+    h.className = "t-fact__title";
+    h.textContent = title;
+    const note = document.createElement("p");
+    note.className = "t-fact__value";
+    note.textContent = "Awaiting source check.";
+    block.appendChild(h);
+    block.appendChild(note);
+    return block;
+  }
 
   function isAccepted(p) {
     // A card counts as verified only when every reported concept and the
@@ -517,6 +561,13 @@ function initTracker(root) {
   function historyEntry(h) {
     const li = document.createElement("li");
     li.className = "t-history__entry";
+    if (h.review_status && !ACCEPTED_STATUSES.has(h.review_status)) {
+      const flag = document.createElement("p");
+      flag.className = "t-history__flag";
+      flag.textContent = "Awaiting source check.";
+      li.appendChild(flag);
+      return li;
+    }
     const when = document.createElement("p");
     when.className = "t-history__when";
     when.textContent = formatDate(h.reported_at) || h.reported_at;
@@ -551,19 +602,6 @@ function initTracker(root) {
       p.appendChild(src);
       li.appendChild(p);
     }
-    if (h.review_status && !ACCEPTED_STATUSES.has(h.review_status)) {
-      const flag = document.createElement("p");
-      flag.className = "t-history__flag";
-      // Rejected claims and claims awaiting evidence are distinct from a
-      // first review that simply has not happened yet.
-      flag.textContent =
-        h.review_status === "rejected"
-          ? "Rejected: this entry is not shown as a current fact."
-          : h.review_status === "needs_more_evidence"
-            ? "Needs more evidence before this entry is verified."
-            : "Verification pending on this entry.";
-      li.appendChild(flag);
-    }
     return li;
   }
 
@@ -579,6 +617,9 @@ function initTracker(root) {
     const concepts = [p.baseline, p.position.budget, p.position.completion, p.position.status];
     for (const c of concepts) {
       if (!c || !c.source_id) {
+        continue;
+      }
+      if (c.review_status && !ACCEPTED_STATUSES.has(c.review_status)) {
         continue;
       }
       // Same document cited at different pages stays as two citations.
