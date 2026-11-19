@@ -25,10 +25,10 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 ## Naming and labels (adopted Nov 18, 2026)
 
-- Label above the headline: `[timing] · [topics] · Published date`, specific to that piece, e.g. `Before the Nov. 17 vote · Wastewater contracts, data center pause`. Never a generic label like "Council Preview" alone. Full rules in `content/README.md`.
+- Label above the headline: timing only, specific to that piece, e.g. `Before the Nov. 17 vote`, `Decided Sept. 15–Oct. 6`, `Promised vs. Actual`. The headline names the topics; the publish date goes in the byline (`meta_line`). Never a generic label like "Council Preview." Full rules in `content/README.md`.
 - No brief numbers in anything readers see (labels, buttons, link text, Substack subjects).
 - Numbers are internal: they follow publish order, set the file and address (`content/brief-4.md` → `/brief/4/`), and are never reassigned. Never change an existing `/brief/N/` address.
-- Off-schedule posts: `Update · date · topic`.
+- Off-schedule posts: `Update · Nov. 20`.
 
 ## Facts and sources
 

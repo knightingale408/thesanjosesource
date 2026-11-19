@@ -5,8 +5,8 @@ date: 2026-11-15
 date_modified: 2026-11-17
 series: Weekly brief
 homepage_blurb: Two wastewater plant contracts, one bid 15% over the City's estimate, and a proposed pause on data center approvals.
-coverage_label: Before the Nov. 17 vote · Wastewater contracts, data center pause · Nov 15, 2026
-eyebrow: Before the Nov. 17 vote · Wastewater contracts, data center pause · Published November 15, 2026
+coverage_label: Before the Nov. 17 vote · Nov 15, 2026
+eyebrow: Before the Nov. 17 vote
 dek: Only two contractors bid on an $11,248,000 heating and cooling contract. Staff say limited competition and a local construction surge, including data center development, may have pushed bids higher.
 meta_line: By J Gonzales · Nov. 15, 2026
 ---

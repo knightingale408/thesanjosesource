@@ -16,15 +16,15 @@ Each file has **YAML front matter** at the top (between `---` lines), then the *
 
 ### Naming and labels (adopted Nov. 18, 2026; replaces the Nov. 7 numbering labels)
 
-- **Labels say what a piece covers, not its number.** The small label above each headline is `[timing] · [topics] · Published date`. Every label must be specific to that piece; never use a generic label such as "Council Preview" on its own.
-  - Before a meeting: `Before the Nov. 17 vote · Wastewater contracts, data center pause`
-  - After a meeting: `Decided Sept. 15–Oct. 6 · Fee waiver, housing loan, police overtime`
-  - Tracker reports: `Promised vs. Actual · Fire stations and police training center`
-  - Off-schedule extras: `Update · Nov. 20 · [topic]`
-  - Topics: two or three, plain words, most important first, under about 50 characters.
+- **Labels are short and say when, not what.** The small label above each headline (`eyebrow`) is the timing only, two to five words. The meeting date keeps each label distinct; the headline names the topics. Never use a generic label such as "Council Preview."
+  - Before a meeting: `Before the Nov. 17 vote`
+  - After a meeting: `Decided Sept. 15–Oct. 6`
+  - Tracker reports: `Promised vs. Actual`
+  - Off-schedule extras: `Update · Nov. 20`
+- **The publish date goes in the byline** (`meta_line`), e.g. `By J Gonzales · Nov. 15, 2026`, plus any `Corrected` or `Updated` dates. Homepage cards (`coverage_label`) show the label plus the short date: `Before the Nov. 17 vote · Nov 15, 2026`.
 - **Buttons and links read "Read the brief"** or name the topic. Readers never see brief numbers.
 - **Numbers stay internal.** Numbers follow publish order and are assigned only when a piece goes live. Drafts never hold one, published pieces are never renumbered, and file number = address: `content/brief-4.md` is `/brief/4/`. Never change an existing `/brief/N/` address.
-- **Substack subject:** `[Label without date]: headline`, for example `Before the Nov. 17 vote: San José wastewater bid comes in 15% over estimate`. X posts lead with the headline and link to the website page.
+- **Substack subject:** `[Label]: headline`, for example `Before the Nov. 17 vote: San José wastewater bid comes in 15% over estimate`. X posts lead with the headline and link to the website page.
 - **Label changes are logged** on the Corrections page with the original wording.
 
 ### Required front matter
@@ -52,26 +52,59 @@ description: Plain-English summary for Google, Substack previews, and social lin
 date: 2026-10-22
 series: Weekly brief
 homepage_blurb: One sentence for the homepage listing.
-coverage_label: Before the [meeting date] vote · [two or three topics] · [publish date]
+eyebrow: Before the [meeting date] vote
+coverage_label: Before the [meeting date] vote · [publish date]
+meta_line: By J Gonzales · [publish date]
 dek: Optional subtitle under the headline.
 ---
 
+> **How to weigh in:** [Day, date, time] Council meeting, City Hall, or by Zoom or phone. Items [6.1, 8.1]. Emailed comments to city.clerk@sanjoseca.gov by [deadline], item number in the subject line, or eComments on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx). (Agenda p. [N].)
+
 ## What matters this week
 
-- **First point** with a [Legistar source](https://sanjose.legistar.com/Calendar.aspx).
+- **Deciding:** What the Council is voting on, with a [Legistar source](https://sanjose.legistar.com/Calendar.aspx).
+- **Cost:** The dollar figure, as the City states it.
+- **For residents:** What changes for people in San José.
 
-## The money
+## [One section per money item, headline style]
 
 Paragraph text and links here.
 
-## What happens next
+## Also on the agenda
 
-Upcoming votes or deadlines.
+- One line per item, with its Legistar link.
+
+## Since our last brief
+
+What happened to the items we previewed, from the minutes (say if they are draft).
+
+- **[Item]:** Passed 9-2. Yes: [members]. No: [members]. Absent: [members]. ([Minutes](https://sanjose.legistar.com/Calendar.aspx), p. [N].)
+
+## On the tracker
+
+One sentence on any change to [Promised vs. Actual](../../tracker/) this week, or "No changes this week."
+
+## Coming up
+
+- [Date]: Two or three money items already on future Legistar agendas, with links.
 
 ## J Gonzales's take
 
 Clearly marked opinion, separate from the facts above.
+
+## What happens next
+
+Upcoming votes or deadlines for this week's items.
 ```
+
+### Weekly brief sections (adopted Nov. 19, 2026)
+
+- **How to weigh in** goes at the top, right under the headline: meeting date and time, item numbers, comment deadline and how to comment. Readers should be able to act without scrolling.
+- **Since our last brief** lists how each councilmember voted on the items we previewed, taken from the minutes. Say whether the minutes are draft or approved. If the minutes aren't posted, say so; don't infer votes from news reports.
+- **On the tracker** is one sentence, linked to the tracker. Leave it as "No changes this week" rather than dropping it.
+- **Coming up** is two or three money items already posted on future Legistar agendas, no more.
+- **Length:** the article body stays near 1,000 words. New sections replace length; they don't add to it. Keep "Also on the agenda" to one line per item.
+- **Weeks with no Council meeting:** the brief still runs. Lead with the most useful City money news that week from official records (committee and commission actions, City audits, budget reports, staff memos to Council), label it `Between Council meetings · [week date]`, and keep How to weigh in pointed at the next comment opportunity, whether a committee or commission meeting or the next Council date.
 
 Existing briefs `brief-1.md` and `brief-2.md` are good references (Brief #2 uses `body_format: html` for legacy layout).
 

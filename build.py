@@ -81,7 +81,7 @@ class Brief:
     def default_eyebrow(self) -> str:
         if self.eyebrow:
             return self.eyebrow
-        return f"{self.series} · Published {self.formatted_date_long()}"
+        return self.series
 
     def default_homepage_blurb(self) -> str:
         if self.homepage_blurb:
@@ -447,7 +447,7 @@ def render_brief_page(brief: Brief) -> str:
     if brief.dek:
         dek_html = f'\n        <p class="brief__dek reveal" data-reveal>{inline_markdown(brief.dek)}</p>'
     body_html = render_article_body(brief)
-    byline = brief.meta_line if brief.meta_line else f"By {brief.author}"
+    byline = brief.meta_line if brief.meta_line else f"By {brief.author} · {brief.date.strftime('%b. %d, %Y').replace(' 0', ' ')}"
     return f"""<!DOCTYPE html>
 <html lang="en">
   <head>

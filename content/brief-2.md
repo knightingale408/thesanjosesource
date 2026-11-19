@@ -4,13 +4,13 @@ description: What the City first planned for four Measure T public-safety buildi
 date: 2026-10-15
 series: Promised vs. Actual
 homepage_blurb: What the City first planned for three Measure T fire stations and the police training center, and where each stands today.
-coverage_label: Promised vs. Actual · Fire stations and police training center · Oct 15, 2026
-eyebrow: Promised vs. Actual · Fire stations and police training center · Published October 15, 2026
+coverage_label: Promised vs. Actual · Oct 15, 2026
+eyebrow: Promised vs. Actual
 body_format: html
 og_title: San José’s fire stations and police training center: target dates, budgets and opening plans
 og_description: What the City first planned for four Measure T public-safety buildings (Fire Stations 8, 32 and 36 and the Police Training and Academy Facility) and where each stands today, in the City's own words. www.TheSanJoseSource.com
 page_title: San José’s fire stations and police training center: target dates, budgets and opening plans — The San Jose Source
-meta_line: By J Gonzales · City records last checked October 14, 2026
+meta_line: By J Gonzales · Oct. 15, 2026 · City records last checked Oct. 14, 2026
 ---
 
 <section class="brief-block reveal" data-reveal>
