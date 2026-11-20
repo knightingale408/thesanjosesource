@@ -222,34 +222,34 @@
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "baseline or current budget not reported"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "one side is year-only or not reported; delta not computed"
       },
       "review_status": "pending_review",
       "baseline": {
         "budget_usd": null,
         "budget_label": null,
-        "completion": null,
-        "completion_label": null,
-        "source_id": "sj-21-1392",
+        "completion": "2024",
+        "completion_label": "2024 (fall)",
+        "source_id": "sj-22-703",
         "source": {
-          "source_id": "sj-21-1392",
-          "document_title": "Measure T projects status report (Legistar file 21-1392)",
-          "meeting_date": "2021-06-15",
-          "agenda_item": "",
-          "page_start": "",
-          "page_end": "",
-          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+          "source_id": "sj-22-703",
+          "document_title": "Measure T status report on the workplan (Legistar file 22-703)",
+          "meeting_date": "2022-05-17",
+          "agenda_item": "3.5",
+          "page_start": "4",
+          "page_end": "4",
+          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/dc8f415c-cf5b-42ba-9e28-d7710cedb170.pdf",
           "archived_document_url": "",
           "retrieved_at": "2026-11-19",
-          "document_sha256": "f4b2a68a72dc3f38b3bb85ce5d48e2d8427e5ed5074c4ff826d73d533e4aa1af",
+          "document_sha256": "2e89ce8a554ecb69db68959d906c4b99fb3925dc5c39cbe6a3e3d44f82055914",
           "source_type": "council_report"
         },
-        "review_status": "pending_review"
+        "review_status": "accepted_with_edits"
       },
       "position": {
         "budget": null,
