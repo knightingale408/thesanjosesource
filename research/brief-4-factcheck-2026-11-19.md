@@ -8,11 +8,11 @@ Not published (`research/` is excluded from the site).
 - Legistar data feed, Nov. 19: no Nov. 24 Council meeting; Rules item ROGC 26-395 "Review November 24, 2026 Final Agenda - Cancelled". No results or minutes posted for Nov. 10 or Nov. 17.
 
 ## Still to verify before publishing
-1. **Planning Commission staff report page numbers** (pp. 1, 5, 7, 8–10, 11, 16). sanjoseca.gov blocks automated downloads; the quotes were read through a fetch tool. Open the PDF in a browser and confirm each page and quote.
-2. **Planning Commission Nov. 18 outcome.** What it recommended is not yet confirmed. Add a line if the result is posted.
-3. **Nov. 17 results.** Replace the San José Spotlight attribution with the minutes once posted, and add the vote-by-member list for 6.1, 6.2 and 8.1.
-4. **Final Dec. 1 agenda** (expected to post about Nov. 20). Recheck item numbers, amounts and pages, then switch links from the draft agenda to the final agenda and item records.
-5. **Tracker line** is true only after the PR #56 publish is approved and live.
+1. **Done.** **Planning Commission staff report page numbers** (pp. 1, 5, 7, 8–10, 11, 16). sanjoseca.gov blocks automated downloads; the quotes were read through a fetch tool. Open the PDF in a browser and confirm each page and quote. Checked Nov. 20, ~12:30 a.m. PT in a browser by Claude: all Planning Commission staff report quotes and page numbers (pp. 1, 5, 7, 8, 9, 10, 11, 16) match the PDF. No changes needed.
+2. **Planning Commission Nov. 18 outcome.** What it recommended is not yet confirmed. Add a line if the result is posted. Rechecked Nov. 20: the Legistar meeting page (LEGID 8309) shows minutes "Not available", and the City's Planning Commission page could not be loaded. The brief now says "As of Nov. 20". Still open.
+3. **Done (draft minutes).** **Nov. 17 results.** Replace the San José Spotlight attribution with the minutes once posted, and add the vote-by-member list for 6.1, 6.2 and 8.1. Draft minutes are now linked from the Nov. 17 meeting page (https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). Added to the brief: 6.1 and 6.2 approved 9-0-2 (absent Foley, Cohen); 8.1 approved 10-0-1 (absent Foley). Roll call present: Kamei, Campos, Tordillos, Cohen, Ortiz, Mulcahy, Doan, Candelas, Casey, Mahan; absent Foley. The minutes record each vote as "carried unanimously" and name only absent members, so the yes lists are present minus absent. Removed the San José Spotlight attribution, including its "12 projects" figure, which the minutes don't state. The minutes are a Word file with no fixed page numbers, so the brief cites them by item number. Recheck against the minutes once the Council approves them; the Legistar API still shows no tallies.
+4. **Done** (see "Final Dec. 1 agenda, checked Nov. 20" below). **Final Dec. 1 agenda** (expected to post about Nov. 20). Recheck item numbers, amounts and pages, then switch links from the draft agenda to the final agenda and item records.
+5. **Done:** live since publish run #42. **Tracker line** is true only after the PR #56 publish is approved and live.
 6. **J Gonzales's take** is a placeholder draft for Jay.
 7. Word count: about 930 words in the article body, not counting sources.
 
