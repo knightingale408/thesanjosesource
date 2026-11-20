@@ -4,7 +4,7 @@ Read this before changing anything. It applies to Cursor, GitHub Copilot, Claude
 
 ## What this repo is
 
-The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on San José City Council money decisions. Substack and X mirror the website. The owner and only approver is **Jay** (byline **J Gonzales**; never publish the name "Jason").
+The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on San José City Council money decisions. Substack and X mirror the website. The owner and only approver is **Jay** (byline **J Gonzales**; use no other name for him anywhere).
 
 ## The approval gate (never work around it)
 
@@ -42,6 +42,7 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 - Every change to a published page gets an entry in that page's "Corrections and updates" list **and** on `corrections/index.html`, quoting the original wording and dating the change.
 - Corrections go at the top of the affected page. Nothing is removed without a record.
+- A correction is not done until the mirrors match: edit the Substack post (Update, no re-send) and correct or reply to any X post that repeats the old wording, then log both in the WORK LOG.
 
 ## Link checks
 
@@ -64,4 +65,10 @@ A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` 
 
 - Claim the task in the Drive Doc **WORK LOG - who is doing what** before starting; mark it DONE or STOPPED with the PR link after.
 - The GitHub Project board "The San Jose Source" is the single status page. Notion is retired.
-- Claude (chat) researches, drafts, fact-checks and verifies the live site. It cannot push to this repo, so it hands approved changes to Cursor as exact instructions.
+
+## Weekly operating model (adopted Nov 20, 2026)
+
+- **Claude** runs the week: Fri agenda pull, Sat draft + fact-check + PR, Sun packet (asks Jay for his take on the PR), Sun 8:13 PM merge, Mon 5:34 AM pre-flight, Mon 7:04 AM Substack + X posting, Wed results check. Claude works on branches and opens PRs itself.
+- **Perplexity** is the independent, read-only reviewer (Tuesdays) and researches on request. It does not draft, merge or publish.
+- **Grok, Cursor and Copilot are retired** for this repo. Do not start work here from those tools.
+- **Jay's weekly actions:** an optional take (as a PR comment), then one click approving the Publish site production deployment. That click is his yes for the website, Substack and X. No tool writes his take.
