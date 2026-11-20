@@ -7,8 +7,10 @@ homepage_blurb: The proposed data center rules carry two new fees and a staff re
 coverage_label: Before the Dec. 8 vote · Nov 20, 2026
 eyebrow: Before the Dec. 8 vote
 dek: The rules would apply to data centers drawing 20 megawatts or more, and add two fees on top of the taxes staff expect them to pay.
-meta_line: By J Gonzales · Nov. 20, 2026
+meta_line: By J Gonzales · Nov. 20, 2026 · Updated Nov. 20, 2026
 ---
+
+**Update, November 20, 2026:** we added J Gonzales's take, which is opinion. No facts, figures or sources in the news sections changed.
 
 **How to weigh in:** There is no Council meeting Tuesday, Nov. 24. The next one is **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The data center rules come up **Tuesday, Dec. 8**.
 
@@ -60,6 +62,10 @@ From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/
 - **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 12); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 19).
 - **Security guards (2.17):** $2,515,605 more for Allied Universal, for a total of up to $5,865,857 (2.17, p. 11).
 
+## J Gonzales's take
+
+*Opinion.* Walk through downtown San José on a weekday and the empty office floors are hard to miss. The small businesses still open on those blocks are dealing with homelessness mostly on their own. On Dec. 1, the Council is set to approve $1,600,000 for the Guadalupe interim housing site, $1,000,000 more for eviction help and up to $1,757,150 for street outreach ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), pp. 11–12). That money matters. Before the vote, councilmembers should ask staff one plain question: what will a downtown shop owner see change because of it, and by when?
+
 ## What happens next
 
 - Mon., Nov. 30, 5 p.m.: email deadline for Dec. 1 items.
@@ -76,3 +82,11 @@ From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/
 - [Curbside Battery Collection](https://www.sanjoseca.gov/your-government/departments-offices/environmental-services/recycling-garbage/residents/curbside-battery-collection) and [Nov. 16 news release](https://www.sanjoseca.gov/Home/Components/News/News/7661/4699)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
+
+## Corrections and updates
+
+We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 20, 2026: update
+
+- **Take added.** Was: no take section; the brief was published earlier on Nov. 20 without one. Now: a "J Gonzales's take" section, labeled opinion, before "What happens next." Its figures are Dec. 1 agenda items 2.18, 2.19 and 2.20, already listed under "Coming up." The byline now reads "By J Gonzales · Nov. 20, 2026 · Updated Nov. 20, 2026." No facts, figures or sources in the news sections changed.
