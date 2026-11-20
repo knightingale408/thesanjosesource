@@ -1528,3 +1528,13 @@ span.brief-card__more {
   background: rgba(15, 76, 92, 0.08);
   color: var(--ink);
 }
+
+/* Print: show every section even though reveal animations never ran. */
+@media print {
+  .reveal,
+  .reveal.is-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
