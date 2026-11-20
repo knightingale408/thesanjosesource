@@ -37,7 +37,7 @@ jobs:
             --retry-wait-time 5
             --timeout 30
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
-            ${{ github.event_name == 'pull_request' && '--exclude ^https://(www\.)?thesanjosesource\.com/brief/' || '' }}
+            ${{ github.event_name == 'pull_request' && '--exclude ''^https://(www\.)?thesanjosesource\.com/brief/''' || '' }}
             --root-dir ${{ github.workspace }}
             './**/*.html'
           fail: true
