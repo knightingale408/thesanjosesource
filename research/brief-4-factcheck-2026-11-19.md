@@ -29,3 +29,7 @@ An outside review confirmed the staff report figures, the Dec. 1 agenda amounts 
 - A line says the Planning Commission's Nov. 18 recommendation isn't posted yet.
 - The headline was shortened to 10 words, and the no-meeting line was removed from the dek.
 - "2020" Commercial Linkage Fee nexus analysis: confirmed in the p. 10 text ("The City's 2020 Commercial Linkage Fee nexus analysis did not address data centers.").
+
+## Final Dec. 1 agenda, checked Nov. 20
+
+The final agenda was posted Nov. 19 at 3:48 p.m. Pacific (https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf). Every amount and item number in "Coming up" matches the draft. Page numbers changed and were updated: 2.17 and 2.18 are on p. 11, 2.19 and 2.20 on p. 12, 6.1 on p. 18 and 7.1 on p. 19. The comment deadline is still on p. 4. Nov. 17 results and minutes: still not posted (tools/check_results.py --date 2026-11-17 shows 0 of 24).

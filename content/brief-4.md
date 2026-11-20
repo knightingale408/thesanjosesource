@@ -10,7 +10,7 @@ dek: The rules would apply to data centers drawing 20 megawatts or more, and add
 meta_line: By J Gonzales · Nov. 22, 2026
 ---
 
-**How to weigh in:** There is no Council meeting Tuesday, Nov. 24. The next one is **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([draft agenda](https://legistar.granicus.com/sanjose/attachments/4cc204c5-21aa-42fd-96e1-ddcccc329f87.pdf), p. 4). The data center rules come up **Tuesday, Dec. 8**.
+**How to weigh in:** There is no Council meeting Tuesday, Nov. 24. The next one is **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The data center rules come up **Tuesday, Dec. 8**.
 
 ## What matters this week
 
@@ -50,11 +50,11 @@ The City has not posted results or minutes for the [Nov. 17 meeting](https://san
 
 ## Coming up
 
-From the [Dec. 1 draft agenda](https://legistar.granicus.com/sanjose/attachments/4cc204c5-21aa-42fd-96e1-ddcccc329f87.pdf), reviewed Nov. 18 by the [Rules Committee](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8152&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). Items can change before the final agenda posts.
+From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), posted Nov. 19 ([meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)).
 
-- **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 14).
-- **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 10); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 11); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 11); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 14).
-- **Security guards (2.17):** $2,515,605 more for Allied Universal, for a total of up to $5,865,857 (p. 10).
+- **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 18).
+- **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 12); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 19).
+- **Security guards (2.17):** $2,515,605 more for Allied Universal, for a total of up to $5,865,857 (2.17, p. 11).
 
 ## J Gonzales's take
 
@@ -72,7 +72,7 @@ From the [Dec. 1 draft agenda](https://legistar.granicus.com/sanjose/attachments
 - [Planning Commission staff report, PP26-006, Nov. 6, 2026 (heard Nov. 18)](https://www.sanjoseca.gov/home/showpublisheddocument/136043/639301702514330000) and [Nov. 18 Planning Commission agenda](https://www.sanjoseca.gov/home/showpublisheddocument/136115/639301740849900000)
 - Nov. 17 item 8.1, data center pause: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E), [memo](https://legistar.granicus.com/sanjose/attachments/606a2feb-7963-48e4-af7d-ded74f42e041.pdf)
 - [Council meeting page, Nov. 17, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8124&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
-- [Dec. 1, 2026 draft Council agenda](https://legistar.granicus.com/sanjose/attachments/4cc204c5-21aa-42fd-96e1-ddcccc329f87.pdf), from the [Nov. 18 Rules Committee meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8152&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 - [Curbside Battery Collection](https://www.sanjoseca.gov/your-government/departments-offices/environmental-services/recycling-garbage/residents/curbside-battery-collection) and [Nov. 16 news release](https://www.sanjoseca.gov/Home/Components/News/News/7661/4699)
 - Reporting: [San José Spotlight, Nov. 17](https://sanjosespotlight.com/san-jose-enacts-temporary-data-center-moratorium/)
 
