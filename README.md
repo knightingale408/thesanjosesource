@@ -37,10 +37,12 @@ The live site is https://thesanjosesource.com. This repo is not published throug
 The tracker's evidence backbone. `data/`, `schemas/`, `scripts/` and `tests/`
 stay out of the published site.
 
-Two data files **are** public, on purpose: the tracker page loads
-`public-data/projects.json` (built from `data/`, accepted records only) and
-links readers to `promised-vs-actual.csv` as its underlying data file. Anything
-committed to either file goes live with the next publish.
+One data file **is** public, on purpose: the tracker page loads
+`public-data/projects.json` (built from `data/`, accepted records only).
+Anything committed to it goes live with the next publish. The older
+`promised-vs-actual.csv` is kept in the repo for history but is no longer
+published (Nov. 20, 2026): it showed values the tracker holds back until they
+pass the source check.
 
 | Path | What it is |
 |---|---|
