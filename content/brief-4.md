@@ -64,7 +64,7 @@ From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/
 
 ## J Gonzales's take
 
-*Opinion.* Walk through downtown San José on a weekday and the empty office floors are hard to miss. The small businesses still open on those blocks are dealing with homelessness mostly on their own. On Dec. 1, the Council is set to approve $1,600,000 for the Guadalupe interim housing site, $1,000,000 more for eviction help and up to $1,757,150 for street outreach ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), pp. 11–12). That money matters. Before the vote, councilmembers should ask staff one plain question: what will a downtown shop owner see change because of it, and by when?
+*Opinion.* The City's own [2025 General Plan Annual Performance Review](https://www.sanjoseca.gov/home/showpublisheddocument/133069/639191218138070000) says downtown office vacancy "fell slightly from a record high of 31% to 29%" in fiscal 2024–25 (p. 63). From what I see walking those blocks, the small businesses still open there are dealing with homelessness mostly on their own. On Dec. 1, the Council will vote on $1,600,000 for the Guadalupe interim housing site, $1,000,000 more for eviction help and up to $1,757,150 for street outreach ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), pp. 11–12). That money matters. Before the vote, councilmembers should ask staff one plain question: what will a downtown shop owner see change because of it, and by when?
 
 ## What happens next
 
@@ -86,6 +86,10 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 20, 2026: update (take revised)
+
+- **Take wording.** Was: "Walk through downtown San José on a weekday and the empty office floors are hard to miss. The small businesses still open on those blocks are dealing with homelessness mostly on their own. On Dec. 1, the Council is set to approve…" Now: the take cites the City's 2025 General Plan Annual Performance Review, which says downtown office vacancy "fell slightly from a record high of 31% to 29%" in fiscal 2024–25 (p. 63); marks the small-business observation as the author's own; and says the Council "will vote on" the Dec. 1 items instead of "is set to approve," which presumed the outcome. The review credits its vacancy data to Cushman & Wakefield. No facts, figures or sources in the news sections changed.
 
 ### November 20, 2026: update
 
