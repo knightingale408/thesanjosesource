@@ -182,6 +182,37 @@ def test_public_view_keeps_accepted_values_and_drops_the_rest():
     assert "$200 pending" not in blob
 
 
+ACCEPTED = {"accepted", "accepted_with_edits"}
+
+
+def _leaks(record):
+    """Every published value must come from an accepted record (Jay's rule)."""
+    leaked = []
+    pid = record["project_id"]
+    baseline = record["baseline"]
+    if baseline.get("review_status") not in ACCEPTED:
+        for key in ("budget_usd", "budget_label", "completion", "completion_label"):
+            if baseline.get(key) not in (None, ""):
+                leaked.append(f"{pid} baseline {key}={baseline.get(key)!r}")
+        if record["budget_delta"]["delta"] is not None or record["schedule_delta"]["months"] is not None:
+            leaked.append(f"{pid} delta")
+    for key in ("budget", "completion", "status"):
+        concept = record["position"].get(key)
+        if concept and concept.get("review_status") not in ACCEPTED:
+            leaked.append(f"{pid} position {key}")
+    for entry in record["history"]:
+        if entry.get("review_status") not in ACCEPTED:
+            leaked.append(f"{pid} history {entry.get('update_id')}")
+    published_anything = (
+        baseline.get("review_status") in ACCEPTED
+        or any(record["position"].get(k) for k in ("budget", "completion", "status"))
+        or record["history"]
+    )
+    if not published_anything and record["publication"] != "awaiting_source_check":
+        leaked.append(f"{pid} publication")
+    return leaked
+
+
 def test_public_view_withholds_every_unaccepted_repo_value():
     """Jay's rule: a date or figure that has not been accepted stays off the public tracker."""
     repo = Path(__file__).resolve().parent.parent
@@ -191,21 +222,7 @@ def test_public_view_withholds_every_unaccepted_repo_value():
     categories = __import__("json").loads((repo / "data" / "categories.json").read_text())
     public = cd.public_view(cd.current_view(projects, updates, sources, categories))
     assert len(public) == 6
-    leaked = []
-    for record in public:
-        if record["publication"] != "awaiting_source_check":
-            leaked.append(record["project_id"] + " publication")
-        baseline = record["baseline"]
-        for key in ("budget_usd", "budget_label", "completion", "completion_label"):
-            if baseline.get(key) not in (None, ""):
-                leaked.append(f"{record['project_id']} baseline {key}={baseline.get(key)!r}")
-        for key in ("budget", "completion", "status"):
-            if record["position"].get(key):
-                leaked.append(f"{record['project_id']} position {key}")
-        if record["history"]:
-            leaked.append(f"{record['project_id']} history")
-        if record["budget_delta"]["delta"] is not None or record["schedule_delta"]["months"] is not None:
-            leaked.append(f"{record['project_id']} delta")
+    leaked = [leak for record in public for leak in _leaks(record)]
     assert leaked == []
 
 
@@ -213,15 +230,8 @@ def test_committed_public_json_matches_the_withholding_rule():
     repo = Path(__file__).resolve().parent.parent
     payload = __import__("json").loads((repo / "public-data" / "projects.json").read_text())
     assert len(payload["projects"]) == 6
-    for record in payload["projects"]:
-        assert record["publication"] == "awaiting_source_check"
-        assert record["baseline"]["completion"] is None
-        assert record["baseline"]["completion_label"] is None
-        assert record["baseline"]["budget_label"] is None
-        assert record["position"]["budget"] is None
-        assert record["position"]["completion"] is None
-        assert record["position"]["status"] is None
-        assert record["history"] == []
+    leaked = [leak for record in payload["projects"] for leak in _leaks(record)]
+    assert leaked == []
 
 
 def test_repo_pilots_report_no_budget_deltas():

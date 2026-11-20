@@ -12,25 +12,66 @@
       "fund": "measure-t",
       "accepted_position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-07-21",
+          "label": "Temporary Certificate of Occupancy July 21 2026; crew began operations July 22 2026",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "complete",
+          "status_code": "complete",
+          "change_reason": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "baseline or current budget not reported"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "one side is year-only or not reported; delta not computed"
       },
-      "review_status": "pending_review",
+      "review_status": "accepted_with_edits",
       "baseline": {
         "budget_usd": null,
         "budget_label": null,
-        "completion": null,
-        "completion_label": null,
+        "completion": "2024",
+        "completion_label": "2024 (mid)",
         "source_id": "sj-21-1392",
         "source": {
           "source_id": "sj-21-1392",
@@ -45,15 +86,84 @@
           "document_sha256": "f4b2a68a72dc3f38b3bb85ce5d48e2d8427e5ed5074c4ff826d73d533e4aa1af",
           "source_type": "council_report"
         },
-        "review_status": "pending_review"
+        "review_status": "accepted_with_edits"
       },
       "position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-07-21",
+          "label": "Temporary Certificate of Occupancy July 21 2026; crew began operations July 22 2026",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "complete",
+          "status_code": "complete",
+          "change_reason": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
-      "history": [],
-      "publication": "awaiting_source_check"
+      "history": [
+        {
+          "update_id": "up-2026-09-29-fs8",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-07-21",
+          "completion_label": "Temporary Certificate of Occupancy July 21 2026; crew began operations July 22 2026",
+          "lifecycle_stage": "complete",
+          "status_code": "complete",
+          "change_reason": "Schedule impacted by contractor/subcontractor coordination for commissioning and final inspections.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "review_status": "accepted"
+        }
+      ],
+      "publication": "source_checked"
     },
     {
       "project_id": "measure-t-fs32",
@@ -65,48 +175,158 @@
       "fund": "measure-t",
       "accepted_position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-09",
+          "label": "Beneficial use expected September 2026; operating activation deferred to 2028-29",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Construction delay tied to generator procurement (vendor supply chain); operating activation deferred two years in the 2026-27 Adopted Budget as a balancing strategy.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "baseline or current budget not reported"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "one side is year-only or not reported; delta not computed"
       },
       "review_status": "pending_review",
       "baseline": {
         "budget_usd": null,
         "budget_label": null,
-        "completion": null,
-        "completion_label": null,
-        "source_id": "sj-21-1392",
+        "completion": "2024",
+        "completion_label": "2024 (fall)",
+        "source_id": "sj-22-703",
         "source": {
-          "source_id": "sj-21-1392",
-          "document_title": "Measure T projects status report (Legistar file 21-1392)",
-          "meeting_date": "2021-06-15",
-          "agenda_item": "",
-          "page_start": "",
-          "page_end": "",
-          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+          "source_id": "sj-22-703",
+          "document_title": "Measure T status report on the workplan (Legistar file 22-703)",
+          "meeting_date": "2022-05-17",
+          "agenda_item": "3.5",
+          "page_start": "4",
+          "page_end": "4",
+          "source_document_url": "https://legistar.granicus.com/sanjose/attachments/dc8f415c-cf5b-42ba-9e28-d7710cedb170.pdf",
           "archived_document_url": "",
           "retrieved_at": "2026-11-19",
-          "document_sha256": "f4b2a68a72dc3f38b3bb85ce5d48e2d8427e5ed5074c4ff826d73d533e4aa1af",
+          "document_sha256": "2e89ce8a554ecb69db68959d906c4b99fb3925dc5c39cbe6a3e3d44f82055914",
           "source_type": "council_report"
         },
-        "review_status": "pending_review"
+        "review_status": "accepted_with_edits"
       },
       "position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-09",
+          "label": "Beneficial use expected September 2026; operating activation deferred to 2028-29",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Construction delay tied to generator procurement (vendor supply chain); operating activation deferred two years in the 2026-27 Adopted Budget as a balancing strategy.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
-      "history": [],
-      "publication": "awaiting_source_check"
+      "history": [
+        {
+          "update_id": "up-2026-09-29-fs32",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-09",
+          "completion_label": "Beneficial use expected September 2026; operating activation deferred to 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Construction delay tied to generator procurement (vendor supply chain); operating activation deferred two years in the 2026-27 Adopted Budget as a balancing strategy.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "3",
+          "review_status": "accepted"
+        }
+      ],
+      "publication": "source_checked"
     },
     {
       "project_id": "measure-t-police-training",
@@ -118,25 +338,66 @@
       "fund": "measure-t",
       "accepted_position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-12",
+          "label": "Beneficial use anticipated December 2026; operating activation deferred to 2028-29",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "4",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Unforeseen conditions during construction impacted the schedule; operating activation deferred two years in the 2026-27 Adopted Budget.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "4",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
       "budget_delta": {
         "delta": null,
         "percent": null,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "baseline or current budget not reported"
       },
       "schedule_delta": {
         "months": null,
         "day_precision": false,
-        "reason": "baseline record is not accepted; delta not published"
+        "reason": "one side is year-only or not reported; delta not computed"
       },
       "review_status": "pending_review",
       "baseline": {
         "budget_usd": null,
         "budget_label": null,
-        "completion": null,
-        "completion_label": null,
+        "completion": "2023",
+        "completion_label": "2023 (end)",
         "source_id": "sj-21-1392",
         "source": {
           "source_id": "sj-21-1392",
@@ -151,15 +412,84 @@
           "document_sha256": "f4b2a68a72dc3f38b3bb85ce5d48e2d8427e5ed5074c4ff826d73d533e4aa1af",
           "source_type": "council_report"
         },
-        "review_status": "pending_review"
+        "review_status": "accepted_with_edits"
       },
       "position": {
         "budget": null,
-        "completion": null,
-        "status": null
+        "completion": {
+          "date": "2026-12",
+          "label": "Beneficial use anticipated December 2026; operating activation deferred to 2028-29",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "4",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        },
+        "status": {
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Unforeseen conditions during construction impacted the schedule; operating activation deferred two years in the 2026-27 Adopted Budget.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "4",
+          "as_of": "2026-09-29",
+          "review_status": "accepted"
+        }
       },
-      "history": [],
-      "publication": "awaiting_source_check"
+      "history": [
+        {
+          "update_id": "up-2026-09-29-police-training",
+          "reported_at": "2026-09-29",
+          "budget_usd": null,
+          "budget_label": null,
+          "completion": "2026-12",
+          "completion_label": "Beneficial use anticipated December 2026; operating activation deferred to 2028-29",
+          "lifecycle_stage": "construction",
+          "status_code": "delayed",
+          "change_reason": "Unforeseen conditions during construction impacted the schedule; operating activation deferred two years in the 2026-27 Adopted Budget.",
+          "source_id": "sj-2026-09-29-measure-t-status-report",
+          "source": {
+            "source_id": "sj-2026-09-29-measure-t-status-report",
+            "document_title": "Measure T status report (Legistar file 26-1045)",
+            "meeting_date": "2026-09-29",
+            "agenda_item": "",
+            "page_start": "",
+            "page_end": "",
+            "source_document_url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+            "archived_document_url": "",
+            "retrieved_at": "2026-10-12",
+            "document_sha256": "",
+            "source_type": "council_report"
+          },
+          "source_pages": "4",
+          "review_status": "accepted"
+        }
+      ],
+      "publication": "source_checked"
     },
     {
       "project_id": "measure-t-fs36",
