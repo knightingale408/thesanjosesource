@@ -662,9 +662,9 @@ function initTracker(root) {
     // fallback when the row does not cite specific pages.
     let pages = "";
     if (entryPages) {
-      pages = ` (pp. ${entryPages})`;
+      pages = ` (${/[-,]/.test(String(entryPages)) ? "pp." : "p."} ${entryPages})`;
     } else if (source.page_start) {
-      pages = ` (pp. ${source.page_start}${source.page_end && source.page_end !== source.page_start ? "-" + source.page_end : ""})`;
+      pages = source.page_end && source.page_end !== source.page_start ? ` (pp. ${source.page_start}-${source.page_end})` : ` (p. ${source.page_start})`;
     }
     a.textContent = (source.document_title || source.source_id) + pages;
     return a;
