@@ -58,7 +58,7 @@ meta_line: By J Gonzales · [publish date]
 dek: Optional subtitle under the headline.
 ---
 
-> **How to weigh in:** [Day, date, time] Council meeting, City Hall, or by Zoom or phone. Items [6.1, 8.1]. Emailed comments to city.clerk@sanjoseca.gov by [deadline], item number in the subject line, or eComments on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx). (Agenda p. [N].)
+**How to weigh in:** [Day, date, time] Council meeting, City Hall, or by Zoom or phone. Items [6.1, 8.1]. Emailed comments to city.clerk@sanjoseca.gov by [deadline], item number in the subject line, or eComments on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx). (Agenda p. [N].)
 
 ## What matters this week
 
@@ -99,12 +99,12 @@ Upcoming votes or deadlines for this week's items.
 
 ### Weekly brief sections (adopted Nov. 19, 2026)
 
-- **How to weigh in** goes at the top, right under the headline: meeting date and time, item numbers, comment deadline and how to comment. Readers should be able to act without scrolling.
+- **How to weigh in** goes at the top, as the first paragraph before any `##` heading (the build styles it as a callout): meeting date and time, item numbers, comment deadline and how to comment. Readers should be able to act without scrolling.
 - **Since our last brief** lists how each councilmember voted on the items we previewed, taken from the minutes. Say whether the minutes are draft or approved. If the minutes aren't posted, say so; don't infer votes from news reports.
 - **On the tracker** is one sentence, linked to the tracker. Leave it as "No changes this week" rather than dropping it.
 - **Coming up** is two or three money items already posted on future Legistar agendas, no more.
 - **Length:** the article body stays near 1,000 words. New sections replace length; they don't add to it. Keep "Also on the agenda" to one line per item.
-- **Weeks with no Council meeting:** the brief still runs. Lead with the most useful City money news that week from official records (committee and commission actions, City audits, budget reports, staff memos to Council), label it `Between Council meetings · [week date]`, and keep How to weigh in pointed at the next comment opportunity, whether a committee or commission meeting or the next Council date.
+- **Weeks with no Council meeting:** the brief still runs. Lead with the most useful City money news that week from official records (committee and commission actions, City audits, budget reports, staff memos to Council), label it with the next decision the lead story points to (for example `Before the Dec. 8 vote`), or `Update · [date]` if there is none, and keep How to weigh in pointed at the next comment opportunity, whether a committee or commission meeting or the next Council date.
 
 Existing briefs `brief-1.md` and `brief-2.md` are good references (Brief #2 uses `body_format: html` for legacy layout).
 

@@ -1,0 +1,35 @@
+# Brief #4 fact-check notes (draft, Nov. 19, 2026)
+
+Not published (`research/` is excluded from the site).
+
+## Checked
+- Dec. 1 draft agenda (Rules Committee, Nov. 18, ROGC 26-396 attachment): items 2.17 p. 10, 2.18 p. 10, 2.19 p. 11, 2.20 p. 11, 6.1 p. 14, 7.1 p. 14; comment rules p. 4. Downloaded and read directly.
+- Nov. 17 item 8.1 memo (file 26-1220), p. 1: recommendation wording.
+- Legistar data feed, Nov. 19: no Nov. 24 Council meeting; Rules item ROGC 26-395 "Review November 24, 2026 Final Agenda - Cancelled". No results or minutes posted for Nov. 10 or Nov. 17.
+
+## Still to verify before publishing
+1. **Done.** **Planning Commission staff report page numbers** (pp. 1, 5, 7, 8–10, 11, 16). sanjoseca.gov blocks automated downloads; the quotes were read through a fetch tool. Open the PDF in a browser and confirm each page and quote. Checked Nov. 20, ~12:30 a.m. PT in a browser by Claude: all Planning Commission staff report quotes and page numbers (pp. 1, 5, 7, 8, 9, 10, 11, 16) match the PDF. No changes needed.
+2. **Planning Commission Nov. 18 outcome.** What it recommended is not yet confirmed. Add a line if the result is posted. Rechecked Nov. 20: the Legistar meeting page (LEGID 8309) shows minutes "Not available", and the City's Planning Commission page could not be loaded. The brief now says "As of Nov. 20". Still open.
+3. **Done (draft minutes).** **Nov. 17 results.** Replace the San José Spotlight attribution with the minutes once posted, and add the vote-by-member list for 6.1, 6.2 and 8.1. Draft minutes are now linked from the Nov. 17 meeting page (https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). Added to the brief: 6.1 and 6.2 approved 9-0-2 (absent Foley, Cohen); 8.1 approved 10-0-1 (absent Foley). Roll call present: Kamei, Campos, Tordillos, Cohen, Ortiz, Mulcahy, Doan, Candelas, Casey, Mahan; absent Foley. The minutes record each vote as "carried unanimously" and name only absent members, so the yes lists are present minus absent. Removed the San José Spotlight attribution, including its "12 projects" figure, which the minutes don't state. The minutes are a Word file with no fixed page numbers, so the brief cites them by item number. Recheck against the minutes once the Council approves them; the Legistar API still shows no tallies.
+4. **Done** (see "Final Dec. 1 agenda, checked Nov. 20" below). **Final Dec. 1 agenda** (expected to post about Nov. 20). Recheck item numbers, amounts and pages, then switch links from the draft agenda to the final agenda and item records.
+5. **Done:** live since publish run #42. **Tracker line** is true only after the PR #56 publish is approved and live.
+6. **Done (removed).** **J Gonzales's take** was a placeholder draft for Jay. Removed for publish on Jay's approval, Nov. 20; Jay can add his take later as a labeled update.
+7. Word count: about 1000 words in the article body, not counting sources (Nov. 20, after the take was removed).
+
+## Reviewer pass, Nov. 19
+
+An outside review confirmed the staff report figures, the Dec. 1 agenda amounts and pages, the Nov. 17 status, and the battery details. Changes made in response:
+- The $3.5–7M revenue figure is now quoted as written ("data centers are expected to generate…", p. 5), with a note that staff don't say whether it is per project or combined.
+- Item 7.1 now reads "an agreement with the County, up to $5,430,576"; the agenda doesn't say which way the money flows.
+- Item 6.1 from Nov. 17 is now called the wastewater plant HVAC contract.
+- The pause covers "data centers or large energy use projects."
+- The urgency-ordinance sentence was clarified.
+- Battery exclusions now say rechargeables and "larger lithium-ion batteries"; coin cells are accepted.
+- The staff report is dated Nov. 6 and was heard Nov. 18.
+- A line says the Planning Commission's Nov. 18 recommendation isn't posted yet.
+- The headline was shortened to 10 words, and the no-meeting line was removed from the dek.
+- "2020" Commercial Linkage Fee nexus analysis: confirmed in the p. 10 text ("The City's 2020 Commercial Linkage Fee nexus analysis did not address data centers.").
+
+## Final Dec. 1 agenda, checked Nov. 20
+
+The final agenda was posted Nov. 19 at 3:48 p.m. Pacific (https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf). Every amount and item number in "Coming up" matches the draft. Page numbers changed and were updated: 2.17 and 2.18 are on p. 11, 2.19 and 2.20 on p. 12, 6.1 on p. 18 and 7.1 on p. 19. The comment deadline is still on p. 4. Nov. 17 results and minutes: still not posted (tools/check_results.py --date 2026-11-17 shows 0 of 24).
