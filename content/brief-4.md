@@ -1,13 +1,13 @@
 ---
 title: San José data center rules would charge $50,000 per megawatt
 description: With no Council meeting Nov. 24, a look at the fees and revenue in San José's proposed data center standards, which go to the Council Dec. 8, plus the Dec. 1 agenda and how members voted Nov. 17.
-date: 2026-11-22
+date: 2026-11-20
 series: Weekly brief
-homepage_blurb: The proposed data center rules carry two new fees and a staff revenue estimate. No Council meeting this week; the Dec. 1 draft agenda is out.
-coverage_label: Before the Dec. 8 vote · Nov 22, 2026
+homepage_blurb: The proposed data center rules carry two new fees and a staff revenue estimate. No Council meeting this week; the Dec. 1 agenda is out.
+coverage_label: Before the Dec. 8 vote · Nov 20, 2026
 eyebrow: Before the Dec. 8 vote
 dek: The rules would apply to data centers drawing 20 megawatts or more, and add two fees on top of the taxes staff expect them to pay.
-meta_line: By J Gonzales · Nov. 22, 2026
+meta_line: By J Gonzales · Nov. 20, 2026
 ---
 
 **How to weigh in:** There is no Council meeting Tuesday, Nov. 24. The next one is **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The data center rules come up **Tuesday, Dec. 8**.
@@ -59,10 +59,6 @@ From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/
 - **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 18).
 - **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 12); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 19).
 - **Security guards (2.17):** $2,515,605 more for Allied Universal, for a total of up to $5,865,857 (2.17, p. 11).
-
-## J Gonzales's take
-
-[DRAFT — for Jay to rewrite or approve. Opinion.] The City has put a price on the extra strain data centers put on the power supply: $50,000 per megawatt, with 35% held for the host Council district for three years. That is a fair start. But the revenue figures are staff estimates, not commitments. If the Council adopts these rules Dec. 8, it should require a yearly public report on what each project actually paid and how the district share was spent.
 
 ## What happens next
 

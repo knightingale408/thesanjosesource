@@ -13,8 +13,8 @@ Not published (`research/` is excluded from the site).
 3. **Done (draft minutes).** **Nov. 17 results.** Replace the San José Spotlight attribution with the minutes once posted, and add the vote-by-member list for 6.1, 6.2 and 8.1. Draft minutes are now linked from the Nov. 17 meeting page (https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). Added to the brief: 6.1 and 6.2 approved 9-0-2 (absent Foley, Cohen); 8.1 approved 10-0-1 (absent Foley). Roll call present: Kamei, Campos, Tordillos, Cohen, Ortiz, Mulcahy, Doan, Candelas, Casey, Mahan; absent Foley. The minutes record each vote as "carried unanimously" and name only absent members, so the yes lists are present minus absent. Removed the San José Spotlight attribution, including its "12 projects" figure, which the minutes don't state. The minutes are a Word file with no fixed page numbers, so the brief cites them by item number. Recheck against the minutes once the Council approves them; the Legistar API still shows no tallies.
 4. **Done** (see "Final Dec. 1 agenda, checked Nov. 20" below). **Final Dec. 1 agenda** (expected to post about Nov. 20). Recheck item numbers, amounts and pages, then switch links from the draft agenda to the final agenda and item records.
 5. **Done:** live since publish run #42. **Tracker line** is true only after the PR #56 publish is approved and live.
-6. **J Gonzales's take** is a placeholder draft for Jay.
-7. Word count: about 930 words in the article body, not counting sources.
+6. **Done (removed).** **J Gonzales's take** was a placeholder draft for Jay. Removed for publish on Jay's approval, Nov. 20; Jay can add his take later as a labeled update.
+7. Word count: about 1000 words in the article body, not counting sources (Nov. 20, after the take was removed).
 
 ## Reviewer pass, Nov. 19
 
