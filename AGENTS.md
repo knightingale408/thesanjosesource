@@ -8,7 +8,7 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 ## The approval gate (never work around it)
 
-1. Nothing goes public without Jay's explicit yes on that specific change.
+1. Nothing goes public without Jay's yes. **Approving the Publish site `production` deployment is that yes** (Jay, Nov 19, 2026): one approval covers the website, Substack and X for that publish. No separate chat yes is required besides that click.
 2. Every change goes on a branch and into a pull request. Never push straight to `main`.
 3. Merging to `main` starts the **Publish site** workflow. It waits for Jay to approve the `production` deployment, then publishes all site files to here.now and checks live = repo byte for byte.
 4. Don't approve deployments, bypass branch rules, or merge with `--admin` unless Jay asks for that exact PR in the current session.
@@ -18,7 +18,8 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 - Source for each brief: `content/brief-N.md` (front matter plus body). Read `content/README.md` before adding one.
 - `python3 build.py` builds `brief/N/index.html`, refreshes the homepage list, `feed.xml` and `sitemap.xml`. **Run it after any change to `content/` or `build.py`, and commit the generated files in the same PR**, so the repo matches what goes live.
-- Static HTML/CSS/JS. No frameworks, no npm, no build tools beyond `build.py`.
+- Optional build setting: `CF_ANALYTICS_TOKEN`. When set, the shared page head includes the Cloudflare Web Analytics beacon; when empty or unset, the build outputs no beacon. The token is not in the repo yet.
+- Static HTML/CSS/JS. No frameworks, no npm, no build tools beyond `build.py`. No cookies and no third-party trackers except that Cloudflare beacon when the token is set.
 - `.github/scripts/publish.py` defines the deployment file list through `EXCLUDE_EXACT` and `EXCLUDE_PREFIX`, excluding repository-only files and directories. All other tracked files are uploaded to the public site; keep private notes, keys and drafts out of those paths.
 - `python3 build.py` rewrites `feed.xml` only when a brief item changed. The committed `lastBuildDate` stays put on a rebuild of the same briefs, so a clean `git diff` after `build.py` means the generated pages match the commit.
 - `.github/workflows/build-check.yml` runs that check on every pull request. A `content/` change that does not commit the regenerated `brief/`, `index.html`, `feed.xml` and `sitemap.xml` fails CI.
