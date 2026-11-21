@@ -43,11 +43,11 @@ Staff will return to the Council to approve the agreement with the nonprofit (p.
 
 ### A broader construction-tax break for affordable housing (8.1)
 
-The City's exemptions from two construction taxes date to 1978 and cover only projects funded under four older federal housing programs. Projects funded by newer sources, such as federal tax credits or state and local grants, don't qualify ([memo](https://legistar.granicus.com/sanjose/attachments/9cda47b0-0179-445e-a045-051e99257a18.pdf), p. 2). The proposed ordinance would exempt deed-restricted affordable housing financed by any government housing subsidy. It would not cover affordable units in market-rate buildings (p. 3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6)).
+The City's exemptions from two construction taxes date to 1978 and cover only projects funded under four older federal housing programs. Projects funded by newer sources, such as federal tax credits or state and local grants, don't qualify ([memo](https://sanjose.legistar.com/View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0), p. 2). The proposed ordinance would exempt deed-restricted affordable housing financed by any government housing subsidy. It would not cover affordable units in market-rate buildings (p. 3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6)).
 
 The cost: three projects in the pipeline "were estimated to generate approximately $1.2 million in construction tax revenue," which the City expected to collect in fiscal 2028-29 or later. The exemption would apply "indefinitely," and the Housing Department would report on its use within 12 months (p. 4).
 
-### The City's 2015 payroll system, extended to 2031 (2.15)
+### A 2015 payroll-system contract, extended to 2031 (2.15)
 
 CherryRoad Technologies runs the PeopleSoft system behind City human resources, payroll, budget and timekeeping. Its contract, first approved in 2015, ends Dec. 31, 2026. Staff ask for five one-year options through Dec. 31, 2031, with support "estimated at $500,000 annually" from the General Fund. The City "does not anticipate initiating" a review of a replacement system until fiscal 2028-29 ([memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf), pp. 1–3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA)). It's a consent item, approved with other routine items in one vote unless a councilmember pulls it (agenda p. 10).
 
@@ -73,7 +73,7 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 ## Sources
 
 - Item 8.3, file 26-1253: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323523&GUID=C33FB5CC-641A-4D7E-BCE5-5D93120093F0), [memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf)
-- Item 8.1, file 26-1251: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6), [memo](https://legistar.granicus.com/sanjose/attachments/9cda47b0-0179-445e-a045-051e99257a18.pdf)
+- Item 8.1, file 26-1251: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6), [memo](https://sanjose.legistar.com/View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0)
 - Item 2.15, file 26-1238: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA), [memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf)
 - [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 

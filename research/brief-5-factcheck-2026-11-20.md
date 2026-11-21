@@ -31,3 +31,8 @@ Checked by Claude against the City memos (pdftotext) and the Dec. 1 agenda. Page
 Wording rules: no computed totals or delays (removed "five years after"). Did not write that no renters were reached; the memo says only that no funds were disbursed under the County agreement.
 
 Open for Jay: the take placeholder.
+
+## Update, Nov. 20, 2026 (evening)
+
+- 2.15 heading changed from "The City's 2015 payroll system, extended to 2031" to "A 2015 payroll-system contract, extended to 2031". The memo dates the CherryRoad contract to 2015, not the system itself. Approved by Jay.
+- The 8.1 memo link (`legistar.granicus.com/sanjose/attachments/9cda47b0-….pdf`) returned HTTP 404 on two tries. The Legistar record for file 26-1251 now lists a Memorandum attachment at `View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0` (6 pages; PDF created Nov. 20, 2026 UTC; approval date 11/17/26 on p. 1). The brief now links there. Rechecked on the new file: 1978 and four federal authorities (p. 2); any government subsidy, not market-rate units (p. 3); "approximately $1.2 million", FY 2028-29 or later, "indefinitely", report within 12 months (p. 4). All match. The old file can't be compared, so it is unknown whether anything else in the memo changed when it was reposted.
