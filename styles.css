@@ -1073,6 +1073,33 @@ a:hover {
 }
 
 /* —— Subscribe button (replaces the email form, Oct 15, 2026) —— */
+.substack-embed {
+  margin: 0.75rem 0 0;
+  max-width: 32rem;
+}
+
+.substack-embed__label {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.substack-embed__frame {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  height: 10rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--paper);
+}
+
+.brief-block--subscribe {
+  border-top-color: var(--mist);
+}
+
 .subscribe-cta {
   margin-top: 1.75rem;
   display: grid;
