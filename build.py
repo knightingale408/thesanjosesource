@@ -696,6 +696,29 @@ def update_index(briefs: list[Brief]) -> None:
     print(f"Updated {index_path.relative_to(ROOT)}")
 
 
+MARKER_404_LATEST_START = "<!-- build:404-latest-start -->"
+MARKER_404_LATEST_END = "<!-- build:404-latest-end -->"
+
+
+def update_404_latest(briefs: list[Brief]) -> None:
+    """Keep the 404 page's 'Latest brief' button pointed at the newest brief."""
+    path = ROOT / "404.html"
+    if not path.is_file():
+        return
+    latest = sort_briefs_newest_first(briefs)[0]
+    href = f"/brief/{latest.number}/"
+    replacement = (
+        f'\n          <a class="btn btn--outline" href="{href}">Latest brief</a>\n          '
+    )
+    text = path.read_text(encoding="utf-8")
+    if MARKER_404_LATEST_START not in text:
+        print(f"Skip 404 latest link (no markers): {path.relative_to(ROOT)}")
+        return
+    text = replace_between(text, MARKER_404_LATEST_START, MARKER_404_LATEST_END, replacement)
+    path.write_text(text, encoding="utf-8", newline="\n")
+    print(f"Updated {path.relative_to(ROOT)} latest → {href}")
+
+
 def discover_brief_urls_on_disk() -> list[str]:
     urls: list[str] = []
     brief_root = ROOT / "brief"
@@ -860,6 +883,7 @@ def main() -> int:
 
     write_brief_pages(briefs)
     update_index(briefs)
+    update_404_latest(briefs)
     write_feed(briefs)
     write_sitemap(discover_brief_urls_on_disk(), brief_lastmods(briefs))
     print(f"Built {len(briefs)} brief(s).")
