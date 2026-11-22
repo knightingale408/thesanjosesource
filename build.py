@@ -382,10 +382,39 @@ def markdown_body_to_html(md: str) -> str:
     return "\n\n        ".join(chunks)
 
 
+CORR_NOTE_LEAD = re.compile(
+    r"(<(?:p|li)(?:\s[^>]*)?>\s*(?:<em>)?)<strong>"
+    r"((?:Correction(?: and update)?|Update(?: and clarification)?|Clarification)"
+    r"(?:,\s*([^<:]+))?):\s*</strong>\s*",
+    re.IGNORECASE,
+)
+
+
+def decorate_correction_tags(html_body: str) -> str:
+    """Reuse corrections-page .corr-tag classes on brief correction notes."""
+
+    def repl(match: re.Match[str]) -> str:
+        prefix, label, date_part = match.group(1), match.group(2), match.group(3)
+        kind = "correction" if label.lower().startswith("correction") else "update"
+        tag = (
+            f'<span class="corr-tag corr-tag--{kind}">'
+            f"{html.escape(label.split(',')[0].strip())}</span>"
+        )
+        if date_part:
+            tag += f" <time>{html.escape(date_part.strip())}</time>:"
+        else:
+            tag += ":"
+        return f"{prefix}{tag} "
+
+    return CORR_NOTE_LEAD.sub(repl, html_body)
+
+
 def render_article_body(brief: Brief) -> str:
     if brief.body_format == "html":
-        return brief.body_md.strip()
-    return markdown_body_to_html(brief.body_md)
+        body = brief.body_md.strip()
+    else:
+        body = markdown_body_to_html(brief.body_md)
+    return decorate_correction_tags(body)
 
 
 def document_title(brief: Brief) -> str:
