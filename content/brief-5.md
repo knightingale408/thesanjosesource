@@ -59,10 +59,6 @@ As of Nov. 20, the City had not posted the Planning Commission's Nov. 18 recomme
 
 Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 items: the renewable energy trade with Ava Community Energy (6.1), security guards (2.17), and homelessness and eviction help (2.18, 2.19, 2.20, 7.1). The data center rules go to the Council **Tuesday, Dec. 8**.
 
-## J Gonzales's take
-
-[JAY TO WRITE: 60–100 words, labeled opinion. One tradeoff, one accountability question.]
-
 ## What happens next
 
 - Mon., Nov. 30, 5 p.m.: email deadline for Dec. 1 items.
