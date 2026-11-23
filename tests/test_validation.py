@@ -170,3 +170,45 @@ def test_repo_data_validates():
                                (sources, "source_id", "source")):
         validate_data.check_unique_ids(report, rows, field, label)
     assert not report.errors, report.errors
+
+
+def test_legistar_api_or_guidless_links_fail_in_sources():
+    import validate_data as vd
+    bad = {
+        "webapi": "https://webapi.legistar.com/v1/sanjose/matters/12345",
+        "no_guid": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697",
+        "view_no_guid": "https://sanjose.legistar.com/View.ashx?M=F&ID=15930312",
+    }
+    for name, url in bad.items():
+        report = vd.Report()
+        vd.check_sources(report, [{"source_id": name, "source_document_url": url,
+                                   "document_sha256": "x" * 64, "archived_document_url": "",
+                                   "retrieved_at": "", "meeting_date": ""}])
+        assert any("source_document_url" in e for e in report.errors), name
+
+
+def test_legistar_website_links_pass_in_sources():
+    import validate_data as vd
+    good = [
+        "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8236697&GUID=2DC39C4A-DF14-40B7-BE6D-8E7C7ED6B66B",
+        "https://sanjose.legistar.com/View.ashx?M=F&ID=15930312&GUID=B569EB18-C23A-4BEF-9099-0FDCFDF32EF8",
+        "https://legistar.granicus.com/sanjose/attachments/0fd0fee4-57a3-4cdd-8372-fe848df992c6.pdf",
+    ]
+    for url in good:
+        report = vd.Report()
+        vd.check_sources(report, [{"source_id": "s", "source_document_url": url,
+                                   "document_sha256": "x" * 64, "archived_document_url": "",
+                                   "retrieved_at": "", "meeting_date": ""}])
+        assert report.errors == [], url
+
+
+def test_votes_minutes_url_without_guid_fails(tmp_path):
+    import validate_data as vd
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "votes.csv").write_text(
+        "meeting_date,item_number,minutes_url\n"
+        "2026-11-17,6.1,https://sanjose.legistar.com/View.ashx?M=M&ID=1427102\n",
+        encoding="utf-8")
+    report = vd.Report()
+    vd.check_votes(report, tmp_path)
+    assert any("minutes_url" in e for e in report.errors)
