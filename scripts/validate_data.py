@@ -21,6 +21,10 @@ import re
 import sys
 from pathlib import Path
 
+# One rule for Legistar link format, shared with the brief link checker.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from check_links import legistar_format_errors  # noqa: E402
+
 REPO = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent)
 DATA = REPO / "data"
 SCHEMAS = REPO / "schemas"
@@ -211,9 +215,34 @@ def check_plausibility(report, projects, updates):
                 pass
 
 
+def check_legistar_links(report, where, row, fields):
+    """Legistar links must be website links with a GUID (WORK LOG rule).
+
+    API-id links open "Invalid parameters!" for readers. check_links.py
+    applies the same rule to briefs and pages; this covers the data files.
+    """
+    for field in fields:
+        url = (row.get(field) or "").strip()
+        if not url:
+            continue
+        for problem in legistar_format_errors(url):
+            report.error(where, f"'{field}': {problem}")
+
+
+def check_votes(report, repo):
+    path = Path(repo) / "data" / "votes.csv"
+    if not path.exists():
+        return
+    with path.open(encoding="utf-8", newline="") as f:
+        for i, row in enumerate(csv.DictReader(f), start=2):
+            where = f"votes.csv row {i} ({row.get('meeting_date', '')} item {row.get('item_number', '')})"
+            check_legistar_links(report, where, row, ("minutes_url",))
+
+
 def check_sources(report, sources):
     for s in sources:
         where = f"source '{s['source_id']}'"
+        check_legistar_links(report, where, s, ("source_document_url", "archived_document_url"))
         if not (s.get("document_sha256") or "").strip():
             report.warn(where, "no document_sha256 yet; changes to the source file are not detectable")
         if not (s.get("archived_document_url") or "").strip():
@@ -289,6 +318,7 @@ def validate_repo(repo):
     check_editorial(report, projects, updates, sources)
     check_plausibility(report, projects, updates)
     check_sources(report, sources)
+    check_votes(report, repo)
     loaded = {
         "projects": projects,
         "updates": updates,
