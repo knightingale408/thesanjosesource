@@ -922,6 +922,25 @@ a:hover {
   border-radius: 0 var(--radius-card) var(--radius-card) 0;
 }
 
+/* Shared with corrections/index.html — Correction / Update tags on brief notes */
+.corr-tag {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.corr-tag--correction {
+  border-color: currentColor;
+  color: #a23b2a;
+}
+
 .brief-block--correction p {
   margin: 0 0 0.75rem;
   color: var(--ink);
@@ -1073,6 +1092,33 @@ a:hover {
 }
 
 /* —— Subscribe button (replaces the email form, Oct 15, 2026) —— */
+.substack-embed {
+  margin: 0.75rem 0 0;
+  max-width: 32rem;
+}
+
+.substack-embed__label {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.substack-embed__frame {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  height: 10rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--paper);
+}
+
+.brief-block--subscribe {
+  border-top-color: var(--mist);
+}
+
 .subscribe-cta {
   margin-top: 1.75rem;
   display: grid;
