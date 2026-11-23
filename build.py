@@ -25,6 +25,7 @@ from __future__ import annotations
 import html
 import importlib.util
 import json
+import os
 import re
 import sys
 import textwrap
@@ -39,11 +40,60 @@ ROOT = Path(__file__).resolve().parent
 CONTENT_DIR = ROOT / "content"
 SITE_BASE = "https://thesanjosesource.com"
 BRIEF_FILENAME = re.compile(r"^brief-(\d+)\.md$", re.IGNORECASE)
+SUBSTACK_EMBED_SRC = "https://thesanjosesource.substack.com/embed"
 
 MARKER_COVERAGE_START = "<!-- build:coverage-start -->"
 MARKER_COVERAGE_END = "<!-- build:coverage-end -->"
 MARKER_HERO_START = "<!-- build:hero-latest-start -->"
 MARKER_HERO_END = "<!-- build:hero-latest-end -->"
+MARKER_HEAD_EXTRAS_START = "<!-- build:head-extras-start -->"
+MARKER_HEAD_EXTRAS_END = "<!-- build:head-extras-end -->"
+MARKER_SUBSTACK_START = "<!-- build:substack-embed-start -->"
+MARKER_SUBSTACK_END = "<!-- build:substack-embed-end -->"
+
+
+def cf_analytics_token() -> str:
+    """Cloudflare Web Analytics token from CF_ANALYTICS_TOKEN (empty = omit beacon)."""
+    return os.environ.get("CF_ANALYTICS_TOKEN", "").strip()
+
+
+def render_head_extras() -> str:
+    """Referrer-Policy meta + optional Cloudflare Web Analytics beacon."""
+    parts = [
+        '    <meta name="referrer" content="strict-origin-when-cross-origin" />',
+    ]
+    token = cf_analytics_token()
+    if token:
+        beacon = html.escape(token, quote=True)
+        parts.append(
+            "    <script\n"
+            '      defer\n'
+            '      src="https://static.cloudflareinsights.com/beacon.min.js"\n'
+            f"      data-cf-beacon='{{\"token\": \"{beacon}\"}}'\n"
+            "    ></script>"
+        )
+    return "\n".join(parts) + "\n"
+
+
+def render_substack_embed(*, heading: bool = True) -> str:
+    """Substack signup embed styled for the site."""
+    title = ""
+    if heading:
+        title = (
+            '          <p class="substack-embed__label">'
+            "Get the free weekly brief</p>\n"
+        )
+    return (
+        f"{title}"
+        '          <div class="substack-embed">\n'
+        "            <iframe\n"
+        f'              src="{SUBSTACK_EMBED_SRC}"\n'
+        '              title="Subscribe to The San Jose Source on Substack"\n'
+        '              class="substack-embed__frame"\n'
+        '              loading="lazy"\n'
+        "            ></iframe>\n"
+        "          </div>\n"
+    )
 
 
 @dataclass
@@ -544,7 +594,7 @@ def render_brief_page(brief: Brief) -> str:
     <meta name="twitter:image" content="{SITE_BASE}/assets/og.jpg" />
     <meta name="twitter:image:alt" content="The San Jose Source: City money, before the vote." />
     <meta name="theme-color" content="#0f4c5c" />
-    <script type="application/ld+json">
+{render_head_extras()}    <script type="application/ld+json">
 {json_ld(brief)}
     </script>
 </head>
@@ -570,8 +620,9 @@ def render_brief_page(brief: Brief) -> str:
         {body_html}
 
         <p class="brief__signoff reveal" data-reveal>— {html.escape(brief.author)}</p>
+        <section class="brief-block brief-block--subscribe reveal" data-reveal aria-label="Subscribe">
+{render_substack_embed(heading=True)}        </section>
         <div class="brief__cta reveal" data-reveal>
-          <a class="btn btn--gold" href="https://thesanjosesource.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe free</a>
           <a class="btn btn--outline" href="../../">Back to home</a>
         </div>
       </article>
@@ -697,6 +748,31 @@ def render_hero_latest(latest: Brief) -> str:
     ).join(["\n", "\n        "])
 
 
+def update_marked_region(path: Path, start: str, end: str, replacement: str) -> bool:
+    if not path.is_file():
+        return False
+    text = path.read_text(encoding="utf-8")
+    if start not in text or end not in text:
+        return False
+    path.write_text(replace_between(text, start, end, replacement), encoding="utf-8", newline="\n")
+    return True
+
+
+def update_shared_head_extras() -> None:
+    """Inject referrer meta (+ optional CF beacon) into pages with head-extras markers."""
+    replacement = "\n" + render_head_extras()
+    targets = [
+        ROOT / "index.html",
+        ROOT / "about" / "index.html",
+        ROOT / "tracker" / "index.html",
+        ROOT / "corrections" / "index.html",
+        ROOT / "404.html",
+    ]
+    for path in targets:
+        if update_marked_region(path, MARKER_HEAD_EXTRAS_START, MARKER_HEAD_EXTRAS_END, replacement):
+            print(f"Updated head extras in {path.relative_to(ROOT)}")
+
+
 def update_index(briefs: list[Brief]) -> None:
     index_path = ROOT / "index.html"
     text = index_path.read_text(encoding="utf-8")
@@ -713,6 +789,10 @@ def update_index(briefs: list[Brief]) -> None:
         MARKER_HERO_END,
         render_hero_latest(sorted_briefs[0]),
     )
+    if MARKER_SUBSTACK_START in text and MARKER_SUBSTACK_END in text:
+        # Homepage already has the section title; embed only.
+        embed = "\n" + render_substack_embed(heading=False)
+        text = replace_between(text, MARKER_SUBSTACK_START, MARKER_SUBSTACK_END, embed)
     index_path.write_text(text, encoding="utf-8", newline="\n")
     print(f"Updated {index_path.relative_to(ROOT)}")
 
@@ -905,9 +985,14 @@ def main() -> int:
     write_brief_pages(briefs)
     update_index(briefs)
     update_404_latest(briefs)
+    update_shared_head_extras()
     write_feed(briefs)
     write_sitemap(discover_brief_urls_on_disk(), brief_lastmods(briefs))
-    print(f"Built {len(briefs)} brief(s).")
+    token = cf_analytics_token()
+    print(
+        f"Built {len(briefs)} brief(s). "
+        f"CF analytics beacon: {'on' if token else 'off (CF_ANALYTICS_TOKEN empty)'}."
+    )
     return 0
 
 
