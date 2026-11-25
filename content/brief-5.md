@@ -7,14 +7,17 @@ homepage_blurb: The City's revised plan for $11.7 million in 2021 federal rent-h
 coverage_label: Before the Dec. 1 vote · Nov 23, 2026
 eyebrow: Before the Dec. 1 vote
 dek: Staff now propose City-run rent help for about 120 households. The federal money, awarded in 2021, must be spent by Sept. 30, 2030.
-meta_line: By J Gonzales · Nov. 23, 2026
+meta_line: By J Gonzales · Nov. 23, 2026 · Corrected Nov. 25, 2026
+date_modified: 2026-11-25
 ---
+
+**Correction, November 25, 2026:** we corrected the agenda page for the rent-help item (p. 23, not p. 21) and two lines that described Dec. 1 votes as already decided. The original wording is under Corrections and updates at the end of this page.
 
 **How to weigh in:** The Council meets **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Items 8.3 (rent help, a public hearing), 8.1 (tax break) and 2.15 (payroll system). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The draft rent-help plan is open for public review on the Housing Department's website through **Dec. 9** ([memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf), p. 10).
 
 ## What matters this week
 
-- **Deciding (Dec. 1):** Whether to approve a revised plan for San José's federal HOME-ARP grant and send it to the U.S. Department of Housing and Urban Development (HUD) ([record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323523&GUID=C33FB5CC-641A-4D7E-BCE5-5D93120093F0), agenda p. 21).
+- **Deciding (Dec. 1):** Whether to approve a revised plan for San José's federal HOME-ARP grant and send it to the U.S. Department of Housing and Urban Development (HUD) ([record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323523&GUID=C33FB5CC-641A-4D7E-BCE5-5D93120093F0), agenda p. 23).
 - **The money:** $11,693,829 in federal funds, first awarded in 2021. All of it must be spent by Sept. 30, 2030 (memo pp. 1–2).
 - **For residents:** Staff expect to serve about 120 households with 12 to 18 months of rental assistance and support services, starting with people already in City shelters (pp. 5–6).
 
@@ -34,7 +37,7 @@ How the money would shift (p. 7):
 
 - **Rental assistance:** $4,500,000 → $7,317,495
 - **Support services:** $2,424,884 → $2,624,884
-- **Homelessness prevention:** $3,000,000 → $0. Staff say the City will support the County's prevention program with $5,430,576 in Measure E money instead, also on the Dec. 1 agenda (p. 3, note 4).
+- **Homelessness prevention:** $3,000,000 → $0. Staff say the City would support the County's prevention program with $5,430,576 in Measure E money instead, also on the Dec. 1 agenda (p. 3, note 4).
 - **Administration:** $1,751,450 for the City → $1,251,450, plus $500,000 for the nonprofit
 
 Staff will return to the Council to approve the agreement with the nonprofit (p. 9).
@@ -49,7 +52,7 @@ The cost: three projects in the pipeline "were estimated to generate approximate
 
 ### A 2015 payroll-system contract, extended to 2031 (2.15)
 
-CherryRoad Technologies runs the PeopleSoft system behind City human resources, payroll, budget and timekeeping. Its contract, first approved in 2015, ends Dec. 31, 2026. Staff ask for five one-year options through Dec. 31, 2031, with support "estimated at $500,000 annually" from the General Fund. The City "does not anticipate initiating" a review of a replacement system until fiscal 2028-29 ([memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf), pp. 1–3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA)). It's a consent item, approved with other routine items in one vote unless a councilmember pulls it (agenda p. 10).
+CherryRoad Technologies runs the PeopleSoft system behind City human resources, payroll, budget and timekeeping. Its contract, first approved in 2015, ends Dec. 31, 2026. Staff ask for five one-year options through Dec. 31, 2031, with support "estimated at $500,000 annually" from the General Fund. The City "does not anticipate initiating" a review of a replacement system until fiscal 2028-29 ([memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf), pp. 1–3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA)). It's a consent item, so it would be approved with other routine items in one vote unless a councilmember pulls it (agenda p. 10).
 
 ## Since our last brief
 
@@ -74,3 +77,14 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 - [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
+
+## Corrections and updates
+
+We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 25, 2026: correction
+
+- **Agenda page.** Was: "agenda p. 21" for the revised HOME-ARP plan. Now: "agenda p. 23." Page 21 of the Dec. 1 agenda lists other items.
+- **Measure E money.** Was: "Staff say the City will support the County's prevention program with $5,430,576 in Measure E money." Now: "would support." That money is a separate Dec. 1 item the Council has not voted on.
+- **Payroll contract.** Was: "It's a consent item, approved with other routine items in one vote." Now: "It's a consent item, so it would be approved with other routine items in one vote." The Council has not voted yet.
+- No figures or sources changed.
