@@ -1,0 +1,27 @@
+# Agent pre-flight check on every pull request (Jay, Nov 24, 2026).
+# Fails when the PR is not in knightingale408/thesanjosesource, or when it changes a
+# content/brief-N.md file that another open PR, or a waiting Publish site run, is about
+# to publish. Read-only: it never edits, merges, approves or publishes anything.
+name: Agent pre-flight
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Right repo, no queued brief touched
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/preflight.py --ci
