@@ -23,6 +23,40 @@
   if (trackerApp) {
     initTracker(trackerApp);
   }
+
+  document.querySelectorAll("[data-copy-url]").forEach((button) => {
+    const status = button.parentElement.querySelector(".share__status");
+    const input = document.getElementById("share-url");
+    button.addEventListener("click", () => {
+      const url = button.getAttribute("data-copy-url") || "";
+      const mark = (copied) => {
+        if (!status) {
+          return;
+        }
+        status.textContent = copied ? "Copied" : "Select the page link and copy it.";
+      };
+      const copyFromInput = () => {
+        if (!input) {
+          return false;
+        }
+        input.focus();
+        input.select();
+        try {
+          return document.execCommand("copy");
+        } catch (err) {
+          return false;
+        }
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(
+          () => mark(true),
+          () => mark(copyFromInput())
+        );
+        return;
+      }
+      mark(copyFromInput());
+    });
+  });
 })();
 
 // Tracker: renders the Promised vs. Actual scorecards from the generated
