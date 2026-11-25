@@ -83,10 +83,10 @@ A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` 
 - Claim the task in the Drive Doc **WORK LOG - who is doing what** before starting; mark it DONE or STOPPED with the PR link after.
 - The GitHub Project board "The San Jose Source" is the single status page. Notion is retired.
 
-## Weekly operating model (adopted Nov 20, 2026)
+## Weekly operating model (adopted Nov 20, 2026; updated Nov 24, 2026)
 
-- **Claude** runs the week: Fri agenda pull, Sat draft + fact-check + PR, Sun packet (asks Jay for his take on the PR), Sun 8:13 PM merge, Mon 5:34 AM pre-flight, Mon 7:04 AM Substack + X posting, Wed results check. Claude works on branches and opens PRs itself.
+- **Workers:** Claude and Perplexity only (Jay, Nov 24, 2026). Grok, Cursor and Copilot are retired for this repo after Dec 13, 2026; until then, use them only for a task Jay names, and they follow the pre-flight above.
+- **Claude** runs the week: Fri agenda pull, Sat draft + fact-check + PR, Sun 3:34 PM packet (asks Jay for his take on the PR), Sun 6:37 PM prep (inserts Jay's take or removes the placeholder, rebuilds, pushes; **no merge**), Mon 5:34 AM pre-flight, Mon 7:04 AM Substack + X posting of a brief Jay already approved, Wed results check. Claude works on branches and opens PRs itself.
 - **Perplexity** is the independent reviewer (Tuesdays) and researches on request. It may open PRs (Jay, Nov 24, 2026); it never merges or publishes, and Jay reviews every PR.
-- **No agent merges** (Jay, Nov 24, 2026). Where this section says Claude merges, that step waits for Jay's decision; until then, Jay merges.
-- **Grok, Cursor and Copilot are retired** for this repo. Do not start work here from those tools.
-- **Jay's weekly actions:** an optional take (as a PR comment), then one click approving the Publish site production deployment. That click is his yes for the website, Substack and X. No tool writes his take.
+- **No agent merges** (Jay, Nov 24, 2026). Jay merges every PR himself.
+- **Jay's weekly actions, all in his Sunday 6–7 PM session:** an optional take as a PR comment by 6:30 PM, then he merges the brief PR and approves the Publish site production deployment. That approval is his yes for the website, Substack and X. No tool writes his take.
