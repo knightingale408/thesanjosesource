@@ -148,7 +148,7 @@ def main():
         print("Pre-flight FAILED. Do not continue. Log it in the WORK LOG and tell Jay.")
         return 1
     print("  OK: right repo, not on main, no queued brief touched.")
-    print("  Reminder: PRs only. No agent merges, approves a deployment, or publishes; Jay does.")
+    print("  Reminder: PRs only. No agent merges or approves a deployment; Jay does.")
     return 0
 
 

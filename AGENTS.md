@@ -13,7 +13,7 @@ python3 tools/preflight.py
 If you can't run commands, check the same three things by hand:
 
 1. **Right repo.** The repo is `knightingale408/thesanjosesource`. Never `knightingale408/fiscal-os` (the old repo; Jay calls it "OLDSSJFISCLOSREPO") and never `san-jose-sourcearchive`. In Cursor Cloud Agents, pick the `knightingale408/thesanjosesource` environment by name; the old environment called "THESANJOSESOURCE" points to fiscal-os.
-2. **PRs only, no merges.** Work on a branch and open a pull request. No agent merges a PR, approves a deployment or publishes. Jay reviews every PR and does the merging.
+2. **PRs only, no merges.** Work on a branch and open a pull request. No agent merges a PR, approves a deployment, or publishes anything Jay has not approved. Jay reviews every PR and does the merging.
 3. **No work on a brief that's queued to publish.** Don't change a `content/brief-N.md` that another open PR changes, or that a waiting Publish site run is about to publish. Tell Jay instead.
 
 If any check fails, stop, log it in the WORK LOG ("STOPPED: pre-flight"), and tell Jay. The **Agent pre-flight** workflow runs the same check on every PR.
