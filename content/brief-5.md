@@ -1,19 +1,19 @@
 ---
-title: San José revises $11.7M rent-help plan after HUD didn't approve it
-description: Before the Dec. 1 Council meeting, a look at San José's revised plan for $11.7 million in federal HOME-ARP money, a broader construction-tax break for affordable housing, and a payroll-system contract extended to 2031.
+title: San José Council weighs City-run plan for $11.7M in federal rental assistance
+description: Before the Dec. 1 Council meeting, a look at San José's revised plan for $11.7 million in federal HOME-ARP money, a broader construction-tax exemption for affordable housing, and a payroll-system contract extended to 2031.
 date: 2026-11-23
 series: Weekly brief
-homepage_blurb: The City's revised plan for $11.7 million in 2021 federal rent-help money goes to a Dec. 1 hearing, plus an affordable-housing tax break and a payroll-system extension.
+homepage_blurb: The City's revised plan for $11.7 million in 2021 federal HOME-ARP money goes to a Dec. 1 hearing, plus an affordable-housing construction-tax exemption and a payroll-system extension.
 coverage_label: Before the Dec. 1 vote · Nov 23, 2026
 eyebrow: Before the Dec. 1 vote
-dek: Staff now propose City-run rent help for about 120 households. The federal money, awarded in 2021, must be spent by Sept. 30, 2030.
-meta_line: By J Gonzales · Nov. 23, 2026 · Corrected Nov. 25, 2026
+dek: Staff propose a City-run program for about 120 households; HUD did not approve the 2024 County-run plan. The federal money, awarded in 2021, must be spent by Sept. 30, 2030.
+meta_line: By J Gonzales · Nov. 23, 2026 · Corrected and updated Nov. 25, 2026
 date_modified: 2026-11-25
 ---
 
-**Correction, November 25, 2026:** we corrected the agenda page for the rent-help item (p. 23, not p. 21) and two lines that described Dec. 1 votes as already decided. The original wording is under Corrections and updates at the end of this page.
+**Correction, November 25, 2026:** we corrected the agenda page for the rental assistance item (p. 23, not p. 21) and two lines that described Dec. 1 votes as already decided. We also changed wording to match the City record's own terms ("rental assistance," "exemption"). The original wording is under Corrections and updates at the end of this page.
 
-**How to weigh in:** The Council meets **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Items 8.3 (rent help, a public hearing), 8.1 (tax break) and 2.15 (payroll system). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The draft rent-help plan is open for public review on the Housing Department's website through **Dec. 9** ([memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf), p. 10).
+**How to weigh in:** The Council meets **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Items 8.3 (HOME-ARP rental assistance plan, a public hearing), 8.1 (construction-tax exemption) and 2.15 (payroll system). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The draft HOME-ARP plan is open for public review on the Housing Department's website through **Dec. 9** ([memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf), p. 10).
 
 ## What matters this week
 
@@ -21,11 +21,11 @@ date_modified: 2026-11-25
 - **The money:** $11,693,829 in federal funds, first awarded in 2021. All of it must be spent by Sept. 30, 2030 (memo pp. 1–2).
 - **For residents:** Staff expect to serve about 120 households with 12 to 18 months of rental assistance and support services, starting with people already in City shelters (pp. 5–6).
 
-## Rent help, take two
+## Rental assistance: the revised plan
 
 In 2021, San José was awarded $11,676,334 from HOME-ARP, a one-time federal program for people who are homeless or at risk of homelessness. HUD added $17,495 in April 2025 to fix an administrative error, bringing the total to $11,693,829 (memo p. 2).
 
-The Council approved the first plan for the money on March 28, 2023. On Dec. 17, 2024, it approved a change: the County of Santa Clara would run the rent-help program. HUD did not approve the revised plan, so "the proposed County-administered program could not be implemented" (p. 3).
+The Council approved the first plan for the money on March 28, 2023. On Dec. 17, 2024, it approved a change: the County of Santa Clara would run the rental assistance program. HUD did not approve the revised plan, so "the proposed County-administered program could not be implemented" (p. 3).
 
 The sticking point was who could apply. HUD requires the program to be open to four groups, from people who are homeless to people at risk of losing their housing. The earlier plan relied on the County's existing homeless-services waitlist, which staff say does not rank people at risk of homelessness for this kind of help. The County said it could not expand that system to all four groups or keep a separate waitlist for the program, so the City-County agreement "will be terminated" (pp. 2, 4–5).
 
@@ -44,7 +44,7 @@ Staff will return to the Council to approve the agreement with the nonprofit (p.
 
 ## Also on the agenda
 
-### A broader construction-tax break for affordable housing (8.1)
+### A broader construction-tax exemption for affordable housing (8.1)
 
 The City's exemptions from two construction taxes date to 1978 and cover only projects funded under four older federal housing programs. Projects funded by newer sources, such as federal tax credits or state and local grants, don't qualify ([memo](https://sanjose.legistar.com/View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0), p. 2). The proposed ordinance would exempt deed-restricted affordable housing financed by any government housing subsidy. It would not cover affordable units in market-rate buildings (p. 3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6)).
 
@@ -65,9 +65,9 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 ## What happens next
 
 - Mon., Nov. 30, 5 p.m.: email deadline for Dec. 1 items.
-- Tue., Dec. 1, 1:30 p.m.: Council meeting and public hearing on the rent-help plan (8.3).
+- Tue., Dec. 1, 1:30 p.m.: Council meeting and public hearing on the HOME-ARP plan (8.3).
 - Tue., Dec. 8: data center standards and fees.
-- Wed., Dec. 9: public review of the draft rent-help plan ends.
+- Wed., Dec. 9: public review of the draft HOME-ARP plan ends.
 
 ## Sources
 
@@ -81,6 +81,16 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 25, 2026: update (wording)
+
+We changed several phrases to use the City record's own terms. No facts, figures or sources changed.
+
+- **Headline.** Was: "San José revises $11.7M rent-help plan after HUD didn't approve it." Now: "San José Council weighs City-run plan for $11.7M in federal rental assistance."
+- **Subtitle.** Was: "Staff now propose City-run rent help for about 120 households." Now: "Staff propose a City-run program for about 120 households; HUD did not approve the 2024 County-run plan."
+- **Section heading.** Was: "Rent help, take two." Now: "Rental assistance: the revised plan."
+- **"Rent help" / "rent-help."** Was used in the how-to-weigh-in note, the 2024 County plan sentence and What happens next. Now: "rental assistance" or "HOME-ARP plan," the terms in the staff memo.
+- **"Tax break."** Was: "A broader construction-tax break for affordable housing" and "8.1 (tax break)." Now: "construction-tax exemption," the memo's term.
 
 ### November 25, 2026: correction
 
