@@ -2,6 +2,22 @@
 
 Read this before changing anything. It applies to Cursor, GitHub Copilot, Claude Code and any other agent working in `knightingale408/thesanjosesource`.
 
+## Pre-flight check: every agent, every time (Jay, Nov 24, 2026)
+
+Applies to Claude, Cursor, GitHub Copilot, Perplexity, Grok and Gemini. Run it before you change anything and again before you open a PR:
+
+```
+python3 tools/preflight.py
+```
+
+If you can't run commands, check the same three things by hand:
+
+1. **Right repo.** The repo is `knightingale408/thesanjosesource`. Never `knightingale408/fiscal-os` (the old repo; Jay calls it "OLDSSJFISCLOSREPO") and never `san-jose-sourcearchive`. In Cursor Cloud Agents, pick the `knightingale408/thesanjosesource` environment by name; the old environment called "THESANJOSESOURCE" points to fiscal-os.
+2. **PRs only, no merges.** Work on a branch and open a pull request. No agent merges a PR, approves a deployment or publishes. Jay reviews every PR and does the merging.
+3. **No work on a brief that's queued to publish.** Don't change a `content/brief-N.md` that another open PR changes, or that a waiting Publish site run is about to publish. Tell Jay instead.
+
+If any check fails, stop, log it in the WORK LOG ("STOPPED: pre-flight"), and tell Jay. The **Agent pre-flight** workflow runs the same check on every PR.
+
 ## What this repo is
 
 The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on San José City Council money decisions. Substack and X mirror the website. The owner and only approver is **Jay** (byline **J Gonzales**; use no other name for him anywhere).
@@ -70,6 +86,7 @@ A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` 
 ## Weekly operating model (adopted Nov 20, 2026)
 
 - **Claude** runs the week: Fri agenda pull, Sat draft + fact-check + PR, Sun packet (asks Jay for his take on the PR), Sun 8:13 PM merge, Mon 5:34 AM pre-flight, Mon 7:04 AM Substack + X posting, Wed results check. Claude works on branches and opens PRs itself.
-- **Perplexity** is the independent, read-only reviewer (Tuesdays) and researches on request. It does not draft, merge or publish.
+- **Perplexity** is the independent reviewer (Tuesdays) and researches on request. It may open PRs (Jay, Nov 24, 2026); it never merges or publishes, and Jay reviews every PR.
+- **No agent merges** (Jay, Nov 24, 2026). Where this section says Claude merges, that step waits for Jay's decision; until then, Jay merges.
 - **Grok, Cursor and Copilot are retired** for this repo. Do not start work here from those tools.
 - **Jay's weekly actions:** an optional take (as a PR comment), then one click approving the Publish site production deployment. That click is his yes for the website, Substack and X. No tool writes his take.

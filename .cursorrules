@@ -2,6 +2,14 @@
 
 Read `AGENTS.md` first. These rules reinforce the non-negotiables for agents in this repo.
 
+## Pre-flight (required before any change; Jay, Nov 24, 2026)
+
+Run `python3 tools/preflight.py` and stop if it fails. In short:
+
+1. The repo must be `knightingale408/thesanjosesource`. Never `knightingale408/fiscal-os` ("OLDSSJFISCLOSREPO") or `san-jose-sourcearchive`. In Cursor Cloud Agents, choose the `knightingale408/thesanjosesource` environment; the environment named "THESANJOSESOURCE" points to fiscal-os.
+2. PRs only. Never merge, never approve a deployment, never publish.
+3. Don't touch a `content/brief-N.md` that's queued to publish (in another open PR, or waiting in a Publish site run).
+
 ## Stack (do not change)
 
 - Static HTML, CSS, and a little vanilla JS only. No React, Vue, Tailwind, npm, or other frameworks.
