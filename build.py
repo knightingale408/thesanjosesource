@@ -317,7 +317,7 @@ def parse_table(lines: list[str]) -> tuple[str, int]:
 def brief_section_modifier(section_title: str | None, inner: str) -> str:
     """Extra class for correction callouts, take, sources, and corrections log."""
     title = (section_title or "").strip().lower()
-    if title and "take" in title:
+    if re.fullmatch(r"j gonzales['\u2019]s take", title):
         return " brief-block--take"
     if title == "sources":
         return " brief-block--sources"
