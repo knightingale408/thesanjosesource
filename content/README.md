@@ -169,3 +169,7 @@ python check_links.py brief/N/index.html
 This repo uses a **production approval** step in GitHub Actions: the deploy waits for an explicit approval before the site goes live. Nothing is partial—every publish is the full site from `main`.
 
 For local preview only, run `python build.py` on your machine; you do not need to publish to see the generated HTML in the repo folder.
+
+## Record pages
+
+City Council meeting and file-number pages are not briefs. Their source is `content/meetings/<YYYY-MM-DD>.md` and `content/items/<file>.md` (for example `26-1183.md`). `python3 scripts/pull_legistar.py` writes them. `python3 build.py` renders `/meetings/` and `/items/`. Rules: `docs/RECORD-SITE.md`.

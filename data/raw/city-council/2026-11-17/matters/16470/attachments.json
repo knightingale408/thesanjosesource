@@ -1,0 +1,42 @@
+[
+  {
+    "MatterAttachmentId": 40784,
+    "MatterAttachmentGuid": "BB9D1C2D-2858-445C-8A2A-8AFFC4D1EC1C",
+    "MatterAttachmentLastModifiedUtc": "2026-11-06T18:26:44.28",
+    "MatterAttachmentRowVersion": "AAAAAAEJ9E8=",
+    "MatterAttachmentName": "Memorandum",
+    "MatterAttachmentHyperlink": "https://legistar.granicus.com/sanjose/attachments/ae2d1e50-f9d2-4b74-b630-9998ffb5cf80.pdf",
+    "MatterAttachmentFileName": "ae2d1e50-f9d2-4b74-b630-9998ffb5cf80.pdf",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": false,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 1
+  },
+  {
+    "MatterAttachmentId": 40856,
+    "MatterAttachmentGuid": "C2FD1BA5-058B-4630-B229-9C3D4DB0CC2B",
+    "MatterAttachmentLastModifiedUtc": "2026-11-17T16:36:38.66",
+    "MatterAttachmentRowVersion": "AAAAAAEJ9Ec=",
+    "MatterAttachmentName": "Letter from the Public",
+    "MatterAttachmentHyperlink": "https://legistar.granicus.com/sanjose/attachments/3a04af86-6647-4452-9e36-1c2a0de16dce.pdf",
+    "MatterAttachmentFileName": "3a04af86-6647-4452-9e36-1c2a0de16dce.pdf",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": false,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 2
+  }
+]

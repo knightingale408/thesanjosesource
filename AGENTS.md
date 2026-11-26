@@ -18,6 +18,18 @@ If you can't run commands, check the same three things by hand:
 
 If any check fails, stop, log it in the WORK LOG ("STOPPED: pre-flight"), and tell Jay. The **Agent pre-flight** workflow runs the same check on every PR.
 
+## The record site (Jay, Nov 25, 2026)
+
+The record site is the product. The weekly brief is a pick list from the item pages, using the same sentences, with no second voice. One URL per City Council meeting (`/meetings/<YYYY-MM-DD>/`) and one URL per file number (`/items/<file>/`, for example `/items/26-1183/`). Source files are `content/meetings/` and `content/items/`. Raw Legistar JSON stays in `data/raw/`. `python3 build.py` renders the pages and adds them to `sitemap.xml`.
+
+State words come from fields only: Agenda only, Outcome not posted, or Recorded. Do not infer an outcome from the wording of a title or a memo. The pull has to be able to leave a page as Outcome not posted.
+
+A neutrality lint runs on the generated `items/` and `meetings/` pages (`python3 scripts/lint_record_pages.py`). Approved, denied, continued, referred, adopted, and amended are allowed only when the page state is Recorded. The hard bans are in that script.
+
+Steps 5-7 come later: memo PDF extract, the brief as a pick list, and the minutes re-run. Do not add those, and do not add a model or a rewriter, until Jay asks. Do not add file-number links into existing briefs as part of this work.
+
+Full spec, in Jay's words: `docs/RECORD-SITE.md`. How to run a pull: `scripts/README.md`.
+
 ## What this repo is
 
 The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on San José City Council money decisions. Substack and X mirror the website. The owner and only approver is **Jay** (byline **J Gonzales**; use no other name for him anywhere).
@@ -34,6 +46,7 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 
 - Source for each brief: `content/brief-N.md` (front matter plus body). Read `content/README.md` before adding one.
 - `python3 build.py` builds `brief/N/index.html`, refreshes the homepage list, `feed.xml` and `sitemap.xml`. **Run it after any change to `content/` or `build.py`, and commit the generated files in the same PR**, so the repo matches what goes live.
+- The same command renders `meetings/` and `items/` from `content/meetings/` and `content/items/`, and adds those URLs to `sitemap.xml`. Commit the generated record pages in the same PR. The pull is `python3 scripts/pull_legistar.py` (see `scripts/README.md`).
 - Optional build setting: `CF_ANALYTICS_TOKEN`. When set, the shared page head includes the Cloudflare Web Analytics beacon; when empty or unset, the build outputs no beacon. The token is not in the repo yet.
 - Static HTML/CSS/JS. No frameworks, no npm, no build tools beyond `build.py`. No cookies and no third-party trackers except that Cloudflare beacon when the token is set.
 - `.github/scripts/publish.py` defines the deployment file list through `EXCLUDE_EXACT` and `EXCLUDE_PREFIX`, excluding repository-only files and directories. All other tracked files are uploaded to the public site; keep private notes, keys and drafts out of those paths.
@@ -66,7 +79,7 @@ The master copy of **thesanjosesource.com**, a free, nonpartisan weekly brief on
 Two checkers, used for different jobs:
 
 - `python3 check_links.py <file>` is the pre-publish check for one brief or page. It is the checker that rejects a public Legistar link built from the Web API. `LegislationDetail.aspx` must include both `ID` and `GUID`, `View.ashx` must include `GUID`, and `webapi.legistar.com` is not a citation. Those are errors, not warnings. `--offline` checks that format only and does not fetch URLs. HTML `&amp;` in query strings is unescaped before the check.
-- Lychee (`.github/workflows/link-check.yml`) is the sitewide HTTP check. It runs on every pull request, on Monday mornings, and again against the live sitemap after a publish. It follows the links on the pages. HTTP 403 and 429 count as reachable, because some City hosts block automated clients, and concurrency is capped so Legistar does not answer with false 404s. Lychee does not know the GUID rule; `check_links.py` does.
+- Lychee (`.github/workflows/link-check.yml`) is the sitewide HTTP check. It runs on every pull request, on Monday mornings, and again against the live sitemap after a publish. It follows the links on the pages. HTTP 403 and 429 count as reachable, because some City hosts block automated clients, and concurrency is capped so Legistar does not answer with false 404s. Lychee does not know the GUID rule; `check_links.py` does. On a pull request it skips the site's own `/brief/`, `/items/`, and `/meetings/` URLs, because those pages 404 until they are published. The Monday run still checks them.
 
 A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` or `check_links.py` does not start **Publish site**. A change to `publish.yml` does, on purpose.
 
