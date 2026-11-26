@@ -47,7 +47,7 @@ The Planning Commission reviewed the rules Nov. 18 ([agenda](https://www.sanjose
 
 ## Since our last brief
 
-The City's [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) for the [Nov. 17 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8124&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) show the Council approved all three items we previewed. The Council has not yet approved the minutes. Each vote is recorded as unanimous with the absent members named, so the yes votes below are the members present at roll call minus those absent.
+The City's [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) for the [Nov. 17 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) show the Council approved all three items we previewed. The Council has not yet approved the minutes. Each vote is recorded as unanimous with the absent members named, so the yes votes below are the members present at roll call minus those absent.
 
 - **Wastewater plant HVAC contract (6.1):** approved 9-0-2. Yes: Kamei, Campos, Tordillos, Ortiz, Mulcahy, Doan, Candelas, Casey, Mahan. Absent: Foley, Cohen. Motion by Doan, second by Candelas (item 6.1).
 - **Black & Veatch adviser agreement (6.2):** approved 9-0-2. Yes: Kamei, Campos, Tordillos, Ortiz, Mulcahy, Doan, Candelas, Casey, Mahan. Absent: Foley, Cohen. Motion by Candelas, second by Mulcahy (item 6.2).
@@ -59,7 +59,7 @@ The City's [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102
 
 ## Coming up
 
-From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), posted Nov. 19 ([meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)).
+From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), posted Nov. 19 ([meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427104&GUID=66FA99F3-7A7A-4CC3-AF10-7E28B31FC823&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)).
 
 - **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 20).
 - **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 13); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 21).
@@ -80,8 +80,8 @@ From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/
 
 - [Planning Commission staff report, PP26-006, Nov. 6, 2026 (heard Nov. 18)](https://www.sanjoseca.gov/home/showpublisheddocument/136043/639301702514330000) and [Nov. 18 Planning Commission agenda](https://www.sanjoseca.gov/home/showpublisheddocument/136115/639301740849900000)
 - Nov. 17 item 8.1, data center pause: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E), [memo](https://legistar.granicus.com/sanjose/attachments/606a2feb-7963-48e4-af7d-ded74f42e041.pdf)
-- [Council meeting page, Nov. 17, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8124&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) and [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
-- [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Council meeting page, Nov. 17, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) and [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427104&GUID=66FA99F3-7A7A-4CC3-AF10-7E28B31FC823&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 - [Curbside Battery Collection](https://www.sanjoseca.gov/your-government/departments-offices/environmental-services/recycling-garbage/residents/curbside-battery-collection) and [Nov. 16 news release](https://www.sanjoseca.gov/Home/Components/News/News/7661/4699)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
@@ -89,6 +89,10 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 26, 2026: update (links)
+
+We changed the Legistar meeting-page links to the City website's own meeting address (with its ID and GUID). Was: links of the form `MeetingDetail.aspx?LEGID=…&GID=317`. Now: `MeetingDetail.aspx?ID=…&GUID=…`. Each link opens the same meeting as before. No facts, figures, wording or sources changed.
 
 ### November 25, 2026: correction
 

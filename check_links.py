@@ -118,6 +118,26 @@ def legistar_format_errors(url: str) -> list[str]:
     return errors
 
 
+def legistar_meeting_link_warnings(url: str) -> list[str]:
+    """Meeting pages should use the website ID and GUID, not the LEGID form.
+
+    MeetingDetail.aspx?LEGID=…&GID=317 still opens the meeting, so this is a
+    warning for now. brief-1, the record pages and tools/legistar_pull.py
+    still use LEGID; promote this to an error once those are switched.
+    """
+    lower = url.lower()
+    if "meetingdetail.aspx" not in lower:
+        return []
+    qs = parse_qs(urlparse(url).query, keep_blank_values=True)
+    keys = {k.lower() for k in qs}
+    if "id" in keys and "guid" in keys:
+        return []
+    return [
+        "MeetingDetail.aspx link without the website ID and GUID (LEGID form). "
+        "Use MeetingDetail.aspx?ID=…&GUID=… from the meeting page."
+    ]
+
+
 def http_check(url: str, timeout: int) -> tuple[str, list[str], list[str]]:
     """Returns (status_label, warnings, errors)."""
     warnings: list[str] = []
@@ -163,6 +183,7 @@ def http_check(url: str, timeout: int) -> tuple[str, list[str], list[str]]:
 def check_url(url: str, timeout: int, offline: bool = False) -> LinkResult:
     result = LinkResult(url=url)
     result.errors.extend(legistar_format_errors(url))
+    result.warnings.extend(legistar_meeting_link_warnings(url))
 
     if offline or should_skip_http(url):
         result.status = "format-only" if offline else "skipped"
