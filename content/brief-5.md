@@ -74,13 +74,17 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 - Item 8.3, file 26-1253: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323523&GUID=C33FB5CC-641A-4D7E-BCE5-5D93120093F0), [memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf)
 - Item 8.1, file 26-1251: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6), [memo](https://sanjose.legistar.com/View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0)
 - Item 2.15, file 26-1238: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA), [memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf)
-- [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427104&GUID=66FA99F3-7A7A-4CC3-AF10-7E28B31FC823&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
 
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 26, 2026: update (links)
+
+We changed the Legistar meeting-page links to the City website's own meeting address (with its ID and GUID). Was: links of the form `MeetingDetail.aspx?LEGID=…&GID=317`. Now: `MeetingDetail.aspx?ID=…&GUID=…`. Each link opens the same meeting as before. No facts, figures, wording or sources changed.
 
 ### November 25, 2026: update (wording)
 

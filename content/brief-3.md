@@ -55,7 +55,7 @@ The Council will consider [settling Lopez et al. v. City of San José for $180,0
 
 ## Since our last brief
 
-[Draft minutes for the Nov. 10 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8123&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) were not posted as of Sunday, Nov. 15, so most votes are not stated here. The Council took up $3 million in loans tied to [First Community Housing](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300800&GUID=D3B1D20E-B4E8-43FB-823B-8A223A74E0DB&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), a [local emergency proclamation](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300791&GUID=6D8C475E-BAAF-4C63-A959-0C490A75FE50&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) that staff said would give the City "immediate access" to its Emergency Reserve Fund, with $5.5 million available, and Apple's request to take over [131,470 square feet of public street](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300797&GUID=CA805FA6-8700-43A1-968A-33B35C8492E9&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF).
+[Draft minutes for the Nov. 10 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427101&GUID=AF88B76A-2554-4C66-B12E-1E6EB781AB6C&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) were not posted as of Sunday, Nov. 15, so most votes are not stated here. The Council took up $3 million in loans tied to [First Community Housing](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300800&GUID=D3B1D20E-B4E8-43FB-823B-8A223A74E0DB&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), a [local emergency proclamation](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300791&GUID=6D8C475E-BAAF-4C63-A959-0C490A75FE50&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) that staff said would give the City "immediate access" to its Emergency Reserve Fund, with $5.5 million available, and Apple's request to take over [131,470 square feet of public street](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8300797&GUID=CA805FA6-8700-43A1-968A-33B35C8492E9&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF).
 
 One result is on the record: the [change to Apple's development agreement](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8301116&GUID=DCEF5BD1-1E76-465D-9C5C-CD3D54005480&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF) was passed for publication Nov. 10 and is up for [final adoption Nov. 17](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8315001&GUID=73E969DD-B0DA-4BBE-A050-7A4987235C6E) as Ordinance No. 31369 ([agenda p. 6](https://legistar.granicus.com/sanjose/meetings/2026/11/8124_A_City_Council_26-11-17_Agenda.pdf)).
 
@@ -70,19 +70,19 @@ Replacing wastewater equipment that is 30 to 60 years old is necessary, and the 
 
 ## What happens next
 
-- Monday, Nov. 16, 1:30 p.m.: [Council study session on affordability](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8084&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). No votes; public comment on the agenda topic only.
+- Monday, Nov. 16, 1:30 p.m.: [Council study session on affordability](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1423841&GUID=15E8A959-832D-402A-81F8-B0CF5E31AD4C&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF). No votes; public comment on the agenda topic only.
 - Monday, Nov. 16, 5 p.m.: deadline for emailed comments on Tuesday's items to city.clerk@sanjoseca.gov, with the item number in the subject line: 6.1 (heating contract), 6.2 (adviser), 8.1 (data center pause) or 2.7 (settlement). eComments on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) post immediately ([agenda p. 4](https://legistar.granicus.com/sanjose/meetings/2026/11/8124_A_City_Council_26-11-17_Agenda.pdf)).
-- Tuesday, Nov. 17, 1:30 p.m.: [Council meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8124&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), City Hall. Speak in person, by [Zoom](https://sanjoseca.zoom.us/j/98221474336), or by phone at (888) 475-4499, webinar ID 982 2147 4336. The closed session and evening session are canceled.
+- Tuesday, Nov. 17, 1:30 p.m.: [Council meeting](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), City Hall. Speak in person, by [Zoom](https://sanjoseca.zoom.us/j/98221474336), or by phone at (888) 475-4499, webinar ID 982 2147 4336. The closed session and evening session are canceled.
 - Tuesday, Dec. 8: Council takes up data center standards and an urgency ordinance, if the pause proposal passes Tuesday.
 
 ## Sources
 
-- [Council agenda, Nov. 17, 2026](https://legistar.granicus.com/sanjose/meetings/2026/11/8124_A_City_Council_26-11-17_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8124&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Council agenda, Nov. 17, 2026](https://legistar.granicus.com/sanjose/meetings/2026/11/8124_A_City_Council_26-11-17_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427102&GUID=37A5F823-E6C9-4107-A62A-D0C631E299B3&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 - Item 6.1, file 26-1195: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307264&GUID=AA6B974E-292A-44B8-80B8-210432F2460B), [memo](https://legistar.granicus.com/sanjose/attachments/5d0c4f99-3de4-4886-b417-aef93334c8f9.pdf)
 - Item 6.2, file 26-1196: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307265&GUID=10E9141B-21D6-4432-99CA-4FAC4A1EF046), [memo](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf)
 - Item 8.1, data center and large energy use pause: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E), [memo](https://legistar.granicus.com/sanjose/attachments/606a2feb-7963-48e4-af7d-ded74f42e041.pdf)
 - Item 2.7, file 26-1205: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8308950&GUID=67412A9A-30B0-43C1-94AF-8CEA4E455AAE), [memo](https://legistar.granicus.com/sanjose/attachments/2657cd2f-7c7f-4d6a-ac14-100be03cc838.pdf)
-- [Council meeting page, Nov. 10, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8123&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Council meeting page, Nov. 10, 2026](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427101&GUID=AF88B76A-2554-4C66-B12E-1E6EB781AB6C&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
 
@@ -90,11 +90,15 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
 
+### November 26, 2026: update (links)
+
+We changed the Legistar meeting-page links to the City website's own meeting address (with its ID and GUID). Was: links of the form `MeetingDetail.aspx?LEGID=…&GID=317`. Now: `MeetingDetail.aspx?ID=…&GUID=…`. Each link opens the same meeting as before. No facts, figures, wording or sources changed.
+
 ### November 17, 2026: correction and update
 
 - **Pump-station votes.** Was: "The Council would vote twice more before construction starts (p. 7)." Now: "The Council would vote three more times before construction starts (p. 7)." The adviser memo lists three more Council approvals: environmental findings in the second half of 2028, the design-builder's contract for preliminary services in late 2028, and contract changes with a guaranteed maximum price in spring 2031 ([adviser memo](https://legistar.granicus.com/sanjose/attachments/2f73d643-fdb8-4cbe-9b58-038f7164f23d.pdf), p. 7).
 - **Schedule.** Was: "Late 2028: a design-build contract." Now: "Late 2028: the design-builder's contract for preliminary services." We also added the environmental findings in the second half of 2028. The memo calls the late 2028 item "the design-builder's contract for preliminary services" (p. 7).
-- **Minutes (update).** Was: "Earlier results below are from draft minutes, not yet formally approved." Now: "The Oct. 20 results below are from draft minutes, not yet formally approved. The Council approved the Oct. 27 minutes on Nov. 10, 11-0." That approval appears in the Nov. 10 draft minutes, which the City posted Nov. 16, after this brief was published ([Nov. 10 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8123&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), p. 2).
+- **Minutes (update).** Was: "Earlier results below are from draft minutes, not yet formally approved." Now: "The Oct. 20 results below are from draft minutes, not yet formally approved. The Council approved the Oct. 27 minutes on Nov. 10, 11-0." That approval appears in the Nov. 10 draft minutes, which the City posted Nov. 16, after this brief was published ([Nov. 10 meeting](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427101&GUID=AF88B76A-2554-4C66-B12E-1E6EB781AB6C&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF), p. 2).
 
 ### November 16, 2026: correction
 
