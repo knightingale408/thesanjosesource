@@ -19,6 +19,7 @@ LEGISLATION = (
 )
 AGENDA = "https://legistar.granicus.com/sanjose/meetings/2026/11/agenda.pdf"
 MEMO = "https://legistar.granicus.com/sanjose/attachments/memo.pdf"
+RESOLUTION = "https://legistar.granicus.com/sanjose/attachments/resolution.pdf"
 ACTION_TEXT = "Adopt a resolution retroactively authorizing free use of the plazas."
 
 
@@ -92,7 +93,14 @@ def _write_pull(repo: Path) -> None:
             "MatterAttachmentHyperlink": MEMO,
             "MatterAttachmentShowOnInternetPage": True,
             "MatterAttachmentSort": 1,
-        }
+        },
+        {
+            "MatterAttachmentId": 40769,
+            "MatterAttachmentName": "Resolution",
+            "MatterAttachmentHyperlink": RESOLUTION,
+            "MatterAttachmentShowOnInternetPage": True,
+            "MatterAttachmentSort": 2,
+        },
     ]
     events_rec = _raw(repo, "data/raw/sanjose/2026-11-17/events.json", [event])
     items_rec = _raw(repo, "data/raw/sanjose/2026-11-17/event-8124-items.json", items)
@@ -138,6 +146,7 @@ def test_build_publishes_outcome_not_posted_and_keeps_the_title(tmp_path):
     assert "Consent Agenda" in item
     assert "LegislationDetail.aspx?ID=8307101&amp;GUID=8E675B70-06CB-4536-899A-9BB198C253D4" in item
     assert MEMO in item
+    assert RESOLUTION not in item
     assert AGENDA in item
     assert "As of" in item
     assert ACTION_TEXT not in item
@@ -162,6 +171,7 @@ def test_build_publishes_outcome_not_posted_and_keeps_the_title(tmp_path):
     paths = {row["path"]: row for row in manifest["pages"]}
     assert paths["/items/26-1183/"]["state"] == "Outcome not posted"
     assert paths["/items/26-1183/"]["legislation_url"] == LEGISLATION
+    assert RESOLUTION in paths["/items/26-1183/"]["source_urls"]
     assert paths["/items/26-1183/"]["pulled_at"] == "2026-11-26T05:40:12Z"
     assert paths["/meetings/2026-11-17/"]["state"] == "Outcome not posted"
     summary = manifest["meetings"][0]

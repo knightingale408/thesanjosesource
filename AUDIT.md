@@ -130,7 +130,7 @@ Section on the item page is `EventItemMatterType` (for example `Consent Agenda`,
 
 Public Legistar item links are not built from the API `EventItemMatterId` or `EventItemMatterGuid`. Those open "Invalid parameters!" on the website. `pull` follows `https://sanjose.legistar.com/gateway.aspx?M=L&ID=<MatterId>` and stores the `LegislationDetail.aspx` URL that includes both `ID` and `GUID`.
 
-Agenda PDF is `EventAgendaFile`. Minutes PDF is `EventMinutesFile`, and the link is omitted when that field is empty. Memorandum and other files are `MatterAttachmentHyperlink` where `MatterAttachmentShowOnInternetPage` is not false. A memorandum is an attachment whose `MatterAttachmentName` matches memorandum, memoranda, or memo. The link text is the attachment name.
+Agenda PDF is `EventAgendaFile`. Minutes PDF is `EventMinutesFile`, and the link is omitted when that field is empty. A memorandum is an attachment whose `MatterAttachmentName` matches memorandum, memoranda, or memo, with `MatterAttachmentShowOnInternetPage` not false. The page links those, using `MatterAttachmentHyperlink` and the attachment name as the link text. Other public attachments stay in the raw JSON and in `source_urls` on the manifest. They are not hrefs on the HTML. A page that linked every attachment made Granicus answer the sitewide link check with false 404s, including PDFs on the existing briefs.
 
 Vote rows are printed only when the votes call returns rows. Columns are `VotePersonName` and `VoteValueName`. There is no yes/no total.
 

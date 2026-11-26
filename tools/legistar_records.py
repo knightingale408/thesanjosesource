@@ -453,7 +453,12 @@ def source_items(item: dict) -> str:
         parts.append("<li>Legistar item: website link not resolved</li>")
     if item["agenda_pdf"]:
         parts.append(f"<li>{ext_a(item['agenda_pdf'], 'Agenda PDF')}</li>")
+    # Memoranda only. Other public attachments stay in the manifest and the
+    # raw JSON. Putting every PDF on the page makes Granicus answer the
+    # sitewide link check with false 404s.
     for row in item["attachments"]:
+        if row["kind"] != "memorandum":
+            continue
         parts.append(f"<li>{ext_a(row['url'], row['label'], 'attachment_name')}</li>")
     if item["minutes_pdf"]:
         parts.append(f"<li>{ext_a(item['minutes_pdf'], 'Minutes PDF')}</li>")
@@ -727,6 +732,8 @@ def render_item_md(item: dict) -> str:
     if item["agenda_pdf"]:
         lines.append(f"- [Agenda PDF]({item['agenda_pdf']})")
     for row in item["attachments"]:
+        if row["kind"] != "memorandum":
+            continue
         lines.append(f"- [{row['label']}]({row['url']})")
     if item["minutes_pdf"]:
         lines.append(f"- [Minutes PDF]({item['minutes_pdf']})")
