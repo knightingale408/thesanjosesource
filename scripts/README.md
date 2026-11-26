@@ -58,6 +58,18 @@ python3 build.py
 
 The item file keeps both slices. The page shows the recommendation as a quote. It shows the fiscal quote only when that quote contains a number or a fee. Otherwise it says the memo does not state a resident effect.
 
+## Brief pick list
+
+Score the item pages and write a brief that copies each picked recommendation's first sentence. It does not rewrite them.
+
+```bash
+python3 scripts/select_brief.py
+python3 scripts/select_brief.py --write content/brief-6.md
+python3 build.py
+```
+
+An item is in the running if the title, section, or recommendation matches ordinance, fee, rate, tax, budget, contract, housing entitlement, or utility, or if the recommendation or fiscal quote contains a dollar amount. The slate is the top eight. The first line of the brief is how many items are still outcome not posted, and the as-of time.
+
 ## Lint
 
 ```bash
