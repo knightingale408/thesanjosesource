@@ -1,0 +1,366 @@
+{
+  "body": "City Council",
+  "client": "sanjose",
+  "event_ids": {
+    "8124": {
+      "attachments": {
+        "15915": {
+          "path": "data/raw/sanjose/2026-11-17/matter-15915-attachments.json",
+          "sha256": "0764cbc0dfc0113d31a1a38b96fb8e6e6707a4a4d5ea09aec44e9057d9891569",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/15915/attachments"
+        },
+        "16460": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16460-attachments.json",
+          "sha256": "275a7c937fddaabd0dfbdd02f4681208edc5d0e37db2792ef90c9e40ed0996eb",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16460/attachments"
+        },
+        "16462": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16462-attachments.json",
+          "sha256": "558958900fa5baa7f1a228401e591d172eaeb1d0cb535ec3f43c423271aed806",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16462/attachments"
+        },
+        "16463": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16463-attachments.json",
+          "sha256": "de3cc84fa93005f6015646e0e05508d7465cb056b8e61f87d799564d7dd21a00",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16463/attachments"
+        },
+        "16465": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16465-attachments.json",
+          "sha256": "ac20bcfb6be346abe2ddeae7affa0b51b84616aa0b804847f7c96889565845e5",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16465/attachments"
+        },
+        "16466": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16466-attachments.json",
+          "sha256": "557b3f8d6d4984f5522611a48b22a1b397e4842f19248e5881bf1653f639aee4",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16466/attachments"
+        },
+        "16467": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16467-attachments.json",
+          "sha256": "c96fc70cb736ede85e738210ed651b410ea3065e41e8aa1b46d2a74927a42953",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16467/attachments"
+        },
+        "16468": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16468-attachments.json",
+          "sha256": "19913260fa7e74d473a4684ba6a1f6b312e6467238adc4b1454670651b312bea",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16468/attachments"
+        },
+        "16469": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16469-attachments.json",
+          "sha256": "f8818e7df3a0309eb08b029ff07982a2894e484bae696bc243e16ea595977839",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16469/attachments"
+        },
+        "16470": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16470-attachments.json",
+          "sha256": "011116233e88ecab7d3622442e6671ce8291e0e5305a3592a7efbb11a54af525",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16470/attachments"
+        },
+        "16471": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16471-attachments.json",
+          "sha256": "5684118decbcecf97d8e9a33794bb7d2cfa0a7f069ea4017b3a975d3d4e0bea8",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16471/attachments"
+        },
+        "16472": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16472-attachments.json",
+          "sha256": "d562d4237460a39aa522df3caffb5623402f5b10411776869f32a3798c6d2123",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16472/attachments"
+        },
+        "16473": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16473-attachments.json",
+          "sha256": "a0a3e2792e6ff6f9db854a15fe88c47abcf070a460e44cd6d252cf4c15ecd736",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16473/attachments"
+        },
+        "16474": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16474-attachments.json",
+          "sha256": "1e411cbca77ca06448702c2b269e7c40dd8815f4b52b0750a830f0d0b77e5590",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16474/attachments"
+        },
+        "16475": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16475-attachments.json",
+          "sha256": "396d7af4123494a797bc6b927ad3c0c61a6728d56b39fd66aa2c10076a8fddd3",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16475/attachments"
+        },
+        "16476": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16476-attachments.json",
+          "sha256": "fcbac9025bae6516ddd748f461413a0a7a8f58d61ca2773da0cc18cd15fa7e3e",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16476/attachments"
+        },
+        "16477": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16477-attachments.json",
+          "sha256": "cac0e63e5f2b1c31a249b4d5ee73298d78b6084e824301a7de2c7c021e73d403",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16477/attachments"
+        },
+        "16478": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16478-attachments.json",
+          "sha256": "f28b4f3606a42488fa10bc77c57d86a7868dd11558125c162b5bd64700f597ba",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16478/attachments"
+        },
+        "16480": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16480-attachments.json",
+          "sha256": "24a1bc6bd447a7358c9462867b8bc42a60d0db316fe036c719f4305ef407aeff",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16480/attachments"
+        },
+        "16483": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16483-attachments.json",
+          "sha256": "6ced939343b0ab75c89109b7b81af6afdc7343b88cf3f7e739993e664707be6f",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16483/attachments"
+        },
+        "16484": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16484-attachments.json",
+          "sha256": "7153abc74f1c8280b12621e7507ba596dbad80081f601a4336a40944d7190fbf",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16484/attachments"
+        },
+        "16485": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16485-attachments.json",
+          "sha256": "9733d934b79b5c76f3a8bf5d0a99deac00d22dcc53591e327e13f68f5f98aaca",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16485/attachments"
+        },
+        "16491": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16491-attachments.json",
+          "sha256": "0e00fc6335d452046bb19ec7f9db250a9b827f097012526b14a6f27884a31d7c",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16491/attachments"
+        },
+        "16498": {
+          "path": "data/raw/sanjose/2026-11-17/matter-16498-attachments.json",
+          "sha256": "a22724fa87d1267f149c5a9ca92c36af1993a21daf5357eb7183f537dff31fc4",
+          "url": "https://webapi.legistar.com/v1/sanjose/matters/16498/attachments"
+        }
+      },
+      "event_items": {
+        "path": "data/raw/sanjose/2026-11-17/event-8124-items.json",
+        "sha256": "43cd2798dbe0ed8acb34e5dd9f9bb6436090c355237d3d0715c368fd0be3e3e9",
+        "url": "https://webapi.legistar.com/v1/sanjose/events/8124/eventitems"
+      },
+      "votes": {
+        "133682": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133682-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133682/votes"
+        },
+        "133750": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133750-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133750/votes"
+        },
+        "133751": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133751-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133751/votes"
+        },
+        "133752": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133752-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133752/votes"
+        },
+        "133754": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133754-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133754/votes"
+        },
+        "133755": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133755-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133755/votes"
+        },
+        "133756": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133756-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133756/votes"
+        },
+        "133757": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133757-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133757/votes"
+        },
+        "133758": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133758-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133758/votes"
+        },
+        "133759": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133759-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133759/votes"
+        },
+        "133760": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133760-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133760/votes"
+        },
+        "133761": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133761-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133761/votes"
+        },
+        "133762": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133762-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133762/votes"
+        },
+        "133763": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133763-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133763/votes"
+        },
+        "133764": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133764-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133764/votes"
+        },
+        "133765": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133765-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133765/votes"
+        },
+        "133766": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133766-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133766/votes"
+        },
+        "133768": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133768-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133768/votes"
+        },
+        "133771": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133771-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133771/votes"
+        },
+        "133773": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133773-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133773/votes"
+        },
+        "133774": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133774-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133774/votes"
+        },
+        "133802": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133802-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133802/votes"
+        },
+        "133803": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133803-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133803/votes"
+        },
+        "133831": {
+          "path": "data/raw/sanjose/2026-11-17/eventitem-133831-votes.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "url": "https://webapi.legistar.com/v1/sanjose/eventitems/133831/votes"
+        }
+      }
+    }
+  },
+  "files": {
+    "events": {
+      "path": "data/raw/sanjose/2026-11-17/events.json",
+      "sha256": "edec74400e91c106081d4105176a763de7287ef066777db7ff1395d9aff46990",
+      "url": "https://webapi.legistar.com/v1/sanjose/events?$filter=EventBodyName+eq+'City+Council'+and+EventDate+ge+datetime'2026-11-17'+and+EventDate+lt+datetime'2026-11-18'&$orderby=EventDate&$top=1000"
+    }
+  },
+  "legislation_urls": {
+    "15915": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8024302&GUID=C067F90C-9C07-41C3-9E04-B5F91346E5D5"
+    },
+    "16460": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8306979&GUID=AB227022-B5AA-4569-B769-B5102CCAE680"
+    },
+    "16462": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307101&GUID=8E675B70-06CB-4536-899A-9BB198C253D4"
+    },
+    "16463": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307102&GUID=18E6FCC1-A02F-460A-9D62-3C0AFA67469E"
+    },
+    "16465": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307104&GUID=F36FB62C-9B01-40C5-9A74-D0E037C42903"
+    },
+    "16466": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307105&GUID=BA1B60A5-18F1-4DD9-A68F-9B10656FCCF8"
+    },
+    "16467": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307240&GUID=299BA09B-3ACF-4B36-BA48-AF6B05921A04"
+    },
+    "16468": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307241&GUID=1D2697E6-EBFA-4FE9-AE2B-D925CD1B8055"
+    },
+    "16469": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307242&GUID=65835259-ACE5-46CF-B82A-B006FF9ADE0E"
+    },
+    "16470": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307243&GUID=8AFD303A-9045-4915-ABF5-7029EBB41815"
+    },
+    "16471": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307244&GUID=D228497B-9BDB-485F-9829-F8E2EFEC1F5C"
+    },
+    "16472": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307245&GUID=EF1AFF5C-136E-47E6-96F6-B48C8DFF2755"
+    },
+    "16473": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307263&GUID=F8B29890-FB77-4153-A3CD-1529EBAE4F3B"
+    },
+    "16474": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307264&GUID=AA6B974E-292A-44B8-80B8-210432F2460B"
+    },
+    "16475": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307265&GUID=10E9141B-21D6-4432-99CA-4FAC4A1EF046"
+    },
+    "16476": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307266&GUID=7E3EC47F-7E2A-4B29-B725-F0AAE133C387"
+    },
+    "16477": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8307267&GUID=B74DBA7D-12B3-4EEC-8989-1585A201E1EE"
+    },
+    "16478": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8308824&GUID=AD3ACB29-4C2B-49F7-9805-5B1C6F513E5A"
+    },
+    "16480": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8308950&GUID=67412A9A-30B0-43C1-94AF-8CEA4E455AAE"
+    },
+    "16483": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8309311&GUID=16BDF253-0C60-4451-BD77-7D6A5F998A5F"
+    },
+    "16484": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8314304&GUID=7B8F17DD-1234-46AC-A418-93086FD95E08"
+    },
+    "16485": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8315001&GUID=73E969DD-B0DA-4BBE-A050-7A4987235C6E"
+    },
+    "16491": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8318104&GUID=F51F8BA3-FDC5-4041-A517-6BE3EAE14909"
+    },
+    "16498": {
+      "resolved": true,
+      "url": "https://sanjose.legistar.com/LegislationDetail.aspx?ID=8319338&GUID=36D6A965-5868-43B5-913F-38A06F3E770E"
+    }
+  },
+  "meeting_date": "2026-11-17",
+  "pulled_at": "2026-11-26T05:31:18Z",
+  "since": "2026-11-17",
+  "until": "2026-11-17"
+}
