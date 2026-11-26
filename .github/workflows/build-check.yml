@@ -46,3 +46,5 @@ jobs:
             echo "::error::A Legistar link is missing its website GUID, or it points at the Web API. See the check output above."
             exit 1
           fi
+      - name: Neutrality lint on record pages
+        run: python3 scripts/lint_record_pages.py

@@ -733,6 +733,10 @@ a:hover {
   color: var(--muted);
 }
 
+.record-file {
+  white-space: nowrap;
+}
+
 .tracker-app {
   max-width: 100%;
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Compile markdown briefs in content/ into static HTML pages and refresh site indexes.
+Compile markdown briefs in content/ into static HTML pages, render the
+Legistar record pages under meetings/ and items/, and refresh site indexes.
 
 Usage:
   python build.py
@@ -1018,6 +1019,20 @@ def write_feed(briefs: list[Brief]) -> None:
     print(f"Wrote {out.relative_to(ROOT)}")
 
 
+def render_record_pages() -> None:
+    """Write meetings/ and items/ from content/meetings and content/items.
+
+    Sitemap discovery runs after this, so the new index.html files are included.
+    """
+    script = ROOT / "scripts" / "render_records.py"
+    spec = importlib.util.spec_from_file_location("render_records", script)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot load record renderer from {script}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.render_all(ROOT, head_extras=render_head_extras())
+
+
 def main() -> int:
     try:
         briefs = discover_briefs()
@@ -1030,6 +1045,7 @@ def main() -> int:
             "No brief markdown found in content/ (expected brief-N.md). "
             "Skipping HTML and index updates."
         )
+        render_record_pages()
         write_sitemap(discover_brief_urls_on_disk())
         return 0
 
@@ -1038,6 +1054,7 @@ def main() -> int:
     update_404_latest(briefs)
     update_shared_head_extras()
     write_feed(briefs)
+    render_record_pages()
     write_sitemap(discover_brief_urls_on_disk(), brief_lastmods(briefs))
     token = cf_analytics_token()
     print(
