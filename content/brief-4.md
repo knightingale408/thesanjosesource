@@ -7,8 +7,11 @@ homepage_blurb: The proposed data center rules carry two new fees and a staff re
 coverage_label: Before the Dec. 8 vote · Nov 20, 2026
 eyebrow: Before the Dec. 8 vote
 dek: The rules would apply to data centers drawing 20 megawatts or more, and add two fees on top of the taxes staff expect them to pay.
-meta_line: By J Gonzales · Nov. 20, 2026 · Updated Nov. 20, 2026
+meta_line: By J Gonzales · Nov. 20, 2026 · Corrected Nov. 25, 2026
+date_modified: 2026-11-25
 ---
+
+**Correction, November 25, 2026:** we corrected four Dec. 1 agenda page cites: item 6.1 is p. 20, not p. 18; item 2.20 is p. 13, not p. 12; item 7.1 is p. 21, not p. 19; and the take's page range is pp. 11–13, not pp. 11–12. The original wording is under Corrections and updates at the end of this page.
 
 **Update, November 20, 2026:** we added J Gonzales's take, which is opinion. No facts, figures or sources in the news sections changed.
 
@@ -58,13 +61,13 @@ The City's [draft minutes](https://sanjose.legistar.com/View.ashx?M=M&ID=1427102
 
 From the [Dec. 1 agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), posted Nov. 19 ([meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?LEGID=8126&GID=317&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)).
 
-- **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 18).
-- **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 12); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 19).
+- **Renewable energy trade (6.1):** two 10-year agreements with Ava Community Energy for 2027 through 2036, one to buy and one to sell "a substantially equivalent amount" of renewable energy, each capped at $9,500,000 a year and $89,500,000 total (p. 20).
+- **Homelessness and eviction help:** $1,600,000 to run the Guadalupe interim housing site through June 2027 (2.18, p. 11); $1,000,000 more in Measure E money for Sacred Heart's eviction diversion program (2.19, p. 12); up to $1,757,150 for HomeFirst outreach to unsheltered residents (2.20, p. 13); and an agreement with the County, up to $5,430,576, for homelessness prevention in 2027 (7.1, p. 21).
 - **Security guards (2.17):** $2,515,605 more for Allied Universal, for a total of up to $5,865,857 (2.17, p. 11).
 
 ## J Gonzales's take
 
-*Opinion.* The City's own [2025 General Plan Annual Performance Review](https://www.sanjoseca.gov/home/showpublisheddocument/133069/639191218138070000) says downtown office vacancy "fell slightly from a record high of 31% to 29%" in fiscal 2024–25 (p. 63). From what I see walking those blocks, the small businesses still open there are dealing with homelessness mostly on their own. On Dec. 1, the Council will vote on $1,600,000 for the Guadalupe interim housing site, $1,000,000 more for eviction help and up to $1,757,150 for street outreach ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), pp. 11–12). That money matters. Before the vote, councilmembers should ask staff one plain question: what will a downtown shop owner see change because of it, and by when?
+*Opinion.* The City's own [2025 General Plan Annual Performance Review](https://www.sanjoseca.gov/home/showpublisheddocument/133069/639191218138070000) says downtown office vacancy "fell slightly from a record high of 31% to 29%" in fiscal 2024–25 (p. 63). From what I see walking those blocks, the small businesses still open there are dealing with homelessness mostly on their own. On Dec. 1, the Council will vote on $1,600,000 for the Guadalupe interim housing site, $1,000,000 more for eviction help and up to $1,757,150 for street outreach ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), pp. 11–13). That money matters. Before the vote, councilmembers should ask staff one plain question: what will a downtown shop owner see change because of it, and by when?
 
 ## What happens next
 
@@ -86,6 +89,10 @@ Every figure links to a City record. Spot an error? [Corrections](https://thesan
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 25, 2026: correction
+
+- **Agenda pages.** Was: renewable energy trade (6.1) cited as "(p. 18)"; HomeFirst outreach as "(2.20, p. 12)"; County homelessness prevention as "(7.1, p. 19)"; and the take's agenda range as "pp. 11–12." Now: "(p. 20)," "(2.20, p. 13)," "(7.1, p. 21)," and "pp. 11–13." No figures or other wording changed.
 
 ### November 20, 2026: update (take revised)
 
