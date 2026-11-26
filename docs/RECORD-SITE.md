@@ -1,6 +1,6 @@
 # How to build the Legistar record site
 
-Jay's email, Nov 25, 2026. The words below are the spec. v1 in this repo is steps 1–4: the folders, the pull, the pages, and one real week (November 17, 2026), plus the neutrality lint. Steps 5–7 are not built yet.
+Jay's email, Nov 25, 2026. The words below are the spec. Steps 1–5 are in this repo: the folders, the pull, the pages, the November 17, 2026 week, the neutrality lint, and the memo quotes (recommendation and fiscal or cost section, stored as quotes). Steps 6 and 7 are not built yet.
 
 ---
 

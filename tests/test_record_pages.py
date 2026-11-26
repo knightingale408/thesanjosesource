@@ -42,6 +42,13 @@ def test_item_and_meeting_pages_use_the_fixed_headings(tmp_path: Path):
         "minutes_pdf": "",
         "as_of": as_of,
         "amended": "",
+        "memo_pdf": "https://legistar.granicus.com/sanjose/attachments/memo.pdf",
+        "memo_from": "Jen Baker",
+        "recommendation": "Adopt a resolution retroactively authorizing free use on October 24, 2026.",
+        "fiscal_heading": "FISCAL IMPACTS",
+        "fiscal": "The estimated total cost for the reservation is $6,708.60.",
+        "update": "2026-11-25",
+        "update_note": "Added the staff memorandum recommendation as a quote.",
         "attachments": [
             {"name": "Memorandum", "url": "https://legistar.granicus.com/sanjose/attachments/memo.pdf"},
         ],
@@ -79,5 +86,11 @@ def test_item_and_meeting_pages_use_the_fixed_headings(tmp_path: Path):
     assert "why it matters" not in meeting_html.lower()
     assert "Memorandum (PDF)" in item_html
     assert "Minutes PDF" not in item_html
+    assert "What the staff memo recommends" in item_html
+    assert "Adopt a resolution retroactively authorizing free use on October 24, 2026." in item_html
+    assert "$6,708.60" in item_html
+    assert "$9,999" not in item_html
+    assert "Not in the public record as of November 26, 2026, 5:09 a.m. Pacific." in item_html
+    assert "<blockquote" in item_html
     assert (tmp_path / "items" / "index.html").is_file()
     assert (tmp_path / "meetings" / "index.html").is_file()

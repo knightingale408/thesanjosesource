@@ -70,6 +70,7 @@ SCRIPT_OR_STYLE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 TAG = re.compile(r"<[^>]+>")
+BLOCKQUOTE = re.compile(r"<blockquote\b[^>]*>.*?</blockquote>", re.IGNORECASE | re.DOTALL)
 
 # Double quotes and curly quotes. Straight single quotes are left alone so
 # apostrophes in "City's" are not treated as quotation marks.
@@ -92,9 +93,13 @@ def visible_text(html: str) -> str:
 
 
 def lint_html(html: str) -> list[str]:
-    """Return one message per problem. Empty means the page passed."""
+    """Return one message per problem. Empty means the page passed.
+
+    A blockquote is the City's memorandum, stored as a quote. The lint
+    checks the page's own sentences, not those quotes.
+    """
     state = page_state(html)
-    text = visible_text(html)
+    text = visible_text(BLOCKQUOTE.sub(" ", html))
     problems: list[str] = []
 
     for word in HARD_BAN_WORDS:

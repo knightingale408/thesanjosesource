@@ -214,6 +214,93 @@ def amended_html(record: dict) -> str:
     return f'\n        <p class="brief__meta reveal" data-reveal>{esc(label)}</p>'
 
 
+def quote_html(text: str) -> str:
+    paragraphs = [part.strip() for part in str(text).split("\n\n") if part.strip()]
+    inner = "\n".join(f"<p>{esc(part)}</p>" for part in paragraphs)
+    return f'<blockquote class="memo-quote">\n{inner}\n</blockquote>'
+
+
+def update_html(record: dict) -> str:
+    note = str(record.get("update_note") or "").strip()
+    if not note:
+        return ""
+    when = str(record.get("update") or "").strip()
+    label = "Update"
+    if when:
+        try:
+            shown = parse_iso_date(when).strftime("%b. %d, %Y").replace(" 0", " ")
+            label = f"Update, {shown}"
+        except ValueError:
+            label = f"Update, {when}"
+    return (
+        '\n        <section class="brief-block brief-block--correction reveal" data-reveal '
+        'aria-labelledby="updates-title">\n'
+        '          <h2 id="updates-title" class="brief-block__title">Corrections and updates</h2>\n'
+        f"          <p><strong>{esc(label)}.</strong> {esc(note)}</p>\n"
+        "        </section>"
+    )
+
+
+def memo_html(record: dict) -> str:
+    """Three boxes. The recommendation and fiscal text are quotes, not a rewrite."""
+    memo_from = str(record.get("memo_from") or "").strip()
+    recommendation = str(record.get("recommendation") or "").strip()
+    fiscal = str(record.get("fiscal") or "").strip()
+    memo_pdf = str(record.get("memo_pdf") or "").strip()
+    as_of = format_as_of(str(record.get("as_of") or ""))
+    state = str(record.get("state") or "")
+
+    if recommendation:
+        source = "From the staff memorandum"
+        if memo_from:
+            source += f", {memo_from}"
+        if memo_pdf:
+            recommend_body = (
+                f"<p>{esc(source)}. {external(memo_pdf, 'Staff memorandum (PDF)')}.</p>\n"
+                f"          {quote_html(recommendation)}"
+            )
+        else:
+            recommend_body = f"<p>{esc(source)}.</p>\n          {quote_html(recommendation)}"
+    elif memo_pdf:
+        recommend_body = (
+            "<p>No recommendation section was found in the "
+            f"{external(memo_pdf, 'staff memorandum (PDF)')}.</p>"
+        )
+    else:
+        recommend_body = "<p>No staff memorandum is in the public record for this file.</p>"
+
+    if state == "Recorded":
+        record_body = "<p>State: Recorded.</p>"
+    elif as_of:
+        record_body = f"<p>Not in the public record as of {esc(as_of)}.</p>"
+    else:
+        record_body = "<p>Not in the public record.</p>"
+
+    if fiscal:
+        heading = str(record.get("fiscal_heading") or "Fiscal section")
+        change_body = (
+            f"<p>The memorandum’s {esc(heading.lower())} section says:</p>\n"
+            f"          {quote_html(fiscal)}"
+        )
+    else:
+        change_body = "<p>The memo does not state a resident effect.</p>"
+
+    return (
+        '\n        <section class="brief-block reveal" data-reveal aria-labelledby="recommends-title">\n'
+        '          <h2 id="recommends-title" class="brief-block__title">What the staff memo recommends</h2>\n'
+        f"          {recommend_body}\n"
+        "        </section>\n"
+        '        <section class="brief-block reveal" data-reveal aria-labelledby="record-shows-title">\n'
+        '          <h2 id="record-shows-title" class="brief-block__title">What the record shows</h2>\n'
+        f"          {record_body}\n"
+        "        </section>\n"
+        '        <section class="brief-block reveal" data-reveal aria-labelledby="resident-title">\n'
+        '          <h2 id="resident-title" class="brief-block__title">What changes for a resident</h2>\n'
+        f"          {change_body}\n"
+        "        </section>"
+    )
+
+
 def generated_line() -> str:
     return (
         '<p class="brief__meta reveal" data-reveal">'
@@ -294,11 +381,11 @@ def render_item(record: dict, *, depth: int, head_extras: str) -> str:
         back = (
             f'<a class="btn btn--outline" href="{esc(meeting_href)}">Meeting page</a>\n          '
         )
-    body = f"""{amended_html(record)}
+    body = f"""{amended_html(record)}{update_html(record)}
         <section class="brief-block reveal" data-reveal aria-labelledby="record-title">
           <h2 id="record-title" class="brief-block__title">Official record</h2>
 {facts}
-        </section>{link_block}
+        </section>{memo_html(record)}{link_block}
         {generated_line()}
         <div class="brief__cta reveal" data-reveal>
           {back}<a class="btn btn--outline" href="{prefix(depth)}items/">All files</a>

@@ -46,6 +46,18 @@ Matter histories count only when they include an action-name field. A later run 
 
 Vote rows for this client come back from `/eventitems/{id}/votes`. The matter votes route is not used.
 
+## Memo quotes
+
+After a pull, copy the recommendation and the fiscal or cost section out of each staff memorandum. This does not rewrite them. It needs `pypdf`.
+
+```bash
+python3 -m pip install pypdf
+python3 scripts/extract_memos.py
+python3 build.py
+```
+
+The item file keeps both slices. The page shows the recommendation as a quote. It shows the fiscal quote only when that quote contains a number or a fee. Otherwise it says the memo does not state a resident effect.
+
 ## Lint
 
 ```bash

@@ -57,6 +57,12 @@ def test_style_and_script_text_is_not_linted():
     assert lint.lint_html(page("File 26-1183. State: Outcome not posted.")) == []
 
 
+def test_memorandum_quotes_are_not_linted():
+    quoted = page('<blockquote class="memo-quote"><p>Council approved it for the community and stakeholders.</p></blockquote>')
+    assert lint.lint_html(quoted) == []
+    assert lint.lint_html(page("Council approved it."))
+
+
 def test_missing_state_still_blocks_outcome_verbs():
     html = "<html><body><p>Council approved it.</p></body></html>"
     assert lint.lint_html(html)

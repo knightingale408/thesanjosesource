@@ -26,7 +26,7 @@ State words come from fields only: Agenda only, Outcome not posted, or Recorded.
 
 A neutrality lint runs on the generated `items/` and `meetings/` pages (`python3 scripts/lint_record_pages.py`). Approved, denied, continued, referred, adopted, and amended are allowed only when the page state is Recorded. The hard bans are in that script.
 
-Steps 5-7 come later: memo PDF extract, the brief as a pick list, and the minutes re-run. Do not add those, and do not add a model or a rewriter, until Jay asks. Do not add file-number links into existing briefs as part of this work.
+Step 5 is the memo quotes. `python3 scripts/extract_memos.py` stores the recommendation and the fiscal or cost section on the item file as quotes, with the PDF link. The page shows those quotes. It does not paraphrase them, and it does not add a dollar, fee, date, or address that is not in the quote. Steps 6 and 7 are still later: the brief as a pick list, and the minutes re-run. Do not add a model or a rewriter until Jay asks. Do not add file-number links into existing briefs.
 
 Full spec, in Jay's words: `docs/RECORD-SITE.md`. How to run a pull: `scripts/README.md`.
 

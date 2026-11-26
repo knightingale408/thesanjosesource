@@ -737,6 +737,20 @@ a:hover {
   white-space: nowrap;
 }
 
+.memo-quote {
+  margin: 0.75rem 0 0;
+  padding: 0.1rem 0 0.1rem 1rem;
+  border-left: 3px solid var(--bay);
+}
+
+.memo-quote p {
+  margin: 0 0 0.7rem;
+}
+
+.memo-quote p:last-child {
+  margin-bottom: 0;
+}
+
 .tracker-app {
   max-width: 100%;
 }

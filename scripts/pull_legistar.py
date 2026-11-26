@@ -234,6 +234,31 @@ def classify(items: list[dict]) -> tuple[list[dict], list[tuple[str, str]], list
     return kept, dropped, duplicates
 
 
+MEMO_QUOTE_KEYS = (
+    "memo_pdf",
+    "memo_from",
+    "recommendation",
+    "fiscal_heading",
+    "fiscal",
+    "update",
+    "update_note",
+)
+
+
+def keep_memo_quotes(path: Path, fields: dict) -> dict:
+    """A fresh pull must not drop quotes already stored on the item file."""
+    if not path.is_file():
+        return fields
+    try:
+        old = load_record(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return fields
+    for key in MEMO_QUOTE_KEYS:
+        if old.get(key) and not fields.get(key):
+            fields[key] = old[key]
+    return fields
+
+
 def prior_amended(path: Path) -> str:
     if not path.is_file():
         return ""
@@ -525,20 +550,16 @@ def pull_event(event: dict, *, as_of_stamp: str, link_cache: dict[int, str]) -> 
         path = items_dir / f"{file_number}.md"
         if not agenda_changed:
             item_amended = prior_amended(path)
-        path.write_text(
-            dump_record(
-                build_item_fields(
-                    event,
-                    item,
-                    state=state,
-                    legistar_url=legistar_url,
-                    attachments=attachments,
-                    as_of=as_of_stamp,
-                    amended=item_amended,
-                )
-            ),
-            encoding="utf-8",
+        fields = build_item_fields(
+            event,
+            item,
+            state=state,
+            legistar_url=legistar_url,
+            attachments=attachments,
+            as_of=as_of_stamp,
+            amended=item_amended,
         )
+        path.write_text(dump_record(keep_memo_quotes(path, fields)), encoding="utf-8")
 
     for file_number in sorted(removed):
         path = items_dir / f"{file_number}.md"
