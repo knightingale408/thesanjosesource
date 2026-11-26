@@ -98,9 +98,17 @@ A change that only edits `link-check.yml`, `build-check.yml`, `agenda-pull.yml` 
 
 ## Weekly operating model (adopted Nov 20, 2026; updated Nov 24, 2026)
 
-- **Workers:** Claude and Perplexity only (Jay, Nov 24, 2026). Grok, Cursor and Copilot are retired for this repo after Dec 13, 2026; until then, use them only for a task Jay names, and they follow the pre-flight above.
+- **Workers:** Claude and Perplexity only. **Grok, Cursor and Copilot are retired for this repo as of Nov 26, 2026** (Jay moved the date up from Dec 13). They don't open PRs, push branches or comment here. Their open PRs stay for Jay to merge or close.
 - **Claude** runs the week: Fri agenda pull, Sat draft + fact-check + PR, Sun 3:34 PM packet (asks Jay for his take on the PR), Sun 6:37 PM prep (inserts Jay's take or removes the placeholder, rebuilds, pushes; **no merge**), Mon 5:34 AM pre-flight, Mon 7:04 AM Substack + X posting of a brief Jay already approved, Wed results check. Claude works on branches and opens PRs itself.
 - **Perplexity** is the independent reviewer (Tuesdays) and researches on request. It may open PRs (Jay, Nov 24, 2026); it never merges or publishes, and Jay reviews every PR.
-- **Grok (Alfred, Webby)**, until Dec 13, 2026: research leads and X post drafts only, sent to Jay by Thursday 6 PM (new Council or committee items with money attached, Legistar links, one line on why each matters; up to 3 X post ideas). Grok never drafts briefs, edits content/ files, opens PRs or posts anything (Jay, Nov 24, 2026).
+- **Grok (Alfred, Webby):** retired Nov 26, 2026. Its weekly leads routine is paused; Claude's Friday agenda pull covers research leads.
+
+## Keep it simple (Jay, Nov 26, 2026)
+
+1. **One brief PR a week.** The only routine PR is the weekly brief. Every other change (fixes, features, tooling, rules) waits for **one batched maintenance PR on the first Sunday of each month**. Exception: a correction to a published brief (AGENTS.md corrections rules) can go anytime.
+2. **Feature freeze until Jan. 3, 2027.** No new site features, record-site steps 5–7, templates or integrations. Ship the weekly brief and corrections only.
+3. **One place for Jay to read:** the Sunday packet email. Other Claude tasks write to the WORK LOG and email Jay only when they stop or need him.
+4. **One status file:** `claude/STATUS.md` in the claude.ai Project. The Drive WORK LOG is an automatic log Jay doesn't need to read; the Drive STATUS LOG is retired.
+5. **Ideas wait:** new ideas go in the Drive doc "TSJS — Data and ideas inventory" and are reviewed once a month, in Jay's first Sunday session of the month.
 - **No agent merges** (Jay, Nov 24, 2026). Jay merges every PR himself.
 - **Jay's weekly actions, all in his Sunday 6–7 PM session:** an optional take as a PR comment by 6:30 PM, then he merges the brief PR and approves the Publish site production deployment. That approval is his yes for the website, Substack and X. No tool writes his take.
