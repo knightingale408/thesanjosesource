@@ -1,0 +1,42 @@
+[
+  {
+    "MatterAttachmentId": 39088,
+    "MatterAttachmentGuid": "C51DE563-B3E6-47A0-BE45-13B669FC47B8",
+    "MatterAttachmentLastModifiedUtc": "2026-05-11T22:19:53.817",
+    "MatterAttachmentRowVersion": "AAAAAAD8NFk=",
+    "MatterAttachmentName": "Language Access Page",
+    "MatterAttachmentHyperlink": "https://www.sanjoseca.gov/your-government/appointees/city-clerk/language-access-for-city-council-and-council-committee-meetings",
+    "MatterAttachmentFileName": "",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": true,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 1
+  },
+  {
+    "MatterAttachmentId": 39089,
+    "MatterAttachmentGuid": "79137FCB-1460-40BB-BDEB-525EB1E1A132",
+    "MatterAttachmentLastModifiedUtc": "2026-05-11T22:20:35.36",
+    "MatterAttachmentRowVersion": "AAAAAAD6/jQ=",
+    "MatterAttachmentName": "How to Use Wordly illustration",
+    "MatterAttachmentHyperlink": "https://www.sanjoseca.gov/your-government/appointees/city-clerk/your-city-your-voice/language-access-wordly-instructions",
+    "MatterAttachmentFileName": "",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": true,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 2
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "MatterAttachmentId": 40775,
+    "MatterAttachmentGuid": "56949BB7-3338-4C85-849A-7E597EE5BE40",
+    "MatterAttachmentLastModifiedUtc": "2026-11-05T23:29:23.3",
+    "MatterAttachmentRowVersion": "AAAAAAEJnhE=",
+    "MatterAttachmentName": "Memorandum",
+    "MatterAttachmentHyperlink": "https://legistar.granicus.com/sanjose/attachments/93eb2ea0-05ba-4a46-aab3-395d8046f394.pdf",
+    "MatterAttachmentFileName": "93eb2ea0-05ba-4a46-aab3-395d8046f394.pdf",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": false,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 1
+  },
+  {
+    "MatterAttachmentId": 40841,
+    "MatterAttachmentGuid": "FA1B1619-9458-4C9F-8044-52B7AF8D61E8",
+    "MatterAttachmentLastModifiedUtc": "2026-11-13T22:00:43.797",
+    "MatterAttachmentRowVersion": "AAAAAAEJnho=",
+    "MatterAttachmentName": "Letter from TPAC, 11/12/26",
+    "MatterAttachmentHyperlink": "https://legistar.granicus.com/sanjose/attachments/ca20c01f-e5bd-45d1-a962-2a4640e69d83.pdf",
+    "MatterAttachmentFileName": "ca20c01f-e5bd-45d1-a962-2a4640e69d83.pdf",
+    "MatterAttachmentMatterVersion": "0",
+    "MatterAttachmentIsHyperlink": false,
+    "MatterAttachmentBinary": null,
+    "MatterAttachmentIsSupportingDocument": false,
+    "MatterAttachmentShowOnInternetPage": true,
+    "MatterAttachmentIsMinuteOrder": false,
+    "MatterAttachmentIsBoardLetter": false,
+    "MatterAttachmentAgiloftId": 0,
+    "MatterAttachmentDescription": null,
+    "MatterAttachmentPrintWithReports": true,
+    "MatterAttachmentSort": 2
+  }
+]
