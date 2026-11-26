@@ -7,6 +7,8 @@ reaches thesanjosesource.com, and changes here don't trigger the publish workflo
 | Tool | What it does |
 |---|---|
 | `legistar_pull.py` | Lists upcoming Council items about budgets, housing, fees, public safety, and contracts/spending. Each item gets its full Legistar website link (ID + GUID). Runs automatically on Fridays (Actions > "Agenda pull"). |
+| `legistar_records.py` | Builds the record pages (`/meetings/YYYY-MM-DD/` and `/items/<file>/`) from a City Council date window. Raw JSON stays in `data/raw/`. Rules and commands are in `AUDIT.md`. |
+| `record_lint.py` | Fails the record pages if they use an outcome verb the fields do not support, or banned wording. |
 | `check_results.py` | Shows whether Legistar has posted the result of each item from a past meeting, and whether minutes are up. |
 
 ```bash

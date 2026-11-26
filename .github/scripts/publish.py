@@ -14,7 +14,7 @@ CLIENT = "github-actions/thesanjosesource"
 # Repo-only files that are never part of the website.
 EXCLUDE_EXACT = {"README.md", "AGENTS.md", "build.py", "check_links.py", ".nojekyll", ".gitattributes", ".gitignore", "CNAME",
                  "METHODOLOGY.md", "DATA_DICTIONARY.md", "CONTRIBUTING.md", "CORRECTIONS.md", ".cursorrules",
-                 "promised-vs-actual.csv"}
+                 "promised-vs-actual.csv", "AUDIT.md"}
 EXCLUDE_PREFIX = (".github/", "content/", "tools/", "research/", "data/", "schemas/", "scripts/", "tests/")
 
 TYPES = {

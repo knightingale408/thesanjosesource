@@ -1647,6 +1647,52 @@ span.brief-card__more {
   color: var(--ink);
 }
 
+/* Record pages: meeting and file-number records. Text carries the state. */
+.page-record a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.record-state {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bay-deep);
+  background: #d5e6ea;
+  padding: 0.15rem 0.45rem;
+}
+
+.record-dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 14rem) 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.record-dl dt {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.record-dl dd {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .record-dl {
+    grid-template-columns: 1fr;
+    gap: 0.1rem 0;
+  }
+
+  .record-dl dt {
+    margin-top: 0.65rem;
+  }
+}
+
 /* Print: show every section even though reveal animations never ran. */
 @media print {
   .reveal,

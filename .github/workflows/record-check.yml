@@ -1,0 +1,26 @@
+# Checks the Legistar record pages. Read-only: it never edits files or publishes.
+name: Check record pages
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: python3 -m pip install --quiet "pytest>=9,<10"
+      - name: State machine, lint, and offline page tests
+        run: python3 -m pytest tests/test_record_state.py tests/test_record_lint.py tests/test_record_pages.py -q
+      - name: Neutrality lint on the record pages
+        run: python3 tools/record_lint.py
+      - name: Pages match the saved Legistar JSON
+        run: python3 tools/legistar_records.py build --check
