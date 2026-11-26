@@ -27,8 +27,9 @@ jobs:
           # Concurrency is capped at 4 so Legistar/Granicus doesn't throttle
           # us and return 404s for links that are actually fine.
           # Font preconnect hosts aren't reader links. On pull requests, the
-          # site's own /brief/ pages are skipped because a new brief's page
-          # 404s until it is published; the Monday run still checks them.
+          # site's own /brief/, /items/, and /meetings/ pages are skipped
+          # because a new page 404s until it is published. The Monday run
+          # still checks them.
           args: >-
             --no-progress
             --accept 200..=299,403,429
@@ -37,7 +38,7 @@ jobs:
             --retry-wait-time 5
             --timeout 30
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
-            ${{ github.event_name == 'pull_request' && '--exclude ''^https://(www\.)?thesanjosesource\.com/brief/''' || '' }}
+            ${{ github.event_name == 'pull_request' && '--exclude ''^https://(www\.)?thesanjosesource\.com/(brief|items|meetings)/''' || '' }}
             --root-dir ${{ github.workspace }}
             './**/*.html'
           fail: true
