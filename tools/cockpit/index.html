@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSJS Cockpit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #131311;
+    --panel: #1c1b18;
+    --row: #22211d;
+    --row-hover: #292824;
+    --line: #2c2a26;
+    --line-soft: #24231f;
+    --text: #ece8df;
+    --text-2: #d6d1c6;
+    --text-3: #b9b4a9;
+    --muted: #9b968b;
+    --dim: #8a857b;
+    --faint: #6f6b63;
+    --box: #5a564e;
+    --locked: #4a4740;
+    --input-line: #3a3833;
+    --green: oklch(0.78 0.13 150);
+    --amber: oklch(0.8 0.13 75);
+    --red: oklch(0.74 0.13 25);
+    --blue: oklch(0.78 0.1 245);
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); }
+  a { color: #9cc3ef; }
+  a:hover { color: #cfe2f8; }
+  input::placeholder { color: var(--faint); }
+  button { all: unset; cursor: pointer; }
+  button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+  .wrap { max-width: 1440px; margin: 0 auto; padding: 28px 28px 64px; font-family: var(--sans); font-size: 14px; line-height: 1.5; display: flex; flex-direction: column; gap: 20px; }
+  @media (max-width: 600px) { .wrap { padding: 20px 16px 48px; } }
+
+  .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .tag { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .note { font-size: 12px; color: var(--muted); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+
+  /* Header */
+  header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+  header .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  header h1 { margin: 6px 0 0; font-size: 28px; font-weight: 600; letter-spacing: -.01em; }
+  .meta { display: flex; gap: 28px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; }
+  .meta .k { color: var(--muted); }
+  .meta .v { font-size: 15px; }
+
+  /* Gauges */
+  .gauges { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+  .big { display: flex; align-items: baseline; gap: 10px; }
+  .big .n { font-size: 40px; font-weight: 600; line-height: 1; }
+  .big .of { color: var(--muted); }
+  .weeks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .week { display: flex; flex-direction: column; gap: 4px; align-items: stretch; }
+  .week .cell { height: 28px; border-radius: 3px; border: 1px solid transparent; }
+  .week .lbl { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: center; }
+  .sub { color: var(--text-3); font-size: 13px; }
+  .sub strong { color: var(--text); }
+  .stack { display: flex; height: 12px; border-radius: 3px; overflow: hidden; gap: 2px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--text-3); }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .sw { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+  .meter { display: flex; height: 12px; border-radius: 3px; overflow: hidden; background: var(--line); }
+  .meter span { background: var(--green); }
+  .small { font-size: 12px; color: var(--text-3); }
+
+  /* Actions + right column */
+  .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr)); gap: 16px; align-items: start; }
+  .split > .card:first-child { gap: 14px; }
+  .col { display: flex; flex-direction: column; gap: 16px; }
+  .lane { display: flex; flex-direction: column; gap: 6px; }
+  .lane-name { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+  .lane-name i { width: 8px; height: 8px; border-radius: 50%; }
+  .item { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 12px; align-items: start; padding: 10px 12px; border-radius: 6px; background: var(--row); }
+  .item:hover, .stage:hover { background: var(--row-hover); }
+  .item.done { opacity: .45; }
+  .item.done .title { text-decoration: line-through; }
+  .check { width: 16px; height: 16px; margin-top: 2px; border-radius: 3px; border: 1px solid var(--box); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--green); }
+  .item .body { display: flex; flex-direction: column; gap: 2px; }
+  .item .title { font-weight: 500; }
+  .item .why { font-size: 12px; color: var(--muted); }
+  .item .when { font-family: var(--mono); font-size: 11px; color: var(--text-3); text-align: right; white-space: nowrap; }
+
+  .ladder { display: flex; flex-direction: column; gap: 2px; }
+  .step { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
+  .rail { display: flex; flex-direction: column; align-items: center; }
+  .rail .dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 3px; border: 2px solid; }
+  .rail .bar { flex: 1; width: 2px; background: var(--line); min-height: 18px; }
+  .step .txt { padding-bottom: 12px; }
+  .step .row1 { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+  .step .name { font-weight: 600; }
+  .step .state { font-family: var(--mono); font-size: 11px; }
+  .step .gate { font-size: 12px; color: var(--muted); }
+
+  .metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .metrics label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--text-3); }
+  .metrics input { background: var(--bg); border: 1px solid var(--input-line); border-radius: 5px; padding: 8px 10px; color: var(--text); font-family: var(--mono); font-size: 14px; outline: none; width: 100%; }
+  .metrics input:focus { border-color: var(--box); }
+
+  /* Pipeline */
+  .pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+  .stage { padding: 12px; border-radius: 6px; background: var(--row); border-top: 3px solid; display: flex; flex-direction: column; gap: 4px; }
+  .stage .day { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .stage .name { font-weight: 500; }
+  .stage .st { font-size: 12px; }
+
+  /* Tracker table */
+  .table { display: flex; flex-direction: column; }
+  .tr { display: grid; grid-template-columns: minmax(160px, 1.3fr) minmax(150px, 1fr) minmax(0, 2fr) minmax(130px, .9fr); gap: 12px; padding: 10px; border-bottom: 1px solid var(--line-soft); align-items: start; }
+  .tr.th { padding: 6px 10px; font-family: var(--mono); font-size: 11px; color: var(--muted); border-bottom-color: var(--line); }
+  .tr .pname { font-weight: 500; }
+  .tr .status { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+  .tr .status i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .tr .latest { font-size: 13px; color: var(--text-3); text-wrap: pretty; }
+  .tr .ev { font-family: var(--mono); font-size: 12px; }
+  @media (max-width: 760px) {
+    .tr { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .tr.th { display: none; }
+    .tr .latest { grid-column: 1 / -1; }
+  }
+
+  /* Footer */
+  .foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+  .risks { gap: 10px; }
+  .risk { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; font-size: 13px; }
+  .risk .lvl { font-family: var(--mono); font-size: 11px; padding-top: 2px; }
+  .risk .t { color: var(--text-2); text-wrap: pretty; }
+  .sources { gap: 8px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="kicker">The San José Source · Operator cockpit</div>
+      <h1>Where the project stands</h1>
+    </div>
+    <div class="meta">
+      <div><div class="k">As of</div><div class="v" id="today"></div></div>
+      <div><div class="k">Next Sunday session</div><div class="v" id="session" style="color:var(--amber)"></div></div>
+      <div><div class="k">Stage</div><div class="v">Pre-revenue · building record</div></div>
+    </div>
+  </header>
+
+  <section class="gauges">
+    <div class="card">
+      <div class="card-head"><span class="eyebrow">Publishing cadence</span><span class="tag" style="color:var(--red)">Promise: weekly</span></div>
+      <div class="big"><span class="n" id="publishedWeeks"></span><span class="of">of <span id="totalWeeks"></span> weeks with a brief since Oct. 12</span></div>
+      <div class="weeks" id="weeks"></div>
+      <div class="sub">Last brief: <strong>#3, Nov. 15</strong> · <span id="daysSince"></span> days ago · streak <span id="streak"></span> wk</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="eyebrow">Tracker evidence</span><span class="tag">6 projects</span></div>
+      <div class="big"><span class="n" id="baselineAccepted"></span><span class="of">of 6 first-promise baselines sourced</span></div>
+      <div class="stack" id="evidenceBar"></div>
+      <div class="legend" id="evidenceLegend"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="eyebrow">Open responsibilities</span><span class="tag">this cockpit</span></div>
+      <div class="big"><span class="n" id="dutyOpen"></span><span class="of">duty items open · <span id="growthOpen"></span> growth</span></div>
+      <div class="meter"><span id="dutyBar"></span></div>
+      <div class="small"><span id="dutyDone"></span> of <span id="dutyTotal"></span> duty items checked off</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="eyebrow">Income</span><span class="tag">self-reported</span></div>
+      <div class="big"><span class="n" id="revenue"></span><span class="of">per month</span></div>
+      <div class="small" id="revenueNote"></div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow">Next actions · in order</span>
+        <span class="note">Click to check off. Saved in this browser.</span>
+      </div>
+      <div id="lanes" style="display:flex;flex-direction:column;gap:14px"></div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="gap:14px">
+        <span class="eyebrow">Path to income · each step unlocks the next</span>
+        <div class="ladder" id="ladder"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="eyebrow">Audience &amp; money · enter from Substack</span><span class="note">Blank means unknown</span></div>
+        <div class="metrics" id="metrics"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" style="gap:14px">
+    <div class="card-head"><span class="eyebrow">This week's pipeline · click a stage to update</span><span class="note">Not started → In progress → Done → Blocked</span></div>
+    <div class="pipeline" id="pipeline"></div>
+  </section>
+
+  <section class="card">
+    <span class="eyebrow">Promised vs. Actual · public rows</span>
+    <div class="table" id="projects">
+      <div class="tr th"><span>Project</span><span>Status label</span><span>Latest from City record</span><span>First promise</span></div>
+    </div>
+  </section>
+
+  <section class="foot">
+    <div class="card risks">
+      <span class="eyebrow">Risks to watch</span>
+      <div id="risks" style="display:contents"></div>
+    </div>
+    <div class="card sources">
+      <span class="eyebrow">Where these facts come from</span>
+      <span>Repo README and issues #35, #36, #45 (Nov. 10–11); PRs #21 (Nov. 8), #46, #59 and #60 (Nov. 20), #78 (sitemap shows Brief #3 published Nov. 15). Status labels from PR #21. Anything not in those records is shown as unknown or left for you to enter.</span>
+      <span>Audience and income numbers are not public. Enter them above; they stay in this browser.</span>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  // ---------- Config ----------
+  // Growth lane is on by default. Hide it with ?growth=0 in the URL.
+  const SHOW_GROWTH = new URLSearchParams(location.search).get('growth') !== '0';
+  const KEY = 'tsjs-cockpit-v1';
+  const LAST_BRIEF = new Date(2026, 10, 15); // Brief #3, Nov. 15, 2026
+
+  const G = 'var(--green)', A = 'var(--amber)', R = 'var(--red)', B = 'var(--blue)', M = 'var(--faint)';
+
+  // ---------- Data (from the public repo record; see "Where these facts come from") ----------
+  const WEEK_KEYS = ['10-12', '10-19', '10-26', '11-02', '11-09', '11-16', '11-23'];
+  const DEFAULT_WEEKS = { '10-12': 'yes', '10-19': 'no', '10-26': 'no', '11-02': 'no', '11-09': 'yes', '11-16': 'no', '11-23': 'unknown' };
+
+  const PROJECTS = [
+    { name: 'Fire Station 8', status: 'Delivered', color: G, latest: 'Delivered per tracker (PR #21).', evidence: 'Not confirmed here', evColor: M },
+    { name: 'Fire Station 32', status: 'Later than first promised', color: A, latest: 'Beneficial use Sept. 2026 (file 26-1045, p. 3). Council approved partial activation from Oct. 1, 2026.', evidence: 'Fall 2024 · sourced', evColor: G },
+    { name: 'Police training center', status: 'Later than first promised', color: A, latest: 'Council approved activation from Jan. 1, 2027 (Oct. 20).', evidence: 'Not confirmed here', evColor: M },
+    { name: 'Fire Station 36', status: 'Later than first promised', color: A, latest: 'Council approved $15.5M → $16.5M (Oct. 20). Public Works early 2029; Fire Dept. winter 2028.', evidence: 'Awaiting source check', evColor: R },
+    { name: 'Coyote Creek Phase 2', status: "On the City's schedule", color: B, latest: 'Oct. 13 Council agenda dates (files 26-1099, 26-1100).', evidence: 'Awaiting source check', evColor: R },
+    { name: 'Pure Water Silicon Valley', status: "On the City's schedule", color: B, latest: 'Grant total $3,295,950 cited; construction cost difference not stated.', evidence: 'Awaiting source check', evColor: R }
+  ];
+  const EVIDENCE = [
+    { label: 'Sourced', n: 1, color: G },
+    { label: 'Awaiting check', n: 3, color: R },
+    { label: 'Not confirmed here', n: 2, color: 'var(--locked)' }
+  ];
+
+  const DUTY = [
+    { id: 'd1', title: 'Approve Brief #4 in the Sunday session', why: 'Weekly promise: no brief found since Nov. 15.', when: 'Sun 6 PM' },
+    { id: 'd2', title: 'Source-check Fire Station 36 first promise', why: 'Card reads "Awaiting source check" (Nov. 20).', when: 'Sat prep' },
+    { id: 'd3', title: 'Source-check Coyote Creek Phase 2 first promise', why: 'Same gap; public row lacks a baseline.', when: 'Sat prep' },
+    { id: 'd4', title: 'Source-check Pure Water first promise', why: 'Same gap; variance stays "not stated" until then.', when: 'Sat prep' },
+    { id: 'd5', title: 'Confirm baselines for FS8 and training center', why: 'Not stated in the records reviewed for this cockpit.', when: 'Next week' },
+    { id: 'd6', title: 'Clear the pending "Publish site" run', why: 'Was waiting for approval as of Nov. 10 (issue #45).', when: '5 min' },
+    { id: 'd7', title: 'Finish the aligned promised-vs-latest timeline', why: 'Issue #35 is partial: text only, no graphic.', when: 'Dev queue' }
+  ];
+  const GROWTH = [
+    { id: 'g1', title: 'Enter audience numbers below', why: 'No subscriber, open-rate or income data here yet.', when: '10 min' },
+    { id: 'g2', title: 'Publish 4 weekly briefs in a row', why: 'A track record comes before any support, grant or paid ask.', when: '4 weeks' },
+    { id: 'g3', title: 'Decide on the name overlap', why: 'A separate outlet publishes as "San Jose Source" at sanjosesource.com.', when: 'Decision' },
+    { id: 'g4', title: 'Turn on voluntary reader support', why: 'Briefs stay free; supporters pay to keep them going.', when: 'After g2' },
+    { id: 'g5', title: 'Shortlist local-news grants and a fiscal sponsor', why: 'Fits a free, nonpartisan model.', when: 'After g2' },
+    { id: 'g6', title: 'Scope a paid "Project watch" alert tier', why: 'Sells speed and alerts; the facts stay free.', when: 'Later' }
+  ];
+
+  const METRIC_DEFS = [['subs', 'Email subscribers'], ['opens', 'Avg. open rate (%)'], ['supporters', 'Paying supporters'], ['mrr', 'Monthly income ($)']];
+
+  const PIPE_DEFS = [['p1', 'Fri', 'Agenda pull'], ['p2', 'Sat', 'Fact-check report'], ['p3', 'Sat', 'Tracker changes'], ['p4', 'Sun 6 PM', 'Packet decisions'], ['p5', 'Mon', 'Pre-flight + publish'], ['p6', 'Wed', 'Results check']];
+  const PIPE_STATES = ['Not started', 'In progress', 'Done', 'Blocked'];
+  const PIPE_COLORS = ['var(--faint)', A, G, R];
+
+  const RISKS = [
+    { level: 'HIGH', color: R, text: 'Cadence: the site says weekly; the record shows two briefs since Oct. 12 that can be dated from public records here.' },
+    { level: 'HIGH', color: R, text: 'Half the tracker rows lack a sourced first promise, and a wrong row is a public error.' },
+    { level: 'MED', color: A, text: 'Name overlap with another San José outlet can split search traffic and reader trust.' },
+    { level: 'MED', color: A, text: 'One editor, one hour. Each new growth task takes time from publishing unless it is automated.' }
+  ];
+
+  // ---------- State (persisted in this browser only) ----------
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+  const state = {
+    done: saved.done || {},
+    pipe: saved.pipe || {},
+    metrics: saved.metrics || {},
+    weeks: saved.weeks || { ...DEFAULT_WEEKS }
+  };
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable: keep in memory */ }
+  }
+
+  // ---------- Helpers ----------
+  const $ = id => document.getElementById(id);
+  function el(tag, attrs = {}, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'style') Object.assign(n.style, v);
+      else if (k === 'class') n.className = v;
+      else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v);
+    }
+    for (const c of kids) if (c != null) n.append(c);
+    return n;
+  }
+
+  // ---------- Derived values ----------
+  function streakOf(weeks) {
+    let streak = 0;
+    for (let i = WEEK_KEYS.length - 1; i >= 0; i--) {
+      const v = weeks[WEEK_KEYS[i]];
+      if (v === 'yes') streak++;
+      else if (v === 'unknown' && i === WEEK_KEYS.length - 1) continue; // the latest week may not be confirmed yet
+      else break;
+    }
+    return streak;
+  }
+
+  // ---------- Renderers ----------
+  function renderClock() {
+    const now = new Date();
+    const nextSun = new Date(now); nextSun.setHours(18, 0, 0, 0);
+    nextSun.setDate(now.getDate() + ((7 - now.getDay()) % 7));
+    if (nextSun < now) nextSun.setDate(nextSun.getDate() + 7);
+    const hrs = Math.round((nextSun - now) / 36e5);
+    $('session').textContent = nextSun.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) + ' 6 PM · ' + (hrs > 48 ? Math.round(hrs / 24) + 'd' : hrs + 'h');
+    $('today').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+    $('daysSince').textContent = Math.floor((now - LAST_BRIEF) / 864e5);
+  }
+
+  function renderCadence() {
+    const cyc = { yes: 'no', no: 'unknown', unknown: 'yes' };
+    $('weeks').replaceChildren(...WEEK_KEYS.map(k => {
+      const v = state.weeks[k] || 'no';
+      const [mo, d] = k.split('-');
+      const label = (mo === '10' ? 'Oct ' : 'Nov ') + (+d);
+      const cell = el('span', { class: 'cell', style: {
+        background: v === 'yes' ? G : v === 'unknown' ? 'transparent' : 'var(--line)',
+        borderColor: v === 'unknown' ? 'var(--box)' : 'transparent'
+      } });
+      return el('button', {
+        class: 'week', title: 'Click to correct', 'aria-label': `Week of ${label}: ${v === 'yes' ? 'brief published' : v === 'no' ? 'no brief' : 'unknown'}. Click to correct.`,
+        onclick: () => { state.weeks = { ...state.weeks, [k]: cyc[v] }; save(); renderAll(); }
+      }, cell, el('span', { class: 'lbl' }, label));
+    }));
+    $('publishedWeeks').textContent = WEEK_KEYS.filter(k => state.weeks[k] === 'yes').length;
+    $('totalWeeks').textContent = WEEK_KEYS.length;
+    $('streak').textContent = streakOf(state.weeks);
+  }
+
+  function renderEvidence() {
+    $('baselineAccepted').textContent = EVIDENCE[0].n;
+    $('evidenceBar').replaceChildren(...EVIDENCE.map(s => el('span', { style: { flex: String(s.n), background: s.color } })));
+    $('evidenceLegend').replaceChildren(...EVIDENCE.map(s =>
+      el('span', {}, el('span', { class: 'sw', style: { background: s.color } }), `${s.label} ${s.n}`)));
+  }
+
+  function renderResponsibilities() {
+    const dutyDone = DUTY.filter(i => state.done[i.id]).length;
+    $('dutyOpen').textContent = DUTY.length - dutyDone;
+    $('growthOpen').textContent = GROWTH.filter(i => !state.done[i.id]).length;
+    $('dutyDone').textContent = dutyDone;
+    $('dutyTotal').textContent = DUTY.length;
+    $('dutyBar').style.width = Math.round(dutyDone / DUTY.length * 100) + '%';
+  }
+
+  function renderIncome() {
+    const m = state.metrics;
+    const mrr = m.mrr === undefined || m.mrr === '' ? null : Number(m.mrr);
+    $('revenue').textContent = mrr === null || isNaN(mrr) ? '—' : '$' + mrr.toLocaleString();
+    $('revenueNote').textContent = mrr === null
+      ? 'Not entered. The site is free; homepage has support links.'
+      : 'Entered by you · ' + (m.supporters || 0) + ' paying supporters';
+  }
+
+  function renderLanes() {
+    const lanes = [{ name: 'Duty: meet the project’s responsibilities', color: A, items: DUTY }];
+    if (SHOW_GROWTH) lanes.push({ name: 'Growth: move toward income', color: B, items: GROWTH });
+    $('lanes').replaceChildren(...lanes.map(lane => el('div', { class: 'lane' },
+      el('div', { class: 'lane-name', style: { color: lane.color } }, el('i', { style: { background: lane.color } }), lane.name),
+      ...lane.items.map(it => {
+        const d = !!state.done[it.id];
+        return el('button', {
+          class: 'item' + (d ? ' done' : ''), role: 'checkbox', 'aria-checked': String(d),
+          onclick: () => { state.done = { ...state.done, [it.id]: !d }; save(); renderAll(); }
+        },
+          el('span', { class: 'check' }, d ? '✓' : ''),
+          el('span', { class: 'body' }, el('span', { class: 'title' }, it.title), el('span', { class: 'why' }, it.why)),
+          el('span', { class: 'when' }, it.when));
+      })
+    )));
+  }
+
+  function renderLadder() {
+    const m = state.metrics;
+    const streak = streakOf(state.weeks);
+    const gateMet = streak >= 4;
+    const hasAudience = !!m.subs;
+    const steps = [
+      { name: '1 · Reliable weekly brief', gate: 'Gate: 4 consecutive weeks. Current streak: ' + streak + '.', met: gateMet, cur: !gateMet },
+      { name: '2 · Measured audience', gate: 'Gate: subscriber and open-rate numbers tracked weekly.', met: gateMet && hasAudience, cur: gateMet && !hasAudience },
+      { name: '3 · Voluntary reader support', gate: 'Gate: first paying supporters; briefs stay free.', met: gateMet && hasAudience && Number(m.supporters) > 0, cur: false },
+      { name: '4 · Grants / fiscal sponsor', gate: 'Gate: track record plus corrections log to show funders.', met: false, cur: false },
+      { name: '5 · Paid alert product', gate: 'Gate: tracker covers enough projects to be worth watching.', met: false, cur: false }
+    ];
+    $('ladder').replaceChildren(...steps.map(st => {
+      const ring = st.met ? G : st.cur ? A : 'var(--locked)';
+      const dot = st.met ? G : st.cur ? A : 'transparent';
+      const text = st.met || st.cur ? 'var(--text)' : 'var(--dim)';
+      return el('div', { class: 'step' },
+        el('div', { class: 'rail' }, el('span', { class: 'dot', style: { background: dot, borderColor: ring } }), el('span', { class: 'bar' })),
+        el('div', { class: 'txt' },
+          el('div', { class: 'row1' },
+            el('span', { class: 'name', style: { color: text } }, st.name),
+            el('span', { class: 'state', style: { color: ring } }, st.met ? 'met' : st.cur ? 'you are here' : 'locked')),
+          el('div', { class: 'gate' }, st.gate)));
+    }));
+  }
+
+  // Inputs are built once so typing never loses focus; edits only re-render dependent panels.
+  function buildMetrics() {
+    $('metrics').replaceChildren(...METRIC_DEFS.map(([k, label]) => el('label', {}, label,
+      el('input', {
+        value: state.metrics[k] ?? '', placeholder: 'not entered', inputmode: 'decimal',
+        oninput: e => { state.metrics = { ...state.metrics, [k]: e.target.value }; save(); renderIncome(); renderLadder(); }
+      }))));
+  }
+
+  function renderPipeline() {
+    $('pipeline').replaceChildren(...PIPE_DEFS.map(([k, day, name]) => {
+      const i = state.pipe[k] || 0;
+      return el('button', {
+        class: 'stage', style: { borderTopColor: PIPE_COLORS[i] }, 'aria-label': `${day} ${name}: ${PIPE_STATES[i]}. Click to change.`,
+        onclick: () => { state.pipe = { ...state.pipe, [k]: (i + 1) % 4 }; save(); renderPipeline(); }
+      },
+        el('span', { class: 'day' }, day),
+        el('span', { class: 'name' }, name),
+        el('span', { class: 'st', style: { color: PIPE_COLORS[i] } }, PIPE_STATES[i]));
+    }));
+  }
+
+  function renderProjects() {
+    const head = $('projects').firstElementChild;
+    $('projects').replaceChildren(head, ...PROJECTS.map(pr => el('div', { class: 'tr' },
+      el('span', { class: 'pname' }, pr.name),
+      el('span', { class: 'status' }, el('i', { style: { background: pr.color } }), pr.status),
+      el('span', { class: 'latest' }, pr.latest),
+      el('span', { class: 'ev', style: { color: pr.evColor } }, pr.evidence))));
+  }
+
+  function renderRisks() {
+    $('risks').replaceChildren(...RISKS.map(r => el('div', { class: 'risk' },
+      el('span', { class: 'lvl', style: { color: r.color } }, r.level),
+      el('span', { class: 't' }, r.text))));
+  }
+
+  function renderAll() {
+    renderClock(); renderCadence(); renderResponsibilities(); renderIncome();
+    renderLanes(); renderLadder(); renderPipeline();
+  }
+
+  // ---------- Boot ----------
+  renderEvidence(); renderProjects(); renderRisks(); buildMetrics(); renderAll();
+  setInterval(renderClock, 60000);
+})();
+</script>
+</body>
+</html>

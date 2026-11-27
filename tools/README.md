@@ -8,6 +8,7 @@ reaches thesanjosesource.com, and changes here don't trigger the publish workflo
 |---|---|
 | `legistar_pull.py` | Lists upcoming Council items about budgets, housing, fees, public safety, and contracts/spending. Each item gets its full Legistar website link (ID + GUID). Runs automatically on Fridays (Actions > "Agenda pull"). |
 | `check_results.py` | Shows whether Legistar has posted the result of each item from a past meeting, and whether minutes are up. |
+| `cockpit/index.html` | Jay's operator cockpit: cadence, tracker evidence, next actions, path to income, weekly pipeline. Open the file in a browser; checkmarks and numbers you enter stay in that browser only. Add `?growth=0` to hide the growth lane. |
 
 ```bash
 python3 tools/legistar_pull.py --since 2026-10-27 --until 2026-10-27 --json
