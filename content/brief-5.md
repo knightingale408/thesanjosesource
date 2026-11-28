@@ -1,19 +1,21 @@
 ---
 title: San José Council weighs City-run plan for $11.7M in federal rental assistance
-description: Before the Dec. 1 Council meeting, a look at San José's revised plan for $11.7 million in federal HOME-ARP money, a broader construction-tax exemption for affordable housing, and a payroll-system contract extended to 2031.
+description: Before the Dec. 1 Council meeting, a look at San José's revised plan for $11.7 million in federal HOME-ARP money, a broader construction-tax exemption for affordable housing, and five one-year options to extend a payroll-system contract through Dec. 31, 2031, subject to appropriation.
 date: 2026-11-23
 series: Weekly brief
 homepage_blurb: The City's revised plan for $11.7 million in 2021 federal HOME-ARP money goes to a Dec. 1 hearing, plus an affordable-housing construction-tax exemption and a payroll-system extension.
 coverage_label: Before the Dec. 1 vote · Nov 23, 2026
 eyebrow: Before the Dec. 1 vote
 dek: Staff propose a City-run program for about 120 households; HUD did not approve the 2024 County-run plan. The federal money, awarded in 2021, must be spent by Sept. 30, 2030.
-meta_line: By J Gonzales · Nov. 23, 2026 · Corrected and updated Nov. 25, 2026
-date_modified: 2026-11-25
+meta_line: By J Gonzales · Nov. 23, 2026 · Corrected Nov. 27, 2026
+date_modified: 2026-11-27
 ---
+
+**Correction, November 27, 2026:** the draft HOME-ARP plan is open for public review through Dec. 11, not Dec. 9. The Dec. 1 staff memo (p. 10) still says Dec. 9; the Housing Department page says December 11, 2026. We removed the line telling readers to use eComment. The payroll item is five one-year options to extend through Dec. 31, 2031, subject to appropriation, not a contract extended to 2031. The original wording is under Corrections and updates at the end of this page.
 
 **Correction, November 25, 2026:** we corrected the agenda page for the rental assistance item (p. 23, not p. 21) and two lines that described Dec. 1 votes as already decided. We also changed wording to match the City record's own terms ("rental assistance," "exemption"). The original wording is under Corrections and updates at the end of this page.
 
-**How to weigh in:** The Council meets **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Items 8.3 (HOME-ARP rental assistance plan, a public hearing), 8.1 (construction-tax exemption) and 2.15 (payroll system). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line, or use eComment on the [Legistar calendar](https://sanjose.legistar.com/Calendar.aspx) ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The draft HOME-ARP plan is open for public review on the Housing Department's website through **Dec. 9** ([memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf), p. 10).
+**How to weigh in:** The Council meets **Tuesday, Dec. 1, 1:30 p.m.**, at City Hall or by [Zoom](https://sanjoseca.zoom.us/j/98221474336). Items 8.3 (HOME-ARP rental assistance plan, a public hearing), 8.1 (construction-tax exemption) and 2.15 (payroll system). Email city.clerk@sanjoseca.gov by **5 p.m. Monday, Nov. 30**, with the item number in the subject line ([agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf), p. 4). The draft HOME-ARP plan is open for public review on the [Housing Department's website](https://www.sanjoseca.gov/your-government/departments-offices/housing/nonprofit-grant-programs/home-arp-program) through **Dec. 11**, with comments to [Nosheen.Hossain@sanjoseca.gov](mailto:Nosheen.Hossain@sanjoseca.gov). The Dec. 1 staff memo still says the review runs through Dec. 9 ([memo](https://legistar.granicus.com/sanjose/attachments/0517e90a-bc26-409a-98e0-04f77a450dfa.pdf), p. 10).
 
 ## What matters this week
 
@@ -50,9 +52,9 @@ The City's exemptions from two construction taxes date to 1978 and cover only pr
 
 The cost: three projects in the pipeline "were estimated to generate approximately $1.2 million in construction tax revenue," which the City expected to collect in fiscal 2028-29 or later. The exemption would apply "indefinitely," and the Housing Department would report on its use within 12 months (p. 4).
 
-### A 2015 payroll-system contract, extended to 2031 (2.15)
+### Five one-year options to extend a 2015 payroll-system contract (2.15)
 
-CherryRoad Technologies runs the PeopleSoft system behind City human resources, payroll, budget and timekeeping. Its contract, first approved in 2015, ends Dec. 31, 2026. Staff ask for five one-year options through Dec. 31, 2031, with support "estimated at $500,000 annually" from the General Fund. The City "does not anticipate initiating" a review of a replacement system until fiscal 2028-29 ([memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf), pp. 1–3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA)). It's a consent item, so it would be approved with other routine items in one vote unless a councilmember pulls it (agenda p. 10).
+CherryRoad Technologies runs the PeopleSoft system behind City human resources, payroll, budget and timekeeping. Its contract, first approved in 2015, ends Dec. 31, 2026. Staff ask for five one-year options to extend through Dec. 31, 2031, subject to appropriation, with support "estimated at $500,000 annually" from the General Fund. The City "does not anticipate initiating" a review of a replacement system until fiscal 2028-29 ([memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf), pp. 1–3; [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA)). It's a consent item, so it would be approved with other routine items in one vote unless a councilmember pulls it (agenda p. 10).
 
 ## Since our last brief
 
@@ -67,7 +69,7 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 - Mon., Nov. 30, 5 p.m.: email deadline for Dec. 1 items.
 - Tue., Dec. 1, 1:30 p.m.: Council meeting and public hearing on the HOME-ARP plan (8.3).
 - Tue., Dec. 8: data center standards and fees.
-- Wed., Dec. 9: public review of the draft HOME-ARP plan ends.
+- Fri., Dec. 11: public review of the draft HOME-ARP plan ends. The Dec. 1 staff memo (p. 10) still says Dec. 9.
 
 ## Sources
 
@@ -75,12 +77,21 @@ Our [Nov. 20 brief](https://thesanjosesource.com/brief/4/) covered other Dec. 1 
 - Item 8.1, file 26-1251: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323521&GUID=E7573319-D5C3-42EF-8B84-3686511EEBD6), [memo](https://sanjose.legistar.com/View.ashx?M=F&ID=16156158&GUID=FF69C595-B8C9-48DA-A54F-858A3A324AE0)
 - Item 2.15, file 26-1238: [record](https://sanjose.legistar.com/LegislationDetail.aspx?ID=8323481&GUID=D183C88E-6317-4A86-97F0-6879D69F76DA), [memo](https://legistar.granicus.com/sanjose/attachments/e3faaf83-7a1f-4953-abcb-52f35d86aa59.pdf)
 - [Dec. 1, 2026 Council agenda](https://legistar.granicus.com/sanjose/meetings/2026/12/8126_A_City_Council_26-12-01_Agenda.pdf) and [meeting page](https://sanjose.legistar.com/MeetingDetail.aspx?ID=1427104&GUID=66FA99F3-7A7A-4CC3-AF10-7E28B31FC823&G=920296E4-80BE-4CA2-A78F-32C5EFCF78AF)
+- [Housing Department HOME-ARP page](https://www.sanjoseca.gov/your-government/departments-offices/housing/nonprofit-grant-programs/home-arp-program) (public review through Dec. 11, 2026)
 
 Every figure links to a City record. Spot an error? [Corrections](https://thesanjosesource.com/corrections/) · Check any project: [Promised vs. Actual](https://thesanjosesource.com/tracker/) · Free every week: [Subscribe](https://thesanjosesource.substack.com)
 
 ## Corrections and updates
 
 We keep a public record of every change to a published brief. Original wording is quoted so readers can see exactly what changed.
+
+### November 27, 2026: correction
+
+Checked against the City record on Nov. 27, 2026.
+
+- **HOME-ARP public review.** Was: "The draft HOME-ARP plan is open for public review on the Housing Department's website through Dec. 9 (memo, p. 10)." And in What happens next: "Wed., Dec. 9: public review of the draft HOME-ARP plan ends." Now: through Dec. 11, with comments to Nosheen.Hossain@sanjoseca.gov. The Dec. 1 staff memo (p. 10) still says the review runs through Dec. 9. The Housing Department page says through December 11, 2026.
+- **eComment.** Was: "or use eComment on the Legistar calendar." Removed. Legistar's meeting page and calendar showed eComment as "Not available" for the Dec. 1 meeting. The agenda (p. 4) still mentions eComment. Emailed comments still go to city.clerk@sanjoseca.gov by 5 p.m. Monday, Nov. 30, with the item number in the subject line. The meeting is still Tuesday, Dec. 1, 1:30 p.m., at City Hall or on Zoom.
+- **Payroll contract (2.15).** Was: "A 2015 payroll-system contract, extended to 2031" in the heading and the page description, and "Staff ask for five one-year options through Dec. 31, 2031." Now: five one-year options to extend through Dec. 31, 2031, subject to appropriation (agenda p. 10; memo).
 
 ### November 26, 2026: update (links)
 
